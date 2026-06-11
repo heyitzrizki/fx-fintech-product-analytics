@@ -1,0 +1,6 @@
+feature,importance
+transactions_90d,0.5419572
+total_volume_90d,0.20666923
+recency_days,0.11358927
+transactions_all,0.078238025
+failed_ratio_90d,0.059546307
