@@ -1,0 +1,16 @@
+market_regime_at_transaction,failure_reason,failed_transactions,share_within_regime
+low,insufficient_balance,2263,27.46
+low,rate_changed,1955,23.73
+low,bank_timeout,1918,23.28
+low,technical_error,1114,13.52
+low,limit_exceeded,990,12.01
+normal,insufficient_balance,1961,27.13
+normal,rate_changed,1772,24.52
+normal,bank_timeout,1568,21.69
+normal,technical_error,1007,13.93
+normal,limit_exceeded,920,12.73
+high,insufficient_balance,1431,27.44
+high,rate_changed,1268,24.31
+high,bank_timeout,1145,21.96
+high,technical_error,733,14.06
+high,limit_exceeded,638,12.23

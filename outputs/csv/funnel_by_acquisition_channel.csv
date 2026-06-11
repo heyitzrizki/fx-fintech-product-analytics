@@ -1,0 +1,8 @@
+acquisition_channel,valid_signups,kyc_completed,kyc_completion_rate,bank_linked,bank_link_rate,first_successful_exchange,first_exchange_rate,activated_within_14_days,activation_rate_14d
+referral,8154,6573,80.61,5769,70.75,5076,62.25,1948,23.89
+direct,3984,2977,74.72,2600,65.26,2307,57.91,898,22.54
+affiliate,4478,3372,75.3,2987,66.7,2611,58.31,994,22.2
+content,2676,1986,74.22,1737,64.91,1521,56.84,571,21.34
+organic_search,13581,10097,74.35,8795,64.76,7761,57.15,2839,20.9
+other,1387,1021,73.61,890,64.17,786,56.67,281,20.26
+paid_social,10714,7380,68.88,6486,60.54,5729,53.47,2118,19.77

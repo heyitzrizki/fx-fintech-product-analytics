@@ -1,0 +1,4 @@
+market_regime_at_transaction,transaction_attempts,successful_transactions,success_rate,avg_transaction_amount_krw,completed_volume_krw
+low,117445,109205,92.98,2251334.0,246004056423.0
+normal,88561,81333,91.84,2266686.0,184690951968.0
+high,53998,48783,90.34,2264756.0,110355878812.0

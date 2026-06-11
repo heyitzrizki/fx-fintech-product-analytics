@@ -1,0 +1,17 @@
+# Large local database
+data/*.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment / secrets
+.env
+.streamlit/secrets.toml
+
+# Notebook/system
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,5 @@
+feature_group,first_exchange_users,d30_repeat_users,d30_repeat_rate
+Both target-rate and rate-alert,10884,6426,59.04
+Rate-alert only,2893,1129,39.03
+Target-rate only,4711,1684,35.75
+Neither feature,7303,1524,20.87

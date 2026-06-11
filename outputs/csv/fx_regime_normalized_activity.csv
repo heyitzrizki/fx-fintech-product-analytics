@@ -1,0 +1,4 @@
+market_regime,regime_hour_rows,transaction_attempts,successful_transactions,attempts_per_regime_hour,successful_transactions_per_regime_hour
+low,31580,117445,109205,3.72,3.46
+normal,24560,88561,81333,3.61,3.31
+high,14036,53998,48783,3.85,3.48
