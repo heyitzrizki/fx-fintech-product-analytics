@@ -189,6 +189,14 @@ def load_csv(file_name: str) -> pd.DataFrame:
 
 
 @st.cache_data
+def load_optional_csv(file_name: str) -> pd.DataFrame:
+    path = CSV_DIR / file_name
+    if not path.exists():
+        return pd.DataFrame()
+    return pd.read_csv(path)
+
+
+@st.cache_data
 def load_dashboard_data() -> dict[str, pd.DataFrame]:
     return {
         "cohort": load_csv("cohort_retention.csv"),
@@ -211,6 +219,12 @@ def load_dashboard_data() -> dict[str, pd.DataFrame]:
         "metrics": load_csv("user_repeat_model_metrics.csv"),
         "predictions": load_csv("user_repeat_predictions.csv"),
         "targeting": load_csv("user_repeat_targeting_dataset.csv"),
+        "fx_vol_metrics": load_optional_csv("fx_volatility_model_metrics.csv"),
+        "fx_vol_predictions": load_optional_csv("fx_volatility_predictions.csv"),
+        "fx_vol_importance": load_optional_csv("fx_volatility_feature_importance.csv"),
+        "fx_vol_confusion": load_optional_csv("fx_volatility_confusion_matrix.csv"),
+        "fx_vol_regime_comparison": load_optional_csv("fx_volatility_regime_definition_comparison.csv"),
+        "fx_vol_regime_metadata": load_optional_csv("fx_volatility_regime_metadata.csv"),
     }
 
 
@@ -721,6 +735,97 @@ def fx_regime_chart(behavior: pd.DataFrame, activity: pd.DataFrame) -> go.Figure
     return style_plotly(fig, height=430)
 
 
+def fx_volatility_probability_chart(predictions: pd.DataFrame) -> go.Figure:
+    chart_df = predictions.copy()
+    chart_df["date"] = pd.to_datetime(chart_df["date"])
+    recent = chart_df.tail(120)
+    fig = go.Figure()
+    fig.add_trace(
+        go.Scatter(
+            x=recent["date"],
+            y=recent["prob_high"],
+            mode="lines",
+            name="High-volatility probability",
+            line=dict(color=COLOR_ROSE, width=3),
+        )
+    )
+    fig.add_trace(
+        go.Scatter(
+            x=recent["date"],
+            y=recent["prob_normal"],
+            mode="lines",
+            name="Normal-volatility probability",
+            line=dict(color=COLOR_ORANGE, width=2),
+        )
+    )
+    fig.add_trace(
+        go.Scatter(
+            x=recent["date"],
+            y=recent["prob_low"],
+            mode="lines",
+            name="Low-volatility probability",
+            line=dict(color=COLOR_TEAL, width=2),
+        )
+    )
+    fig.update_layout(title="Next-Day FX Volatility Signal, Recent Period")
+    fig.update_xaxes(title="")
+    fig.update_yaxes(title="Predicted probability", tickformat=".0%", range=[0, 1])
+    return style_plotly(fig, height=420)
+
+
+def fx_volatility_metrics_chart(metrics: pd.DataFrame) -> go.Figure:
+    chart_df = metrics.copy()
+    chart_df["Setup"] = chart_df["regime_definition"] + " | " + chart_df["model"]
+    chart_df = chart_df.sort_values("f1_macro", ascending=True)
+    fig = px.bar(
+        chart_df,
+        x="f1_macro",
+        y="Setup",
+        color="regime_definition",
+        orientation="h",
+        text="f1_macro",
+        title="FX Volatility Model Comparison by Macro F1",
+        color_discrete_sequence=[COLOR_TEAL, COLOR_NAVY],
+    )
+    fig.update_traces(texttemplate="%{text:.2f}", textposition="outside", cliponaxis=False)
+    fig.update_xaxes(title="Macro F1", tickformat=".0%", range=[0, max(0.7, chart_df["f1_macro"].max() + 0.08)])
+    fig.update_yaxes(title="")
+    return style_plotly(fig, height=500)
+
+
+def fx_volatility_feature_importance_chart(importance: pd.DataFrame) -> go.Figure:
+    chart_df = importance.copy().sort_values("importance", ascending=False).head(12).sort_values("importance", ascending=True)
+    fig = px.bar(
+        chart_df,
+        x="importance",
+        y="feature",
+        orientation="h",
+        text="importance",
+        color_discrete_sequence=[COLOR_NAVY],
+        title="Top Signals Used by the FX Volatility Model",
+    )
+    fig.update_traces(texttemplate="%{text:.3f}", textposition="outside", cliponaxis=False)
+    fig.update_xaxes(title="Signal strength")
+    fig.update_yaxes(title="")
+    return style_plotly(fig, height=430)
+
+
+def fx_volatility_confusion_chart(confusion: pd.DataFrame) -> go.Figure:
+    matrix = confusion.set_index("actual_regime")
+    matrix.index = matrix.index.str.replace("Actual ", "", regex=False).map(clean_label)
+    matrix.columns = matrix.columns.str.replace("Predicted ", "", regex=False).map(clean_label)
+    fig = px.imshow(
+        matrix,
+        text_auto=True,
+        aspect="auto",
+        color_continuous_scale="Teal",
+        title="FX Volatility Prediction Confusion Matrix",
+    )
+    fig.update_xaxes(title="Predicted regime")
+    fig.update_yaxes(title="Actual regime")
+    return style_plotly(fig, height=430)
+
+
 def value_segment_chart(df: pd.DataFrame) -> go.Figure:
     fig = go.Figure()
     fig.add_bar(x=df["value_segment"], y=df["target_rate_adoption_rate"], name="Target-rate adoption", marker_color=COLOR_NAVY)
@@ -1202,6 +1307,102 @@ def render_prediction_quality(language: str, data: dict[str, pd.DataFrame]) -> N
 
 def render_fx_market_intelligence(language: str, data: dict[str, pd.DataFrame]) -> None:
     section_header(language, "FX Market Intelligence")
+    fx_metrics = data["fx_vol_metrics"]
+    fx_predictions = data["fx_vol_predictions"]
+    fx_importance = data["fx_vol_importance"]
+    fx_confusion = data["fx_vol_confusion"]
+    fx_regime_comparison = data["fx_vol_regime_comparison"]
+    fx_regime_metadata = data["fx_vol_regime_metadata"]
+
+    if not fx_metrics.empty and not fx_predictions.empty:
+        latest = fx_predictions.copy()
+        latest["date"] = pd.to_datetime(latest["date"])
+        latest_row = latest.sort_values("date").iloc[-1]
+        selected = fx_metrics[fx_metrics["selected_model_flag"] == 1]
+        best = selected.iloc[0] if not selected.empty else fx_metrics.sort_values("f1_macro", ascending=False).iloc[0]
+        latest_regime = clean_label(latest_row["predicted_regime"])
+        latest_date = latest_row["date"].strftime("%Y-%m-%d")
+
+        st.markdown("#### Real-Market Volatility Prediction Signal")
+        cols = st.columns(4)
+        if language == "Korean":
+            cards = [
+                ("Next-day regime", latest_regime, "다음 거래일의 USD/KRW 변동성 구간 예측입니다.", latest_date),
+                ("High-vol probability", format_percent(latest_row["prob_high"] * 100), "다음 거래일이 고변동성일 가능성입니다.", "Operational readiness"),
+                ("Best setup", f"{best['model']}", "현재 비교에서 선택된 FX 변동성 예측 모델입니다.", str(best["regime_definition"])),
+                ("Macro F1", format_percent(best["f1_macro"] * 100), "Low, normal, high 각 클래스의 F1을 평균낸 성능 지표입니다.", "Model quality"),
+            ]
+        else:
+            cards = [
+                ("Next-day regime", latest_regime, "Predicted USD/KRW volatility regime for the next trading day.", latest_date),
+                ("High-vol probability", format_percent(latest_row["prob_high"] * 100), "Estimated chance that the next trading day is a high-volatility period.", "Operational readiness"),
+                ("Best setup", f"{best['model']}", "Selected FX volatility model in the current comparison.", str(best["regime_definition"])),
+                ("Macro F1", format_percent(best["f1_macro"] * 100), "Average F1 across low, normal, and high volatility classes.", "Model quality"),
+            ]
+        for col, (label, value, tip, caption) in zip(cols, cards):
+            with col:
+                metric_card(label, value, tip, caption)
+
+        if latest_row["predicted_regime"] == "high":
+            action_title = "Prepare high-volatility operations"
+            action_text = "Increase transaction monitoring, prepare rate-change messaging, and make support teams aware before market movement creates user friction."
+        elif latest_row["predicted_regime"] == "normal":
+            action_title = "Maintain normal readiness"
+            action_text = "Use standard monitoring and lifecycle messaging, while watching for sudden movement in the high-volatility probability."
+        else:
+            action_title = "Use calm-market windows"
+            action_text = "Normal operations are enough. This can be a good moment for feature education, rate-alert adoption, and target-rate order prompts."
+        insight_box("Recommended operating action", action_title, action_text, action=True)
+
+        left, right = st.columns([1.25, 1])
+        with left:
+            st.plotly_chart(fx_volatility_probability_chart(fx_predictions), width="stretch")
+        with right:
+            st.plotly_chart(fx_volatility_metrics_chart(fx_metrics), width="stretch")
+
+        left, right = st.columns(2)
+        with left:
+            if not fx_importance.empty:
+                st.plotly_chart(fx_volatility_feature_importance_chart(fx_importance), width="stretch")
+        with right:
+            if not fx_confusion.empty:
+                st.plotly_chart(fx_volatility_confusion_chart(fx_confusion), width="stretch")
+
+        left, right = st.columns(2)
+        with left:
+            st.markdown("#### Regime definition comparison")
+            if not fx_regime_comparison.empty:
+                display_cols = [
+                    col
+                    for col in [
+                        "regime_definition",
+                        "best_model_by_f1",
+                        "best_f1_macro",
+                        "best_model_by_balanced_accuracy",
+                        "best_balanced_accuracy",
+                    ]
+                    if col in fx_regime_comparison.columns
+                ]
+                st.dataframe(fx_regime_comparison[display_cols], width="stretch", hide_index=True)
+        with right:
+            st.markdown("#### Regime definition metadata")
+            if not fx_regime_metadata.empty:
+                st.dataframe(fx_regime_metadata, width="stretch", hide_index=True)
+
+        st.download_button(
+            "Download FX volatility predictions",
+            data=to_csv_bytes(fx_predictions),
+            file_name="fx_volatility_predictions.csv",
+            mime="text/csv",
+        )
+    else:
+        insight_box(
+            "FX prediction module",
+            "Prediction outputs are not available yet",
+            "Run the FX volatility regime notebook to create model metrics, predictions, feature importance, and regime comparison CSV files.",
+        )
+
+    st.markdown("#### Product Behavior Under FX Regimes")
     behavior = data["fx_behavior"]
     activity = data["fx_activity"]
     high = behavior[behavior["market_regime_at_transaction"] == "high"].iloc[0]
@@ -1231,7 +1432,7 @@ def render_fx_market_intelligence(language: str, data: dict[str, pd.DataFrame]) 
     with cols[1]:
         insight_box("Product signal", "Rate-change communication matters", "During high volatility, users may need clearer rate movement, execution, and reliability messaging.")
     with cols[2]:
-        insight_box("Next phase", "FX prediction system comes later", "The planned bonus module will use real Yahoo Finance FX data to predict next-day volatility regime.")
+        insight_box("Prediction layer", "FX model is now connected", "Real-market volatility prediction is shown above, while this section explains why market regimes matter for product operations.")
 
 
 def main() -> None:

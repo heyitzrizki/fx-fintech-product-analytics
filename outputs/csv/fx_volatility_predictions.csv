@@ -1,0 +1,537 @@
+date,actual_regime,predicted_regime,prob_low,prob_normal,prob_high,recommended_action
+2024-05-17,normal,normal,0.42254862,0.5080642,0.06938714,Use standard monitoring and normal lifecycle messaging.
+2024-05-20,normal,low,0.6143571,0.36761957,0.01802329,Normal operations; consider using calm-market windows for product education.
+2024-05-21,low,low,0.9055834,0.0837462,0.01067047,Normal operations; consider using calm-market windows for product education.
+2024-05-22,low,low,0.8121875,0.17705849,0.010754047,Normal operations; consider using calm-market windows for product education.
+2024-05-23,low,low,0.6171765,0.3562529,0.026570655,Normal operations; consider using calm-market windows for product education.
+2024-05-24,low,low,0.8022591,0.18274449,0.014996382,Normal operations; consider using calm-market windows for product education.
+2024-05-27,low,low,0.86617285,0.11763851,0.016188568,Normal operations; consider using calm-market windows for product education.
+2024-05-28,low,low,0.68544275,0.3032386,0.0113186315,Normal operations; consider using calm-market windows for product education.
+2024-05-29,normal,low,0.8784544,0.10933996,0.0122055905,Normal operations; consider using calm-market windows for product education.
+2024-05-30,low,low,0.5325622,0.40401053,0.06342731,Normal operations; consider using calm-market windows for product education.
+2024-05-31,normal,normal,0.38769072,0.54392606,0.0683832,Use standard monitoring and normal lifecycle messaging.
+2024-06-03,normal,low,0.6566138,0.29015365,0.053232558,Normal operations; consider using calm-market windows for product education.
+2024-06-04,low,low,0.60404885,0.37388593,0.022065265,Normal operations; consider using calm-market windows for product education.
+2024-06-05,low,low,0.6801824,0.31079373,0.009023827,Normal operations; consider using calm-market windows for product education.
+2024-06-06,low,low,0.5114557,0.398804,0.08974028,Normal operations; consider using calm-market windows for product education.
+2024-06-07,high,high,0.110951565,0.36436597,0.52468246,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2024-06-10,low,low,0.8203112,0.17157796,0.008110856,Normal operations; consider using calm-market windows for product education.
+2024-06-11,low,low,0.90606767,0.088703796,0.005228514,Normal operations; consider using calm-market windows for product education.
+2024-06-12,normal,normal,0.115688,0.66839457,0.21591744,Use standard monitoring and normal lifecycle messaging.
+2024-06-13,low,normal,0.49027294,0.49854454,0.011182544,Use standard monitoring and normal lifecycle messaging.
+2024-06-14,normal,normal,0.21663249,0.7222647,0.06110275,Use standard monitoring and normal lifecycle messaging.
+2024-06-17,low,low,0.8746522,0.11814579,0.007202,Normal operations; consider using calm-market windows for product education.
+2024-06-18,low,low,0.74068165,0.25012088,0.009197476,Normal operations; consider using calm-market windows for product education.
+2024-06-19,low,low,0.8622293,0.131641,0.006129703,Normal operations; consider using calm-market windows for product education.
+2024-06-20,normal,normal,0.45119444,0.5375559,0.011249659,Use standard monitoring and normal lifecycle messaging.
+2024-06-21,low,low,0.89622295,0.09895921,0.0048178495,Normal operations; consider using calm-market windows for product education.
+2024-06-24,low,low,0.8945516,0.0998293,0.005619184,Normal operations; consider using calm-market windows for product education.
+2024-06-25,low,low,0.6393604,0.3475128,0.013126783,Normal operations; consider using calm-market windows for product education.
+2024-06-26,low,low,0.9029504,0.09204281,0.0050067864,Normal operations; consider using calm-market windows for product education.
+2024-06-27,normal,low,0.537245,0.44220328,0.020551732,Normal operations; consider using calm-market windows for product education.
+2024-06-28,normal,normal,0.21143064,0.51821405,0.2703553,Use standard monitoring and normal lifecycle messaging.
+2024-07-01,low,low,0.8161363,0.17449224,0.009371445,Normal operations; consider using calm-market windows for product education.
+2024-07-02,low,low,0.8861195,0.10793035,0.0059501682,Normal operations; consider using calm-market windows for product education.
+2024-07-03,low,low,0.58698976,0.38824105,0.024769194,Normal operations; consider using calm-market windows for product education.
+2024-07-04,normal,low,0.81233174,0.17805997,0.009608244,Normal operations; consider using calm-market windows for product education.
+2024-07-05,low,normal,0.33418602,0.63330257,0.032511383,Use standard monitoring and normal lifecycle messaging.
+2024-07-08,normal,low,0.74935716,0.22663839,0.02400446,Normal operations; consider using calm-market windows for product education.
+2024-07-09,low,low,0.94495165,0.046615448,0.008432882,Normal operations; consider using calm-market windows for product education.
+2024-07-10,low,low,0.9142838,0.07618745,0.009528704,Normal operations; consider using calm-market windows for product education.
+2024-07-11,normal,normal,0.1981915,0.4867592,0.31504935,Use standard monitoring and normal lifecycle messaging.
+2024-07-12,low,low,0.5072965,0.44398195,0.04872155,Normal operations; consider using calm-market windows for product education.
+2024-07-15,normal,low,0.5475757,0.41321918,0.039205078,Normal operations; consider using calm-market windows for product education.
+2024-07-16,low,low,0.9121304,0.082337655,0.0055318805,Normal operations; consider using calm-market windows for product education.
+2024-07-17,low,low,0.5811288,0.4061129,0.012758284,Normal operations; consider using calm-market windows for product education.
+2024-07-18,normal,low,0.64197457,0.34772325,0.01030221,Normal operations; consider using calm-market windows for product education.
+2024-07-19,low,low,0.89654773,0.09555526,0.007896967,Normal operations; consider using calm-market windows for product education.
+2024-07-22,low,low,0.87730604,0.10562639,0.01706763,Normal operations; consider using calm-market windows for product education.
+2024-07-23,low,low,0.8948636,0.09547128,0.009665111,Normal operations; consider using calm-market windows for product education.
+2024-07-24,low,low,0.5714329,0.38641888,0.042148218,Normal operations; consider using calm-market windows for product education.
+2024-07-25,low,normal,0.40460107,0.5082646,0.08713435,Use standard monitoring and normal lifecycle messaging.
+2024-07-26,low,low,0.9607312,0.03041898,0.008849801,Normal operations; consider using calm-market windows for product education.
+2024-07-29,low,low,0.8929471,0.099670485,0.0073825074,Normal operations; consider using calm-market windows for product education.
+2024-07-30,low,low,0.95319176,0.036724053,0.010084166,Normal operations; consider using calm-market windows for product education.
+2024-07-31,high,normal,0.30317524,0.506338,0.19048679,Use standard monitoring and normal lifecycle messaging.
+2024-08-01,low,low,0.812386,0.16787362,0.019740386,Normal operations; consider using calm-market windows for product education.
+2024-08-02,normal,high,0.16144502,0.34221742,0.49633762,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2024-08-05,normal,normal,0.11435304,0.5061814,0.37946558,Use standard monitoring and normal lifecycle messaging.
+2024-08-06,low,normal,0.29951212,0.6171372,0.083350636,Use standard monitoring and normal lifecycle messaging.
+2024-08-07,low,low,0.903557,0.09047224,0.0059707803,Normal operations; consider using calm-market windows for product education.
+2024-08-08,low,low,0.9022396,0.0911398,0.006620558,Normal operations; consider using calm-market windows for product education.
+2024-08-09,normal,normal,0.2512615,0.5373991,0.21133932,Use standard monitoring and normal lifecycle messaging.
+2024-08-12,normal,low,0.7398189,0.24646111,0.01372004,Normal operations; consider using calm-market windows for product education.
+2024-08-13,normal,low,0.51259595,0.4492392,0.038164847,Normal operations; consider using calm-market windows for product education.
+2024-08-14,normal,high,0.19446465,0.31779557,0.4877397,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2024-08-15,normal,high,0.12835464,0.24658158,0.6250638,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2024-08-16,high,low,0.5748206,0.41637126,0.008808163,Normal operations; consider using calm-market windows for product education.
+2024-08-19,high,high,0.064893864,0.15102881,0.78407735,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2024-08-20,low,high,0.19566545,0.13314489,0.67118967,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2024-08-21,normal,normal,0.31445244,0.53046244,0.15508515,Use standard monitoring and normal lifecycle messaging.
+2024-08-22,normal,normal,0.29919907,0.66697836,0.03382258,Use standard monitoring and normal lifecycle messaging.
+2024-08-23,high,high,0.08299645,0.3699857,0.5470178,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2024-08-26,low,normal,0.41551292,0.5464885,0.037998565,Use standard monitoring and normal lifecycle messaging.
+2024-08-27,low,low,0.593912,0.3988827,0.007205276,Normal operations; consider using calm-market windows for product education.
+2024-08-28,normal,normal,0.30245405,0.6643443,0.03320165,Use standard monitoring and normal lifecycle messaging.
+2024-08-29,low,normal,0.3149805,0.6625102,0.02250925,Use standard monitoring and normal lifecycle messaging.
+2024-08-30,low,normal,0.21675484,0.41498762,0.36825755,Use standard monitoring and normal lifecycle messaging.
+2024-09-02,low,low,0.89775753,0.0981115,0.0041309195,Normal operations; consider using calm-market windows for product education.
+2024-09-03,low,low,0.8225986,0.1691663,0.008235106,Normal operations; consider using calm-market windows for product education.
+2024-09-04,normal,normal,0.3571602,0.6038324,0.03900738,Use standard monitoring and normal lifecycle messaging.
+2024-09-05,low,low,0.8892005,0.10357198,0.0072275386,Normal operations; consider using calm-market windows for product education.
+2024-09-06,low,normal,0.24765442,0.7129078,0.039437715,Use standard monitoring and normal lifecycle messaging.
+2024-09-09,low,normal,0.31872013,0.6510218,0.03025809,Use standard monitoring and normal lifecycle messaging.
+2024-09-10,low,low,0.8452322,0.14839436,0.006373512,Normal operations; consider using calm-market windows for product education.
+2024-09-11,low,normal,0.46951693,0.5031601,0.02732298,Use standard monitoring and normal lifecycle messaging.
+2024-09-12,low,low,0.92601645,0.069011524,0.0049720546,Normal operations; consider using calm-market windows for product education.
+2024-09-13,normal,normal,0.2743209,0.687424,0.03825516,Use standard monitoring and normal lifecycle messaging.
+2024-09-16,normal,normal,0.3626119,0.5447146,0.0926735,Use standard monitoring and normal lifecycle messaging.
+2024-09-17,low,low,0.5925514,0.3844506,0.022997985,Normal operations; consider using calm-market windows for product education.
+2024-09-18,low,low,0.87747884,0.11857034,0.0039507975,Normal operations; consider using calm-market windows for product education.
+2024-09-19,normal,normal,0.18869047,0.77579015,0.035519388,Use standard monitoring and normal lifecycle messaging.
+2024-09-20,low,low,0.54327977,0.44664717,0.010073063,Normal operations; consider using calm-market windows for product education.
+2024-09-23,low,low,0.6763746,0.3183923,0.0052331137,Normal operations; consider using calm-market windows for product education.
+2024-09-24,normal,low,0.79994917,0.19433953,0.00571124,Normal operations; consider using calm-market windows for product education.
+2024-09-25,normal,normal,0.30125713,0.66916704,0.02957583,Use standard monitoring and normal lifecycle messaging.
+2024-09-26,high,normal,0.23420309,0.5084326,0.25736427,Use standard monitoring and normal lifecycle messaging.
+2024-09-27,low,high,0.15616438,0.38230693,0.4615287,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2024-09-30,normal,normal,0.31133556,0.6286028,0.060061663,Use standard monitoring and normal lifecycle messaging.
+2024-10-01,normal,normal,0.31839946,0.6493018,0.032298744,Use standard monitoring and normal lifecycle messaging.
+2024-10-02,low,low,0.7131736,0.27953082,0.007295532,Normal operations; consider using calm-market windows for product education.
+2024-10-03,normal,normal,0.26241207,0.59712946,0.14045845,Use standard monitoring and normal lifecycle messaging.
+2024-10-04,normal,high,0.15683258,0.33340907,0.50975835,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2024-10-07,low,low,0.8980756,0.095188394,0.006736,Normal operations; consider using calm-market windows for product education.
+2024-10-08,low,low,0.763858,0.21933873,0.016803183,Normal operations; consider using calm-market windows for product education.
+2024-10-09,low,low,0.6397119,0.34397843,0.01630968,Normal operations; consider using calm-market windows for product education.
+2024-10-10,normal,normal,0.3774892,0.6063049,0.016205877,Use standard monitoring and normal lifecycle messaging.
+2024-10-11,low,low,0.8907519,0.10412145,0.0051266486,Normal operations; consider using calm-market windows for product education.
+2024-10-14,normal,normal,0.24718279,0.71838003,0.03443717,Use standard monitoring and normal lifecycle messaging.
+2024-10-15,normal,low,0.79204524,0.1997019,0.008252824,Normal operations; consider using calm-market windows for product education.
+2024-10-16,low,low,0.79268,0.19823746,0.009082454,Normal operations; consider using calm-market windows for product education.
+2024-10-17,normal,normal,0.48497465,0.48899525,0.026030032,Use standard monitoring and normal lifecycle messaging.
+2024-10-18,low,low,0.9171781,0.074696295,0.008125607,Normal operations; consider using calm-market windows for product education.
+2024-10-21,normal,normal,0.2661368,0.66650254,0.06736066,Use standard monitoring and normal lifecycle messaging.
+2024-10-22,low,low,0.85664475,0.1354016,0.0079535935,Normal operations; consider using calm-market windows for product education.
+2024-10-23,low,low,0.64684844,0.34151164,0.011639907,Normal operations; consider using calm-market windows for product education.
+2024-10-24,low,low,0.9104556,0.08399691,0.005547547,Normal operations; consider using calm-market windows for product education.
+2024-10-25,normal,normal,0.3094183,0.61993325,0.070648424,Use standard monitoring and normal lifecycle messaging.
+2024-10-28,normal,low,0.90351826,0.09016738,0.006314315,Normal operations; consider using calm-market windows for product education.
+2024-10-29,low,normal,0.44929594,0.48151916,0.069184914,Use standard monitoring and normal lifecycle messaging.
+2024-10-30,low,normal,0.37347803,0.5845802,0.041941795,Use standard monitoring and normal lifecycle messaging.
+2024-10-31,normal,low,0.6657183,0.3142824,0.019999309,Normal operations; consider using calm-market windows for product education.
+2024-11-01,normal,low,0.7559073,0.23821445,0.0058782627,Normal operations; consider using calm-market windows for product education.
+2024-11-04,normal,low,0.62674516,0.36161909,0.011635777,Normal operations; consider using calm-market windows for product education.
+2024-11-05,low,low,0.57439864,0.41942263,0.006178689,Normal operations; consider using calm-market windows for product education.
+2024-11-06,high,normal,0.2867859,0.42310575,0.29010838,Use standard monitoring and normal lifecycle messaging.
+2024-11-07,high,normal,0.23171124,0.5971512,0.17113753,Use standard monitoring and normal lifecycle messaging.
+2024-11-08,high,high,0.1992206,0.33405396,0.46672547,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2024-11-11,low,low,0.5856237,0.35715345,0.057222903,Normal operations; consider using calm-market windows for product education.
+2024-11-12,normal,low,0.67269415,0.28978875,0.037517074,Normal operations; consider using calm-market windows for product education.
+2024-11-13,normal,normal,0.31282508,0.37949088,0.3076841,Use standard monitoring and normal lifecycle messaging.
+2024-11-14,low,high,0.14723842,0.2643219,0.5884397,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2024-11-15,normal,high,0.27720785,0.3484273,0.37436482,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2024-11-18,low,low,0.5217938,0.4529394,0.02526684,Normal operations; consider using calm-market windows for product education.
+2024-11-19,low,low,0.5734557,0.41766086,0.008883422,Normal operations; consider using calm-market windows for product education.
+2024-11-20,normal,normal,0.23963344,0.7253562,0.03501033,Use standard monitoring and normal lifecycle messaging.
+2024-11-21,low,low,0.5607235,0.4322098,0.007066785,Normal operations; consider using calm-market windows for product education.
+2024-11-22,low,low,0.5852233,0.4010297,0.013746966,Normal operations; consider using calm-market windows for product education.
+2024-11-25,normal,low,0.5972338,0.3915614,0.0112048155,Normal operations; consider using calm-market windows for product education.
+2024-11-26,low,normal,0.3369124,0.6292967,0.033790838,Use standard monitoring and normal lifecycle messaging.
+2024-11-27,normal,normal,0.4550537,0.5319068,0.0130394995,Use standard monitoring and normal lifecycle messaging.
+2024-11-28,low,low,0.59625846,0.39385417,0.009887363,Normal operations; consider using calm-market windows for product education.
+2024-11-29,normal,low,0.6917358,0.29904047,0.009223737,Normal operations; consider using calm-market windows for product education.
+2024-12-02,low,normal,0.47503954,0.5145074,0.010453027,Use standard monitoring and normal lifecycle messaging.
+2024-12-03,normal,normal,0.3447269,0.4427437,0.21252938,Use standard monitoring and normal lifecycle messaging.
+2024-12-04,low,normal,0.42078167,0.52504706,0.054171246,Use standard monitoring and normal lifecycle messaging.
+2024-12-05,normal,low,0.7349726,0.25658318,0.008444272,Normal operations; consider using calm-market windows for product education.
+2024-12-06,high,normal,0.13584314,0.44346103,0.4206958,Use standard monitoring and normal lifecycle messaging.
+2024-12-09,low,low,0.4961244,0.39452076,0.10935486,Normal operations; consider using calm-market windows for product education.
+2024-12-10,normal,low,0.9126895,0.07598902,0.011321429,Normal operations; consider using calm-market windows for product education.
+2024-12-11,low,high,0.3025168,0.3466162,0.350867,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2024-12-12,low,low,0.93746966,0.053963628,0.008566735,Normal operations; consider using calm-market windows for product education.
+2024-12-13,normal,low,0.92210597,0.07107158,0.006822501,Normal operations; consider using calm-market windows for product education.
+2024-12-16,low,low,0.9102243,0.08239246,0.0073832157,Normal operations; consider using calm-market windows for product education.
+2024-12-17,low,low,0.8863782,0.103893675,0.009728129,Normal operations; consider using calm-market windows for product education.
+2024-12-18,high,low,0.92745626,0.060359318,0.01218448,Normal operations; consider using calm-market windows for product education.
+2024-12-19,high,normal,0.23326978,0.53358203,0.23314817,Use standard monitoring and normal lifecycle messaging.
+2024-12-20,normal,low,0.5164952,0.437222,0.046282772,Normal operations; consider using calm-market windows for product education.
+2024-12-23,low,low,0.7833415,0.20748553,0.009172897,Normal operations; consider using calm-market windows for product education.
+2024-12-24,normal,low,0.56158423,0.42159477,0.016821044,Normal operations; consider using calm-market windows for product education.
+2024-12-25,low,low,0.7360642,0.24803862,0.015897159,Normal operations; consider using calm-market windows for product education.
+2024-12-26,normal,normal,0.32790017,0.53679717,0.1353027,Use standard monitoring and normal lifecycle messaging.
+2024-12-27,normal,high,0.20545864,0.39379933,0.40074202,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2024-12-30,low,low,0.78588307,0.20506245,0.009054443,Normal operations; consider using calm-market windows for product education.
+2024-12-31,normal,normal,0.43893248,0.49692678,0.06414077,Use standard monitoring and normal lifecycle messaging.
+2025-01-02,low,normal,0.40498033,0.5581136,0.03690612,Use standard monitoring and normal lifecycle messaging.
+2025-01-03,normal,normal,0.4698707,0.51553386,0.014595464,Use standard monitoring and normal lifecycle messaging.
+2025-01-06,normal,normal,0.41176134,0.4241321,0.16410655,Use standard monitoring and normal lifecycle messaging.
+2025-01-07,normal,normal,0.12972884,0.4385125,0.43175864,Use standard monitoring and normal lifecycle messaging.
+2025-01-08,normal,normal,0.35631913,0.5855755,0.058105342,Use standard monitoring and normal lifecycle messaging.
+2025-01-09,low,normal,0.46922234,0.50673014,0.024047554,Use standard monitoring and normal lifecycle messaging.
+2025-01-10,high,high,0.1097406,0.36231458,0.5279448,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-01-13,normal,low,0.75230426,0.23517706,0.01251863,Normal operations; consider using calm-market windows for product education.
+2025-01-14,low,normal,0.3769087,0.5781605,0.044930797,Use standard monitoring and normal lifecycle messaging.
+2025-01-15,high,high,0.22040512,0.24773565,0.5318593,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-01-16,high,low,0.6106955,0.3705549,0.018749591,Normal operations; consider using calm-market windows for product education.
+2025-01-17,low,low,0.80165106,0.19207264,0.006276271,Normal operations; consider using calm-market windows for product education.
+2025-01-20,high,high,0.10052318,0.30966464,0.5898122,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-01-21,normal,high,0.17101344,0.1859441,0.64304245,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-01-22,normal,low,0.7616405,0.21644963,0.021909833,Normal operations; consider using calm-market windows for product education.
+2025-01-23,low,low,0.72636503,0.2579195,0.015715461,Normal operations; consider using calm-market windows for product education.
+2025-01-24,normal,low,0.5513157,0.41263086,0.036053438,Normal operations; consider using calm-market windows for product education.
+2025-01-27,normal,low,0.5909056,0.38024554,0.028848851,Normal operations; consider using calm-market windows for product education.
+2025-01-28,high,high,0.17201182,0.27142397,0.5565642,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-01-29,low,high,0.22927195,0.3663877,0.40434033,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-01-30,low,low,0.89805764,0.09149134,0.010451075,Normal operations; consider using calm-market windows for product education.
+2025-01-31,high,low,0.58113337,0.3862634,0.032603227,Normal operations; consider using calm-market windows for product education.
+2025-02-03,low,low,0.46652082,0.44717908,0.08630008,Normal operations; consider using calm-market windows for product education.
+2025-02-04,normal,normal,0.35629216,0.44306514,0.2006427,Use standard monitoring and normal lifecycle messaging.
+2025-02-05,normal,normal,0.45059052,0.50047785,0.048931643,Use standard monitoring and normal lifecycle messaging.
+2025-02-06,low,low,0.80241096,0.1893421,0.008246915,Normal operations; consider using calm-market windows for product education.
+2025-02-07,normal,normal,0.17927085,0.5226789,0.29805025,Use standard monitoring and normal lifecycle messaging.
+2025-02-10,low,low,0.8525006,0.14282815,0.004671235,Normal operations; consider using calm-market windows for product education.
+2025-02-11,low,low,0.9326332,0.06117799,0.0061887624,Normal operations; consider using calm-market windows for product education.
+2025-02-12,low,normal,0.47043636,0.51074624,0.018817373,Use standard monitoring and normal lifecycle messaging.
+2025-02-13,normal,low,0.50957966,0.4790017,0.011418658,Normal operations; consider using calm-market windows for product education.
+2025-02-14,normal,low,0.65691805,0.32646,0.01662192,Normal operations; consider using calm-market windows for product education.
+2025-02-17,normal,low,0.9635473,0.03340476,0.0030479317,Normal operations; consider using calm-market windows for product education.
+2025-02-18,low,low,0.7632822,0.22722316,0.009494604,Normal operations; consider using calm-market windows for product education.
+2025-02-19,low,low,0.9425143,0.053105626,0.0043801065,Normal operations; consider using calm-market windows for product education.
+2025-02-20,normal,low,0.75674206,0.23394956,0.009308387,Normal operations; consider using calm-market windows for product education.
+2025-02-21,low,low,0.94512784,0.051270027,0.0036021548,Normal operations; consider using calm-market windows for product education.
+2025-02-24,normal,low,0.59628314,0.3816989,0.022017961,Normal operations; consider using calm-market windows for product education.
+2025-02-25,low,low,0.9259853,0.069707096,0.0043076235,Normal operations; consider using calm-market windows for product education.
+2025-02-26,low,low,0.84486634,0.14995538,0.005178225,Normal operations; consider using calm-market windows for product education.
+2025-02-27,high,normal,0.26173782,0.669291,0.06897113,Use standard monitoring and normal lifecycle messaging.
+2025-02-28,normal,normal,0.43987843,0.53644204,0.023679504,Use standard monitoring and normal lifecycle messaging.
+2025-03-03,low,low,0.94011396,0.054977205,0.004908751,Normal operations; consider using calm-market windows for product education.
+2025-03-04,low,low,0.7819744,0.20639084,0.011634822,Normal operations; consider using calm-market windows for product education.
+2025-03-05,normal,normal,0.1977985,0.45346686,0.34873468,Use standard monitoring and normal lifecycle messaging.
+2025-03-06,low,normal,0.39913562,0.5354343,0.06543007,Use standard monitoring and normal lifecycle messaging.
+2025-03-07,low,normal,0.39715862,0.5645899,0.03825144,Use standard monitoring and normal lifecycle messaging.
+2025-03-10,normal,normal,0.44408154,0.50061506,0.05530338,Use standard monitoring and normal lifecycle messaging.
+2025-03-11,normal,low,0.86230713,0.12795772,0.009735227,Normal operations; consider using calm-market windows for product education.
+2025-03-12,low,low,0.51685566,0.37828535,0.104858994,Normal operations; consider using calm-market windows for product education.
+2025-03-13,low,low,0.73228383,0.24550271,0.022213433,Normal operations; consider using calm-market windows for product education.
+2025-03-14,low,low,0.9416722,0.048273444,0.010054379,Normal operations; consider using calm-market windows for product education.
+2025-03-17,normal,low,0.9496858,0.045272358,0.0050418577,Normal operations; consider using calm-market windows for product education.
+2025-03-18,normal,normal,0.33630463,0.6038148,0.05988057,Use standard monitoring and normal lifecycle messaging.
+2025-03-19,low,low,0.49664962,0.44572648,0.057623874,Normal operations; consider using calm-market windows for product education.
+2025-03-20,high,normal,0.38151592,0.49647838,0.12200573,Use standard monitoring and normal lifecycle messaging.
+2025-03-21,low,low,0.7712865,0.21140179,0.017311731,Normal operations; consider using calm-market windows for product education.
+2025-03-24,low,low,0.855552,0.1357881,0.008659903,Normal operations; consider using calm-market windows for product education.
+2025-03-25,low,low,0.8331331,0.15677664,0.010090236,Normal operations; consider using calm-market windows for product education.
+2025-03-26,low,low,0.9234995,0.068177104,0.008323413,Normal operations; consider using calm-market windows for product education.
+2025-03-27,low,low,0.77500707,0.21228136,0.012711623,Normal operations; consider using calm-market windows for product education.
+2025-03-28,normal,low,0.8761741,0.11737068,0.006455215,Normal operations; consider using calm-market windows for product education.
+2025-03-31,low,low,0.725044,0.26562852,0.009327469,Normal operations; consider using calm-market windows for product education.
+2025-04-01,low,normal,0.4800203,0.50706875,0.0129108885,Use standard monitoring and normal lifecycle messaging.
+2025-04-02,low,normal,0.21225156,0.74348104,0.04426741,Use standard monitoring and normal lifecycle messaging.
+2025-04-03,high,high,0.056786068,0.3797644,0.5634495,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-04-04,normal,high,0.066295214,0.25357398,0.6801308,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-04-07,normal,normal,0.11574374,0.6647379,0.21951835,Use standard monitoring and normal lifecycle messaging.
+2025-04-08,high,normal,0.28093255,0.6630433,0.05602411,Use standard monitoring and normal lifecycle messaging.
+2025-04-09,high,normal,0.34115303,0.5261244,0.13272259,Use standard monitoring and normal lifecycle messaging.
+2025-04-10,normal,high,0.15925421,0.32383558,0.5169102,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-04-11,high,high,0.24944666,0.2795536,0.4709997,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-04-14,low,normal,0.20115957,0.5838889,0.21495155,Use standard monitoring and normal lifecycle messaging.
+2025-04-15,normal,normal,0.28058612,0.55727273,0.16214117,Use standard monitoring and normal lifecycle messaging.
+2025-04-16,normal,normal,0.19638519,0.52907515,0.27453965,Use standard monitoring and normal lifecycle messaging.
+2025-04-17,normal,low,0.67977333,0.27584666,0.044379998,Normal operations; consider using calm-market windows for product education.
+2025-04-22,normal,low,0.7026114,0.26405707,0.033331525,Normal operations; consider using calm-market windows for product education.
+2025-04-23,low,normal,0.37258828,0.50010085,0.12731084,Use standard monitoring and normal lifecycle messaging.
+2025-04-24,low,normal,0.4321049,0.43495607,0.13293906,Use standard monitoring and normal lifecycle messaging.
+2025-04-25,normal,normal,0.3015231,0.6025958,0.09588111,Use standard monitoring and normal lifecycle messaging.
+2025-04-28,low,low,0.515714,0.4409322,0.043353774,Normal operations; consider using calm-market windows for product education.
+2025-04-29,low,low,0.69680595,0.28030482,0.022889223,Normal operations; consider using calm-market windows for product education.
+2025-04-30,normal,high,0.110250354,0.16070214,0.72904754,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-05-01,normal,high,0.08194799,0.15095505,0.76709694,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-05-02,high,high,0.16316602,0.1826332,0.6542008,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-05-05,high,high,0.14891945,0.12745254,0.723628,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-05-06,low,normal,0.3972392,0.47994626,0.12281458,Use standard monitoring and normal lifecycle messaging.
+2025-05-07,high,high,0.33506602,0.26707456,0.39785942,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-05-08,normal,normal,0.37820822,0.5735346,0.048257202,Use standard monitoring and normal lifecycle messaging.
+2025-05-09,normal,normal,0.35534707,0.43463352,0.21001938,Use standard monitoring and normal lifecycle messaging.
+2025-05-12,high,high,0.19522773,0.107318826,0.6974535,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-05-13,low,low,0.33687586,0.33229446,0.33082968,Normal operations; consider using calm-market windows for product education.
+2025-05-14,normal,high,0.29120484,0.17316188,0.53563327,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-05-15,normal,high,0.16811633,0.19473742,0.63714623,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-05-16,low,low,0.5342849,0.38809773,0.07761739,Normal operations; consider using calm-market windows for product education.
+2025-05-19,normal,normal,0.423982,0.49624613,0.07977185,Use standard monitoring and normal lifecycle messaging.
+2025-05-20,low,low,0.7706707,0.21910588,0.010223422,Normal operations; consider using calm-market windows for product education.
+2025-05-21,high,high,0.13188986,0.31958297,0.5485272,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-05-22,normal,normal,0.42430004,0.5375014,0.03819854,Use standard monitoring and normal lifecycle messaging.
+2025-05-23,high,normal,0.24640144,0.499134,0.2544646,Use standard monitoring and normal lifecycle messaging.
+2025-05-26,low,low,0.6558654,0.3237312,0.020403402,Normal operations; consider using calm-market windows for product education.
+2025-05-27,normal,normal,0.3897298,0.5919185,0.018351682,Use standard monitoring and normal lifecycle messaging.
+2025-05-28,low,low,0.57638925,0.41265577,0.01095499,Normal operations; consider using calm-market windows for product education.
+2025-05-29,low,normal,0.12855324,0.73659366,0.13485311,Use standard monitoring and normal lifecycle messaging.
+2025-05-30,normal,normal,0.40311658,0.5718944,0.02498903,Use standard monitoring and normal lifecycle messaging.
+2025-06-02,normal,normal,0.45608884,0.5297594,0.014151701,Use standard monitoring and normal lifecycle messaging.
+2025-06-03,low,low,0.89472103,0.10127539,0.0040035965,Normal operations; consider using calm-market windows for product education.
+2025-06-04,high,normal,0.217344,0.64357704,0.13907897,Use standard monitoring and normal lifecycle messaging.
+2025-06-05,normal,low,0.504777,0.4606281,0.03459487,Normal operations; consider using calm-market windows for product education.
+2025-06-06,low,low,0.69613713,0.29647878,0.0073841573,Normal operations; consider using calm-market windows for product education.
+2025-06-09,normal,normal,0.24843305,0.7178837,0.033683293,Use standard monitoring and normal lifecycle messaging.
+2025-06-10,normal,normal,0.22245096,0.5957999,0.18174912,Use standard monitoring and normal lifecycle messaging.
+2025-06-11,low,normal,0.3780252,0.6009718,0.021003,Use standard monitoring and normal lifecycle messaging.
+2025-06-12,high,high,0.1087389,0.30646372,0.5847974,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-06-13,high,high,0.10825732,0.30031562,0.591427,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-06-16,normal,normal,0.14620091,0.561758,0.29204115,Use standard monitoring and normal lifecycle messaging.
+2025-06-17,high,normal,0.14917625,0.6320335,0.21879026,Use standard monitoring and normal lifecycle messaging.
+2025-06-18,normal,normal,0.4670669,0.5061476,0.026785467,Use standard monitoring and normal lifecycle messaging.
+2025-06-19,low,low,0.561341,0.38696322,0.051695842,Normal operations; consider using calm-market windows for product education.
+2025-06-20,normal,normal,0.4483446,0.521443,0.030212404,Use standard monitoring and normal lifecycle messaging.
+2025-06-23,normal,high,0.16749264,0.31484225,0.5176651,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-06-24,normal,normal,0.38011968,0.5547144,0.06516594,Use standard monitoring and normal lifecycle messaging.
+2025-06-25,low,low,0.5554452,0.39968732,0.04486749,Normal operations; consider using calm-market windows for product education.
+2025-06-26,low,high,0.10576892,0.3562676,0.5379635,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-06-27,normal,low,0.55131304,0.43562472,0.013062253,Normal operations; consider using calm-market windows for product education.
+2025-06-30,high,normal,0.07435524,0.772651,0.15299374,Use standard monitoring and normal lifecycle messaging.
+2025-07-01,normal,normal,0.42718908,0.5477774,0.025033496,Use standard monitoring and normal lifecycle messaging.
+2025-07-02,low,low,0.53247,0.45255595,0.014974108,Normal operations; consider using calm-market windows for product education.
+2025-07-03,low,normal,0.19373865,0.5697837,0.23647766,Use standard monitoring and normal lifecycle messaging.
+2025-07-04,low,low,0.52065915,0.46827534,0.01106552,Normal operations; consider using calm-market windows for product education.
+2025-07-07,normal,low,0.66253257,0.3197612,0.017706228,Normal operations; consider using calm-market windows for product education.
+2025-07-08,low,low,0.6395339,0.32951665,0.030949485,Normal operations; consider using calm-market windows for product education.
+2025-07-09,low,low,0.7955354,0.19741884,0.007045798,Normal operations; consider using calm-market windows for product education.
+2025-07-10,low,low,0.9168513,0.07850638,0.004642345,Normal operations; consider using calm-market windows for product education.
+2025-07-11,normal,low,0.8151409,0.17626935,0.008589687,Normal operations; consider using calm-market windows for product education.
+2025-07-14,low,low,0.7568988,0.23754866,0.0055525713,Normal operations; consider using calm-market windows for product education.
+2025-07-15,low,normal,0.25409842,0.7259465,0.019955048,Use standard monitoring and normal lifecycle messaging.
+2025-07-16,low,normal,0.26955357,0.696056,0.034390397,Use standard monitoring and normal lifecycle messaging.
+2025-07-17,normal,normal,0.3552521,0.6227122,0.022035677,Use standard monitoring and normal lifecycle messaging.
+2025-07-18,low,low,0.7477635,0.24099712,0.011239325,Normal operations; consider using calm-market windows for product education.
+2025-07-21,normal,normal,0.13780986,0.82543087,0.036759317,Use standard monitoring and normal lifecycle messaging.
+2025-07-22,low,low,0.5376294,0.44537276,0.016997822,Normal operations; consider using calm-market windows for product education.
+2025-07-23,normal,low,0.5400664,0.4510206,0.008912983,Normal operations; consider using calm-market windows for product education.
+2025-07-24,low,normal,0.36566672,0.6150571,0.0192762,Use standard monitoring and normal lifecycle messaging.
+2025-07-25,normal,normal,0.17379278,0.7932712,0.032936037,Use standard monitoring and normal lifecycle messaging.
+2025-07-28,normal,normal,0.3722255,0.60693884,0.020835677,Use standard monitoring and normal lifecycle messaging.
+2025-07-29,low,low,0.6945163,0.29479367,0.010690052,Normal operations; consider using calm-market windows for product education.
+2025-07-30,low,normal,0.23773588,0.68872184,0.07354224,Use standard monitoring and normal lifecycle messaging.
+2025-07-31,low,normal,0.45985204,0.51556396,0.024584,Use standard monitoring and normal lifecycle messaging.
+2025-08-01,low,high,0.16895707,0.32752696,0.50351596,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-08-04,normal,low,0.68925923,0.28380713,0.026933666,Normal operations; consider using calm-market windows for product education.
+2025-08-05,low,low,0.5284344,0.46154046,0.010025104,Normal operations; consider using calm-market windows for product education.
+2025-08-06,low,low,0.83156294,0.16335985,0.0050772075,Normal operations; consider using calm-market windows for product education.
+2025-08-07,low,normal,0.41358066,0.56435454,0.022064792,Use standard monitoring and normal lifecycle messaging.
+2025-08-08,low,normal,0.20098233,0.74783474,0.051182922,Use standard monitoring and normal lifecycle messaging.
+2025-08-11,low,low,0.73878455,0.25452366,0.006691806,Normal operations; consider using calm-market windows for product education.
+2025-08-12,normal,low,0.64281756,0.34655225,0.010630135,Normal operations; consider using calm-market windows for product education.
+2025-08-13,low,normal,0.26825672,0.70622057,0.025522685,Use standard monitoring and normal lifecycle messaging.
+2025-08-14,normal,normal,0.24447237,0.69160765,0.06392001,Use standard monitoring and normal lifecycle messaging.
+2025-08-15,low,low,0.93982834,0.056602776,0.0035689212,Normal operations; consider using calm-market windows for product education.
+2025-08-18,low,low,0.92338294,0.0727058,0.003911242,Normal operations; consider using calm-market windows for product education.
+2025-08-19,low,low,0.8655094,0.12964076,0.0048498795,Normal operations; consider using calm-market windows for product education.
+2025-08-20,normal,low,0.6445246,0.34921053,0.006264892,Normal operations; consider using calm-market windows for product education.
+2025-08-21,low,low,0.7285386,0.26626083,0.005200633,Normal operations; consider using calm-market windows for product education.
+2025-08-22,high,high,0.13069777,0.41015783,0.45914435,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-08-25,normal,low,0.9408278,0.055505503,0.0036666489,Normal operations; consider using calm-market windows for product education.
+2025-08-26,low,normal,0.22112283,0.74755967,0.031317465,Use standard monitoring and normal lifecycle messaging.
+2025-08-27,low,low,0.93210834,0.064941585,0.002950041,Normal operations; consider using calm-market windows for product education.
+2025-08-28,normal,low,0.507394,0.48025274,0.012353278,Normal operations; consider using calm-market windows for product education.
+2025-08-29,low,low,0.5986742,0.3904392,0.010886552,Normal operations; consider using calm-market windows for product education.
+2025-09-01,low,low,0.9095791,0.08342573,0.0069951164,Normal operations; consider using calm-market windows for product education.
+2025-09-02,low,low,0.62402576,0.36395976,0.012014495,Normal operations; consider using calm-market windows for product education.
+2025-09-03,low,low,0.774905,0.21695198,0.008142959,Normal operations; consider using calm-market windows for product education.
+2025-09-04,low,low,0.7655209,0.22592631,0.008552871,Normal operations; consider using calm-market windows for product education.
+2025-09-05,normal,normal,0.47776756,0.51396143,0.0082709985,Use standard monitoring and normal lifecycle messaging.
+2025-09-08,low,low,0.7010431,0.29134053,0.007616296,Normal operations; consider using calm-market windows for product education.
+2025-09-09,low,low,0.94262254,0.054267373,0.0031101054,Normal operations; consider using calm-market windows for product education.
+2025-09-10,low,low,0.9454208,0.050153162,0.004426051,Normal operations; consider using calm-market windows for product education.
+2025-09-11,low,low,0.91590506,0.08088426,0.0032106861,Normal operations; consider using calm-market windows for product education.
+2025-09-12,low,low,0.545444,0.44064188,0.013914108,Normal operations; consider using calm-market windows for product education.
+2025-09-15,normal,low,0.7198138,0.27077985,0.009406307,Normal operations; consider using calm-market windows for product education.
+2025-09-16,normal,low,0.81623334,0.17804664,0.0057200217,Normal operations; consider using calm-market windows for product education.
+2025-09-17,low,low,0.91606593,0.0804411,0.0034930035,Normal operations; consider using calm-market windows for product education.
+2025-09-18,normal,normal,0.34693402,0.632249,0.020816945,Use standard monitoring and normal lifecycle messaging.
+2025-09-19,normal,normal,0.3733507,0.60463023,0.022019008,Use standard monitoring and normal lifecycle messaging.
+2025-09-22,normal,low,0.80328816,0.19122626,0.0054856,Normal operations; consider using calm-market windows for product education.
+2025-09-23,low,low,0.8776829,0.11831477,0.004002308,Normal operations; consider using calm-market windows for product education.
+2025-09-24,normal,normal,0.25654757,0.70809484,0.035357617,Use standard monitoring and normal lifecycle messaging.
+2025-09-25,low,normal,0.27127954,0.6871729,0.041547585,Use standard monitoring and normal lifecycle messaging.
+2025-09-26,low,low,0.7775896,0.21393047,0.008479879,Normal operations; consider using calm-market windows for product education.
+2025-09-29,normal,normal,0.28831682,0.6897563,0.021926899,Use standard monitoring and normal lifecycle messaging.
+2025-09-30,low,low,0.90847075,0.08371362,0.007815678,Normal operations; consider using calm-market windows for product education.
+2025-10-01,low,low,0.6377528,0.3532244,0.009022836,Normal operations; consider using calm-market windows for product education.
+2025-10-02,low,low,0.49411976,0.489721,0.016159251,Normal operations; consider using calm-market windows for product education.
+2025-10-03,low,low,0.6134798,0.37734565,0.009174537,Normal operations; consider using calm-market windows for product education.
+2025-10-06,low,low,0.63685644,0.35286874,0.010274803,Normal operations; consider using calm-market windows for product education.
+2025-10-07,low,low,0.91299963,0.08136967,0.005630624,Normal operations; consider using calm-market windows for product education.
+2025-10-08,normal,normal,0.25235644,0.69053215,0.057111397,Use standard monitoring and normal lifecycle messaging.
+2025-10-09,low,low,0.74436116,0.24303599,0.012602834,Normal operations; consider using calm-market windows for product education.
+2025-10-10,normal,normal,0.23611864,0.72471106,0.039170336,Use standard monitoring and normal lifecycle messaging.
+2025-10-13,low,low,0.59666216,0.38126463,0.022073206,Normal operations; consider using calm-market windows for product education.
+2025-10-14,low,low,0.57780313,0.4083933,0.013803561,Normal operations; consider using calm-market windows for product education.
+2025-10-15,normal,low,0.67391205,0.31172413,0.014363794,Normal operations; consider using calm-market windows for product education.
+2025-10-16,low,low,0.88060933,0.11284224,0.0065484056,Normal operations; consider using calm-market windows for product education.
+2025-10-17,low,low,0.5557568,0.4335239,0.0107192425,Normal operations; consider using calm-market windows for product education.
+2025-10-20,low,low,0.7923847,0.20245665,0.0051587126,Normal operations; consider using calm-market windows for product education.
+2025-10-21,normal,normal,0.22539204,0.7336348,0.04097316,Use standard monitoring and normal lifecycle messaging.
+2025-10-22,low,low,0.93256325,0.06282837,0.0046084067,Normal operations; consider using calm-market windows for product education.
+2025-10-23,low,normal,0.4217974,0.5632484,0.014954175,Use standard monitoring and normal lifecycle messaging.
+2025-10-24,low,low,0.92185354,0.07167063,0.006475888,Normal operations; consider using calm-market windows for product education.
+2025-10-27,normal,low,0.82407045,0.1689117,0.0070178644,Normal operations; consider using calm-market windows for product education.
+2025-10-28,low,low,0.5895037,0.39340913,0.017087102,Normal operations; consider using calm-market windows for product education.
+2025-10-29,low,normal,0.18443866,0.6738527,0.14170864,Use standard monitoring and normal lifecycle messaging.
+2025-10-30,low,normal,0.27673724,0.6891258,0.034136996,Use standard monitoring and normal lifecycle messaging.
+2025-10-31,low,low,0.9262041,0.06672513,0.007070752,Normal operations; consider using calm-market windows for product education.
+2025-11-03,low,low,0.92630696,0.067393,0.006300097,Normal operations; consider using calm-market windows for product education.
+2025-11-04,normal,low,0.6109613,0.37367728,0.015361363,Normal operations; consider using calm-market windows for product education.
+2025-11-05,low,low,0.80302894,0.18847753,0.008493582,Normal operations; consider using calm-market windows for product education.
+2025-11-06,normal,normal,0.30910352,0.670136,0.020760488,Use standard monitoring and normal lifecycle messaging.
+2025-11-07,normal,normal,0.25880617,0.6609652,0.08022866,Use standard monitoring and normal lifecycle messaging.
+2025-11-10,low,low,0.8734935,0.113982625,0.012523916,Normal operations; consider using calm-market windows for product education.
+2025-11-11,low,normal,0.28073454,0.66645056,0.052814882,Use standard monitoring and normal lifecycle messaging.
+2025-11-12,normal,low,0.72133535,0.26208735,0.016577292,Normal operations; consider using calm-market windows for product education.
+2025-11-13,low,low,0.5800314,0.37231264,0.047655996,Normal operations; consider using calm-market windows for product education.
+2025-11-14,high,high,0.064704485,0.1650485,0.77024704,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-11-17,high,low,0.7529799,0.23298112,0.014038955,Normal operations; consider using calm-market windows for product education.
+2025-11-18,low,low,0.8053957,0.18794489,0.0066594197,Normal operations; consider using calm-market windows for product education.
+2025-11-19,normal,low,0.5930573,0.37340817,0.033534557,Normal operations; consider using calm-market windows for product education.
+2025-11-20,normal,low,0.80775553,0.1865125,0.0057319505,Normal operations; consider using calm-market windows for product education.
+2025-11-21,low,low,0.7683101,0.22434588,0.007344023,Normal operations; consider using calm-market windows for product education.
+2025-11-24,normal,low,0.6075606,0.3685106,0.023928864,Normal operations; consider using calm-market windows for product education.
+2025-11-25,normal,normal,0.4149072,0.5570826,0.028010208,Use standard monitoring and normal lifecycle messaging.
+2025-11-26,normal,normal,0.11997503,0.56432736,0.31569764,Use standard monitoring and normal lifecycle messaging.
+2025-11-27,normal,low,0.58073366,0.40132403,0.017942285,Normal operations; consider using calm-market windows for product education.
+2025-11-28,low,high,0.23670384,0.289108,0.47418818,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-12-01,low,low,0.8663996,0.12804063,0.0055598123,Normal operations; consider using calm-market windows for product education.
+2025-12-02,low,low,0.89185417,0.10298352,0.0051623695,Normal operations; consider using calm-market windows for product education.
+2025-12-03,low,normal,0.4614123,0.53142077,0.007166921,Use standard monitoring and normal lifecycle messaging.
+2025-12-04,normal,normal,0.44265535,0.54808915,0.009255486,Use standard monitoring and normal lifecycle messaging.
+2025-12-05,low,low,0.86623126,0.12919912,0.004569609,Normal operations; consider using calm-market windows for product education.
+2025-12-08,low,low,0.7914365,0.20302682,0.005536713,Normal operations; consider using calm-market windows for product education.
+2025-12-09,low,low,0.92869216,0.06662462,0.00468319,Normal operations; consider using calm-market windows for product education.
+2025-12-10,low,low,0.9002229,0.09284244,0.0069347164,Normal operations; consider using calm-market windows for product education.
+2025-12-11,low,normal,0.44489422,0.5366957,0.018410074,Use standard monitoring and normal lifecycle messaging.
+2025-12-12,low,low,0.6502918,0.3265842,0.023123998,Normal operations; consider using calm-market windows for product education.
+2025-12-15,low,normal,0.20921813,0.6215142,0.16926765,Use standard monitoring and normal lifecycle messaging.
+2025-12-16,low,low,0.71318334,0.27693376,0.0098829,Normal operations; consider using calm-market windows for product education.
+2025-12-17,low,normal,0.4082488,0.57811916,0.013632081,Use standard monitoring and normal lifecycle messaging.
+2025-12-18,low,low,0.6694212,0.3243891,0.0061897165,Normal operations; consider using calm-market windows for product education.
+2025-12-19,low,low,0.90775377,0.0883351,0.003911154,Normal operations; consider using calm-market windows for product education.
+2025-12-22,low,low,0.84090734,0.15046982,0.008622818,Normal operations; consider using calm-market windows for product education.
+2025-12-23,low,low,0.92504555,0.06887429,0.0060801352,Normal operations; consider using calm-market windows for product education.
+2025-12-24,high,high,0.11323737,0.14497274,0.7417899,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-12-26,low,high,0.13633306,0.2259254,0.63774157,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2025-12-29,normal,low,0.77435493,0.2198405,0.005804564,Normal operations; consider using calm-market windows for product education.
+2025-12-30,low,normal,0.17368032,0.4671052,0.35921443,Use standard monitoring and normal lifecycle messaging.
+2025-12-31,normal,low,0.49829045,0.481125,0.020584505,Normal operations; consider using calm-market windows for product education.
+2026-01-02,low,low,0.7898128,0.20033176,0.009855431,Normal operations; consider using calm-market windows for product education.
+2026-01-05,low,low,0.6514334,0.33928362,0.009282987,Normal operations; consider using calm-market windows for product education.
+2026-01-06,low,low,0.8714014,0.12395046,0.0046480857,Normal operations; consider using calm-market windows for product education.
+2026-01-07,low,low,0.88177633,0.1109881,0.0072355657,Normal operations; consider using calm-market windows for product education.
+2026-01-08,low,low,0.6588144,0.3315177,0.009667938,Normal operations; consider using calm-market windows for product education.
+2026-01-09,low,low,0.7142846,0.26891726,0.016798146,Normal operations; consider using calm-market windows for product education.
+2026-01-12,normal,normal,0.46761993,0.47969046,0.052689616,Use standard monitoring and normal lifecycle messaging.
+2026-01-13,normal,normal,0.45049688,0.5290954,0.020407706,Use standard monitoring and normal lifecycle messaging.
+2026-01-14,normal,low,0.5057652,0.4208997,0.0733351,Normal operations; consider using calm-market windows for product education.
+2026-01-15,normal,low,0.69706315,0.28989646,0.013040399,Normal operations; consider using calm-market windows for product education.
+2026-01-16,low,low,0.89516085,0.10054186,0.0042973026,Normal operations; consider using calm-market windows for product education.
+2026-01-19,low,low,0.87658846,0.11864252,0.0047690384,Normal operations; consider using calm-market windows for product education.
+2026-01-20,normal,low,0.842027,0.15317768,0.004795344,Normal operations; consider using calm-market windows for product education.
+2026-01-21,normal,normal,0.2697674,0.46710142,0.26313114,Use standard monitoring and normal lifecycle messaging.
+2026-01-22,low,low,0.7721189,0.21837878,0.009502307,Normal operations; consider using calm-market windows for product education.
+2026-01-23,high,low,0.5343427,0.4532746,0.012382688,Normal operations; consider using calm-market windows for product education.
+2026-01-26,low,low,0.42719415,0.42071846,0.15208744,Normal operations; consider using calm-market windows for product education.
+2026-01-27,normal,normal,0.3887437,0.5429041,0.0683522,Use standard monitoring and normal lifecycle messaging.
+2026-01-28,low,normal,0.13583133,0.6135587,0.25060993,Use standard monitoring and normal lifecycle messaging.
+2026-01-29,low,low,0.5245528,0.4084971,0.06695009,Normal operations; consider using calm-market windows for product education.
+2026-01-30,high,normal,0.15845938,0.54062575,0.30091488,Use standard monitoring and normal lifecycle messaging.
+2026-02-02,low,normal,0.15973671,0.5780857,0.26217756,Use standard monitoring and normal lifecycle messaging.
+2026-02-03,normal,normal,0.34828836,0.5484087,0.10330297,Use standard monitoring and normal lifecycle messaging.
+2026-02-04,normal,normal,0.47333068,0.49628225,0.030387085,Use standard monitoring and normal lifecycle messaging.
+2026-02-05,normal,low,0.6146823,0.37018657,0.015131121,Normal operations; consider using calm-market windows for product education.
+2026-02-06,normal,low,0.6252325,0.35059923,0.024168275,Normal operations; consider using calm-market windows for product education.
+2026-02-09,low,low,0.55694854,0.3806537,0.06239775,Normal operations; consider using calm-market windows for product education.
+2026-02-10,low,low,0.6006169,0.37730888,0.02207423,Normal operations; consider using calm-market windows for product education.
+2026-02-11,normal,normal,0.3954005,0.51689696,0.08770253,Use standard monitoring and normal lifecycle messaging.
+2026-02-12,low,high,0.112562224,0.40133977,0.48609808,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2026-02-13,low,low,0.67535114,0.29888192,0.025766954,Normal operations; consider using calm-market windows for product education.
+2026-02-16,low,normal,0.46188498,0.5269891,0.011125918,Use standard monitoring and normal lifecycle messaging.
+2026-02-17,low,low,0.5287083,0.46174172,0.009550011,Normal operations; consider using calm-market windows for product education.
+2026-02-18,low,low,0.5029935,0.48521245,0.011794052,Normal operations; consider using calm-market windows for product education.
+2026-02-19,normal,low,0.79583436,0.1916225,0.012543183,Normal operations; consider using calm-market windows for product education.
+2026-02-20,low,low,0.75475466,0.23997818,0.0052671973,Normal operations; consider using calm-market windows for product education.
+2026-02-23,low,low,0.8816359,0.11154151,0.0068226107,Normal operations; consider using calm-market windows for product education.
+2026-02-24,low,low,0.7504528,0.24319595,0.0063511953,Normal operations; consider using calm-market windows for product education.
+2026-02-25,normal,normal,0.18610586,0.7193836,0.09451048,Use standard monitoring and normal lifecycle messaging.
+2026-02-26,low,high,0.12716162,0.42415968,0.44867873,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2026-02-27,normal,normal,0.26669142,0.6970914,0.036217224,Use standard monitoring and normal lifecycle messaging.
+2026-03-02,high,high,0.10143263,0.33784306,0.5607243,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2026-03-03,high,high,0.19393583,0.28358808,0.52247614,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2026-03-04,high,high,0.23038578,0.3330941,0.43652013,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2026-03-05,high,high,0.24989392,0.35688913,0.393217,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2026-03-06,low,high,0.2770996,0.34449,0.37841037,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2026-03-09,high,normal,0.2830403,0.3846321,0.33232757,Use standard monitoring and normal lifecycle messaging.
+2026-03-10,normal,high,0.27919054,0.2314305,0.48937896,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2026-03-11,low,normal,0.3975815,0.5639796,0.038438857,Use standard monitoring and normal lifecycle messaging.
+2026-03-12,low,normal,0.2332597,0.47654644,0.29019386,Use standard monitoring and normal lifecycle messaging.
+2026-03-13,high,normal,0.44623294,0.4970359,0.056731172,Use standard monitoring and normal lifecycle messaging.
+2026-03-16,normal,normal,0.46454716,0.48458257,0.050870292,Use standard monitoring and normal lifecycle messaging.
+2026-03-17,low,low,0.7372244,0.2422577,0.020517943,Normal operations; consider using calm-market windows for product education.
+2026-03-18,high,high,0.11804458,0.34347233,0.5384831,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2026-03-19,high,low,0.62984836,0.35316816,0.016983505,Normal operations; consider using calm-market windows for product education.
+2026-03-20,high,high,0.07737875,0.29076016,0.63186115,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2026-03-23,high,high,0.0805178,0.29158944,0.62789273,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2026-03-24,normal,low,0.56225467,0.3415701,0.09617519,Normal operations; consider using calm-market windows for product education.
+2026-03-25,low,normal,0.3362262,0.5916106,0.07216319,Use standard monitoring and normal lifecycle messaging.
+2026-03-26,normal,low,0.8788941,0.10810064,0.0130053,Normal operations; consider using calm-market windows for product education.
+2026-03-27,low,low,0.6547529,0.33309865,0.012148399,Normal operations; consider using calm-market windows for product education.
+2026-03-30,normal,low,0.5157474,0.43301567,0.05123689,Normal operations; consider using calm-market windows for product education.
+2026-03-31,normal,normal,0.13700177,0.4602959,0.4027024,Use standard monitoring and normal lifecycle messaging.
+2026-04-01,normal,normal,0.39881068,0.52563393,0.075555414,Use standard monitoring and normal lifecycle messaging.
+2026-04-02,low,normal,0.36190087,0.5537221,0.084377,Use standard monitoring and normal lifecycle messaging.
+2026-04-03,low,low,0.86453706,0.12756507,0.007897927,Normal operations; consider using calm-market windows for product education.
+2026-04-06,low,normal,0.25620747,0.722478,0.02131459,Use standard monitoring and normal lifecycle messaging.
+2026-04-07,normal,normal,0.0940064,0.65251637,0.25347728,Use standard monitoring and normal lifecycle messaging.
+2026-04-08,high,high,0.060767803,0.2231988,0.71603334,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2026-04-09,low,normal,0.4435187,0.505783,0.050698247,Use standard monitoring and normal lifecycle messaging.
+2026-04-10,normal,normal,0.31436193,0.65768003,0.027958063,Use standard monitoring and normal lifecycle messaging.
+2026-04-13,low,normal,0.32344478,0.64036417,0.036191065,Use standard monitoring and normal lifecycle messaging.
+2026-04-14,normal,normal,0.13773215,0.60519284,0.257075,Use standard monitoring and normal lifecycle messaging.
+2026-04-15,low,low,0.6383935,0.34531716,0.016289368,Normal operations; consider using calm-market windows for product education.
+2026-04-16,low,normal,0.3492722,0.62858576,0.022142028,Use standard monitoring and normal lifecycle messaging.
+2026-04-17,normal,high,0.11951786,0.34701443,0.5334677,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2026-04-20,low,normal,0.44034117,0.52717525,0.03248358,Use standard monitoring and normal lifecycle messaging.
+2026-04-21,high,normal,0.42095867,0.56172633,0.017314991,Use standard monitoring and normal lifecycle messaging.
+2026-04-22,normal,low,0.77327716,0.22159205,0.005130765,Normal operations; consider using calm-market windows for product education.
+2026-04-23,low,low,0.72140926,0.27066106,0.007929729,Normal operations; consider using calm-market windows for product education.
+2026-04-24,low,normal,0.40919608,0.5619612,0.02884274,Use standard monitoring and normal lifecycle messaging.
+2026-04-27,low,low,0.72004765,0.27526262,0.0046896795,Normal operations; consider using calm-market windows for product education.
+2026-04-28,low,low,0.915991,0.080808245,0.0032007452,Normal operations; consider using calm-market windows for product education.
+2026-04-29,high,normal,0.23101707,0.61717737,0.15180556,Use standard monitoring and normal lifecycle messaging.
+2026-04-30,normal,normal,0.36031675,0.5985271,0.041156232,Use standard monitoring and normal lifecycle messaging.
+2026-05-01,low,low,0.6584874,0.32773158,0.013781092,Normal operations; consider using calm-market windows for product education.
+2026-05-04,low,normal,0.26600957,0.70840347,0.025586996,Use standard monitoring and normal lifecycle messaging.
+2026-05-05,low,normal,0.41322458,0.56804395,0.018731482,Use standard monitoring and normal lifecycle messaging.
+2026-05-06,high,normal,0.17804813,0.44476828,0.37718362,Use standard monitoring and normal lifecycle messaging.
+2026-05-07,normal,low,0.6324888,0.34831408,0.019197104,Normal operations; consider using calm-market windows for product education.
+2026-05-08,normal,normal,0.33315206,0.62685525,0.03999271,Use standard monitoring and normal lifecycle messaging.
+2026-05-11,high,normal,0.3645258,0.58823,0.047244225,Use standard monitoring and normal lifecycle messaging.
+2026-05-12,high,normal,0.16682845,0.6012192,0.23195235,Use standard monitoring and normal lifecycle messaging.
+2026-05-13,low,normal,0.46970925,0.48729992,0.0429908,Use standard monitoring and normal lifecycle messaging.
+2026-05-14,low,low,0.91568077,0.07743685,0.006882449,Normal operations; consider using calm-market windows for product education.
+2026-05-15,low,low,0.59930426,0.35380328,0.046892468,Normal operations; consider using calm-market windows for product education.
+2026-05-18,low,low,0.4670078,0.4345454,0.09844677,Normal operations; consider using calm-market windows for product education.
+2026-05-19,high,normal,0.17246044,0.5326904,0.29484922,Use standard monitoring and normal lifecycle messaging.
+2026-05-20,normal,normal,0.1367711,0.61957693,0.24365196,Use standard monitoring and normal lifecycle messaging.
+2026-05-21,low,low,0.63883007,0.3409624,0.020207549,Normal operations; consider using calm-market windows for product education.
+2026-05-22,normal,low,0.48398706,0.48190576,0.03410715,Normal operations; consider using calm-market windows for product education.
+2026-05-25,low,low,0.7608574,0.22909048,0.010052129,Normal operations; consider using calm-market windows for product education.
+2026-05-26,normal,normal,0.3634727,0.5588095,0.07771781,Use standard monitoring and normal lifecycle messaging.
+2026-05-27,low,low,0.5292597,0.44812572,0.02261458,Normal operations; consider using calm-market windows for product education.
+2026-05-28,normal,normal,0.19344755,0.65349114,0.1530613,Use standard monitoring and normal lifecycle messaging.
+2026-05-29,normal,normal,0.36209536,0.5916439,0.046260703,Use standard monitoring and normal lifecycle messaging.
+2026-06-01,low,normal,0.26295954,0.6833447,0.05369574,Use standard monitoring and normal lifecycle messaging.
+2026-06-02,low,normal,0.44089577,0.54635096,0.012753281,Use standard monitoring and normal lifecycle messaging.
+2026-06-03,normal,normal,0.09856096,0.6024477,0.29899138,Use standard monitoring and normal lifecycle messaging.
+2026-06-04,low,high,0.10914895,0.24749629,0.6433548,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2026-06-05,high,high,0.0962148,0.17771102,0.72607416,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2026-06-08,high,high,0.229033,0.26711047,0.50385654,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2026-06-09,low,high,0.26763457,0.36330447,0.36906096,"Prepare rate-change messaging, transaction monitoring, and support readiness."
+2026-06-10,low,normal,0.40870816,0.5606658,0.030626029,Use standard monitoring and normal lifecycle messaging.
+2026-06-11,normal,low,0.57904,0.3994755,0.021484502,Normal operations; consider using calm-market windows for product education.
+2026-06-12,normal,low,0.6581136,0.3326812,0.009205222,Normal operations; consider using calm-market windows for product education.

@@ -1,0 +1,3 @@
+regime_definition,method,low_threshold,high_threshold,cluster_centers,cluster_centers_sorted,cluster_to_regime
+Quantile tercile,train_quantile,0.002075930032358464,0.004816983790226459,,,
+KMeans volatility clusters,train_kmeans_1d_abs_return,,,"0.00588077, 0.00180067, 0.01280875","0.00180067, 0.00588077, 0.01280875","{1: 'low', 0: 'normal', 2: 'high'}"
