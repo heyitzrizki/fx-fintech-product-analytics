@@ -1,0 +1,5 @@
+severity,checks,checks_with_issues,affected_rows
+all,20,11,4219556
+error,10,1,1675
+review,1,1,7337
+warning,9,9,4210544

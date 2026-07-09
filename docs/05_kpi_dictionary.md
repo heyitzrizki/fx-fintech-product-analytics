@@ -349,7 +349,7 @@ Transaction success rate indicates execution reliability across market condition
 
 ### Definition
 
-FX market regime classifies market conditions based on simulated FX volatility.
+The transaction-behavior analysis uses legacy simulated regime labels stored with the synthetic product data. The separate volatility model defines regimes from historical Yahoo Finance FX observations.
 
 ### Regime Values
 
@@ -500,4 +500,4 @@ The modeling table is ready for predictive modeling of repeat transaction behavi
 
 ## Final Note
 
-All KPIs are calculated from a synthetic dataset. The results are intended for portfolio demonstration and analytical storytelling, not as actual company performance.
+Product KPIs are calculated from a synthetic dataset and do not represent actual company performance. FX volatility model inputs are historical Yahoo Finance observations.

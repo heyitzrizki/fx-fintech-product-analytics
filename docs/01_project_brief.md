@@ -34,4 +34,4 @@ Main tables:
 
 ## Important Note
 
-This project uses a synthetic dataset created for portfolio and analytical demonstration purposes. The results should not be interpreted as actual Switchwon company performance.
+Product behavior in the SQLite database is synthetic and should not be interpreted as actual Switchwon company performance. The volatility model uses a cached snapshot of historical Yahoo Finance FX observations. The database's `fx_rates_hourly` table is a legacy simulated source and is not used to train that model.

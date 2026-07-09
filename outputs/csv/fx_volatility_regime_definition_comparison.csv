@@ -1,3 +1,3 @@
-regime_definition,best_model_by_f1,best_f1_macro,balanced_accuracy_for_best_f1_model,best_model_by_balanced_accuracy,best_balanced_accuracy,f1_macro_for_best_balanced_accuracy_model
-KMeans volatility clusters,XGBoost,0.5786136370594899,0.5786136370594899,Logistic Regression baseline,0.6017145831419736,0.5339521788023017
-Quantile tercile,Logistic Regression baseline,0.4955634481319879,0.5019239712354249,Logistic Regression baseline,0.5019239712354249,0.4955634481319879
+regime_definition,best_model_by_f1,best_f1_macro,balanced_accuracy_for_best_f1_model
+KMeans volatility clusters,Random Forest,0.5409685283412372,0.5996539501029137
+Quantile tercile,Random Forest,0.504732598237101,0.5167418776851552

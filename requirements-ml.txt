@@ -1,4 +1,3 @@
 -r requirements.txt
-lightgbm>=4.5
-torch>=2.3
-tensorflow>=2.16
+# Optional comparison model. The workflow skips it when unavailable.
+catboost>=1.2

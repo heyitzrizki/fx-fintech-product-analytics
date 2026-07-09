@@ -103,7 +103,7 @@ Analytical use:
 
 ### 4. fx_rates_hourly
 
-The `fx_rates_hourly` table contains hourly FX market data.
+The `fx_rates_hourly` table contains simulated hourly FX data used only for legacy descriptive regime joins and activity normalization. The volatility prediction model instead uses the cached Yahoo Finance daily snapshot in `data/external/yahoo_fx_daily.csv`.
 
 Main fields:
 
@@ -249,7 +249,7 @@ This mart is the core analytical layer used for funnel, activation, acquisition 
 
 ## Data Architecture Summary
 
-The database supports end-to-end product analytics:
+The database supports the product analytics workflow:
 
 ```text
 User acquisition

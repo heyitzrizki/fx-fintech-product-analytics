@@ -1,4 +1,4 @@
 actual_regime,Predicted low,Predicted normal,Predicted high
-Actual low,203,68,14
-Actual normal,75,100,16
-Actual high,7,23,30
+Actual low,157,97,27
+Actual normal,49,99,49
+Actual high,4,12,45

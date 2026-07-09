@@ -1,1477 +1,171 @@
-from pathlib import Path
-
-import numpy as np
 import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
 import streamlit as st
-from plotly.subplots import make_subplots
+
+from dashboard.charts import cohort_heatmap, funnel_chart, horizontal_bar
+from dashboard.config import PAGES
+from dashboard.data_loader import load_data
+from dashboard.ui import page_intro, pattern, percent
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-CSV_DIR = PROJECT_ROOT / "outputs" / "csv"
-
-COLOR_TEXT = "#1F2937"
-COLOR_MUTED = "#667085"
-COLOR_BORDER = "#E4E7EC"
-COLOR_PAGE = "#F6F8FB"
-COLOR_CARD = "#FFFFFF"
-COLOR_TEAL = "#247C7A"
-COLOR_NAVY = "#24476F"
-COLOR_BLUE = "#4C78A8"
-COLOR_ORANGE = "#B76E2B"
-COLOR_ROSE = "#B45F7A"
-COLOR_GREEN = "#4A8F6B"
-
-FEE_RATE_PROXY = 0.00025
-px.defaults.template = "plotly_white"
+st.set_page_config(page_title="FX Fintech Product Analytics", layout="wide")
+data = load_data()
+page = st.sidebar.radio("Page", PAGES)
+st.sidebar.caption("Synthetic product behavior; Yahoo Finance FX market data.")
 
 
-PAGES = [
-    "Executive Overview",
-    "Growth & Funnel Analytics",
-    "Retention & Cohort Analytics",
-    "Product Feature Insights",
-    "Campaign Targeting Studio",
-    "Segment Explorer",
-    "Campaign Simulator",
-    "Data Mart & Quality",
-    "Prediction Quality",
-    "FX Market Intelligence",
-]
-
-KO_PAGES = {
-    "Executive Overview": "경영진 개요",
-    "Growth & Funnel Analytics": "성장 및 퍼널 분석",
-    "Retention & Cohort Analytics": "리텐션 및 코호트 분석",
-    "Product Feature Insights": "제품 기능 인사이트",
-    "Campaign Targeting Studio": "캠페인 타깃팅 스튜디오",
-    "Segment Explorer": "세그먼트 탐색",
-    "Campaign Simulator": "캠페인 시뮬레이터",
-    "Data Mart & Quality": "데이터 마트 및 품질",
-    "Prediction Quality": "예측 품질",
-    "FX Market Intelligence": "FX 시장 인텔리전스",
-}
-
-PAGE_SUBTITLES = {
-    "Executive Overview": {
-        "English": "A business KPI dashboard for product growth, activation, retention opportunity, and campaign-ready audiences.",
-        "Korean": "제품 성장, 활성화, 리텐션 기회, 캠페인 가능 오디언스를 한눈에 보는 비즈니스 KPI 대시보드입니다.",
-    },
-    "Growth & Funnel Analytics": {
-        "English": "Analyze acquisition quality, onboarding conversion, activation, and channel-level growth opportunities.",
-        "Korean": "유입 채널 품질, 온보딩 전환, 활성화, 채널별 성장 기회를 분석합니다.",
-    },
-    "Retention & Cohort Analytics": {
-        "English": "Understand repeat exchange behavior, cohort retention, customer value, and retention risks.",
-        "Korean": "재거래 행동, 코호트 리텐션, 고객 가치, 리텐션 리스크를 파악합니다.",
-    },
-    "Product Feature Insights": {
-        "English": "Connect rate-alert and target-rate feature adoption with retention hypotheses and product actions.",
-        "Korean": "환율 알림 및 목표 환율 기능 채택을 리텐션 가설과 제품 액션으로 연결합니다.",
-    },
-    "Campaign Targeting Studio": {
-        "English": "Predict, segment, recommend, and export a CRM-ready audience for retention campaigns.",
-        "Korean": "리텐션 캠페인을 위한 CRM용 오디언스를 예측, 세분화, 추천, 내보내기까지 지원합니다.",
-    },
-    "Segment Explorer": {
-        "English": "Inspect user-level prediction results and filter audience lists for lifecycle planning.",
-        "Korean": "사용자별 예측 결과를 확인하고 라이프사이클 캠페인용 오디언스를 필터링합니다.",
-    },
-    "Campaign Simulator": {
-        "English": "Estimate directional campaign impact from uplift assumptions before launching retention actions.",
-        "Korean": "리텐션 액션 실행 전 캠페인 효과 가정을 바탕으로 예상 임팩트를 추정합니다.",
-    },
-    "Data Mart & Quality": {
-        "English": "Show the data mart, target definition, coverage, and quality checks behind the analysis.",
-        "Korean": "분석을 뒷받침하는 데이터 마트, 타깃 정의, 커버리지, 품질 점검을 보여줍니다.",
-    },
-    "Prediction Quality": {
-        "English": "Evaluate the repeat transaction prediction layer as decision support for CRM prioritization.",
-        "Korean": "CRM 우선순위 결정을 지원하는 재거래 예측 모델의 품질을 점검합니다.",
-    },
-    "FX Market Intelligence": {
-        "English": "Connect FX market regimes with transaction activity, success, and operational readiness.",
-        "Korean": "FX 시장 국면을 거래 활동, 성공률, 운영 준비와 연결합니다.",
-    },
-}
-
-KPI_INFO = {
-    "Valid signups": "Users who completed valid onboarding entry and are eligible for product activation tracking.",
-    "Activated users": "Users who completed activation within the defined early lifecycle window.",
-    "14-day activation rate": "Share of valid onboarding users who activated within 14 days.",
-    "D30 repeat rate": "Share of first-exchange users who repeated exchange activity within 30 days.",
-    "Expected repeat users": "Estimated repeat users calculated by summing predicted repeat probabilities.",
-    "Target audience": "Users selected by the current segment and threshold filters.",
-    "Avg repeat likelihood": "Average probability that selected users will repeat exchange activity in the next 30 days.",
-    "Baseline repeat users": "Expected repeat users before any campaign uplift assumption is applied.",
-    "Recent segment volume": "Total transaction volume generated by selected users in the last 90 days.",
-    "Priority users": "Users in at-risk or reliability-sensitive segments that may need CRM action.",
-    "Incremental repeat users": "Additional repeat users estimated from the campaign uplift assumption.",
-    "Estimated incremental volume": "Estimated extra transaction volume from incremental repeat users.",
-    "Fee proxy impact": "Estimated fee opportunity using a simplified FX fee-rate assumption.",
-    "Failed transaction rate": "Share of recent transaction attempts that failed.",
-    "Model ROC-AUC": "How well the model ranks likely repeat users above non-repeat users.",
-}
-
-GOAL_ACTIONS = {
-    "Increase repeat exchange": "Send lifecycle nudges with recent FX movement, saved beneficiaries, and a one-tap repeat exchange CTA.",
-    "Promote rate-alert adoption": "Prompt users to create rate alerts for their preferred currency pair.",
-    "Promote target-rate order": "Educate users about target-rate orders with a pre-filled setup path.",
-    "Reactivate inactive users": "Run reactivation education with trust, pricing clarity, and first-step guidance.",
-    "Protect high-value users": "Prioritize high-value users with concierge support and reliability reassurance.",
-}
-
-SEGMENT_LABELS = {
-    "All users": "All users",
-    "Low repeat probability users": "Low repeat likelihood users",
-    "Medium repeat probability users": "Medium repeat likelihood users",
-    "High repeat probability users": "High repeat likelihood users",
-    "High-value at-risk users": "High-value at-risk users",
-    "No recent transaction users": "No recent transaction users",
-    "High failed-ratio users": "High failed transaction users",
-}
-
-KO_SEGMENT_LABELS = {
-    "All users": "전체 사용자",
-    "Low repeat probability users": "낮은 재거래 가능성 사용자",
-    "Medium repeat probability users": "중간 재거래 가능성 사용자",
-    "High repeat probability users": "높은 재거래 가능성 사용자",
-    "High-value at-risk users": "고가치 이탈위험 사용자",
-    "No recent transaction users": "최근 거래 없음 사용자",
-    "High failed-ratio users": "거래 실패율 높은 사용자",
-}
-
-FIELD_LABELS = {
-    "user_id": "User ID",
-    "observation_date": "Score date",
-    "repeat_probability": "Repeat likelihood",
-    "risk_segment": "Segment",
-    "recommended_action": "Recommended action",
-    "recommendation_reason": "Reason",
-    "recency_days": "Days since last transaction",
-    "transactions_90d": "Recent transactions",
-    "transactions_all": "Lifetime transactions",
-    "total_volume_90d": "Recent volume",
-    "estimated_fee_proxy_90d": "Recent fee proxy",
-    "failed_ratio_90d": "Recent failed transaction rate",
-    "value_segment": "Value segment",
-    "acquisition_channel": "Acquisition channel",
-    "target_rate_user_flag": "Uses target-rate order",
-    "rate_alert_user_flag": "Uses rate alert",
-}
-
-BASE_EXPORT_FIELDS = [
-    "user_id",
-    "observation_date",
-    "repeat_probability",
-    "risk_segment",
-    "recommended_action",
-    "recommendation_reason",
-    "recency_days",
-    "transactions_90d",
-    "total_volume_90d",
-    "failed_ratio_90d",
-    "acquisition_channel",
-    "value_segment",
-]
+if page == "Executive Summary":
+    page_intro(
+        page,
+        "14-day activation, D30 repeat, feature adoption, and targetable users",
+        "Prioritize onboarding friction and test feature prompts with a randomized experiment.",
+        "The source data is synthetic; descriptive relationships are not causal.",
+    )
+    funnel = data["funnel"].iloc[0]
+    repeat = data["repeat_channel"]
+    feature = data["feature"]
+    targeting = data["targeting"]
+    cols = st.columns(4)
+    cols[0].metric("Valid signups", f"{funnel['valid_signups']:,.0f}")
+    cols[1].metric("14-day activation", percent(100 * funnel["activated_within_14_days"] / funnel["valid_signups"]))
+    cols[2].metric("D30 repeat", percent(repeat["d30_repeat_users"].sum() / repeat["first_exchange_users"].sum() * 100))
+    cols[3].metric("Priority audience", f"{(targeting['risk_segment'] != 'High repeat probability users').sum():,.0f}")
+    pattern("The largest funnel loss occurs before first exchange; channel quality differs more on activation than signup volume.")
+    st.plotly_chart(funnel_chart(data["funnel"]), width="stretch")
 
 
-st.set_page_config(page_title="FX Fintech Product Analytics Lab", layout="wide")
+elif page == "Funnel and Retention":
+    page_intro(
+        page,
+        "Stage conversion, 14-day activation, and monthly post-exchange retention",
+        "Diagnose the weakest onboarding step by channel and set lifecycle messaging around early repeat windows.",
+        "Later cohorts have incomplete retention windows and should not be compared at unavailable tenures.",
+    )
+    left, right = st.columns(2)
+    left.plotly_chart(funnel_chart(data["funnel"]), width="stretch")
+    channel = data["channel"].merge(data["repeat_channel"], on="acquisition_channel", how="left")
+    right.plotly_chart(
+        horizontal_bar(channel, "activation_rate_14d", "acquisition_channel", "14-day activation %"),
+        width="stretch",
+    )
+    pattern("Referral and direct acquisition can be evaluated on both activation and D30 repeat, not volume alone.")
+    st.plotly_chart(cohort_heatmap(data["cohort"]), width="stretch")
 
 
-@st.cache_data
-def load_csv(file_name: str) -> pd.DataFrame:
-    path = CSV_DIR / file_name
-    if not path.exists():
-        raise FileNotFoundError(f"Missing required CSV: {path}")
-    return pd.read_csv(path)
+elif page == "Feature Adoption and A/B Test":
+    page_intro(
+        page,
+        "Feature adoption within 7 days and repeat-rate association",
+        "Use the onboarding prompt experiment to test adoption lift; treat observational retention gaps as hypotheses.",
+        "Experiment assignment and outcomes are simulated and are not production causal evidence.",
+    )
+    left, right = st.columns(2)
+    left.plotly_chart(
+        px.bar(data["feature"], x="feature", y="adoption_rate", text_auto=".1f", labels={"adoption_rate": "Adoption %"}),
+        width="stretch",
+    )
+    feature_retention = data["feature_retention"]
+    right.plotly_chart(
+        px.bar(feature_retention, x="user_group", y="d30_repeat_rate", color="comparison_type", barmode="group", labels={"d30_repeat_rate": "D30 repeat %"}),
+        width="stretch",
+    )
+    result = data["ab_results"]
+    display = result[["metric", "control_rate", "treatment_rate", "absolute_uplift", "ci_95_low", "ci_95_high", "p_value", "practically_significant"]].copy()
+    for column in ["control_rate", "treatment_rate", "absolute_uplift", "ci_95_low", "ci_95_high"]:
+        display[column] = (display[column] * 100).round(2)
+    pattern("Statistical significance and the minimum practical effect are reported separately.")
+    st.dataframe(display, width="stretch", hide_index=True)
 
 
-@st.cache_data
-def load_optional_csv(file_name: str) -> pd.DataFrame:
-    path = CSV_DIR / file_name
-    if not path.exists():
-        return pd.DataFrame()
-    return pd.read_csv(path)
-
-
-@st.cache_data
-def load_dashboard_data() -> dict[str, pd.DataFrame]:
-    return {
-        "cohort": load_csv("cohort_retention.csv"),
-        "value": load_csv("customer_value_segmentation.csv"),
-        "d30_channel": load_csv("d30_repeat_by_channel.csv"),
-        "failure_reason": load_csv("failure_reason_by_regime.csv"),
-        "feature_combo": load_csv("feature_combination_retention.csv"),
-        "feature_comparison": load_csv("feature_retention_comparison.csv"),
-        "channel_funnel": load_csv("funnel_by_acquisition_channel.csv"),
-        "fx_behavior": load_csv("fx_regime_behavior.csv"),
-        "fx_activity": load_csv("fx_regime_normalized_activity.csv"),
-        "modeling_check": load_csv("modeling_table_check.csv"),
-        "monthly": load_csv("monthly_product_trend.csv"),
-        "funnel": load_csv("product_funnel.csv"),
-        "support": load_csv("support_ticket_impact.csv"),
-        "lifecycle": load_csv("user_lifecycle_summary.csv"),
-        "classification": load_csv("user_repeat_classification_report.csv"),
-        "confusion": load_csv("user_repeat_confusion_matrix.csv"),
-        "importance": load_csv("user_repeat_feature_importance.csv"),
-        "metrics": load_csv("user_repeat_model_metrics.csv"),
-        "predictions": load_csv("user_repeat_predictions.csv"),
-        "targeting": load_csv("user_repeat_targeting_dataset.csv"),
-        "fx_vol_metrics": load_optional_csv("fx_volatility_model_metrics.csv"),
-        "fx_vol_predictions": load_optional_csv("fx_volatility_predictions.csv"),
-        "fx_vol_importance": load_optional_csv("fx_volatility_feature_importance.csv"),
-        "fx_vol_confusion": load_optional_csv("fx_volatility_confusion_matrix.csv"),
-        "fx_vol_regime_comparison": load_optional_csv("fx_volatility_regime_definition_comparison.csv"),
-        "fx_vol_regime_metadata": load_optional_csv("fx_volatility_regime_metadata.csv"),
-    }
-
-
-def page_label(language: str, page: str) -> str:
-    return KO_PAGES[page] if language == "Korean" else page
-
-
-def clean_label(value: str) -> str:
-    return str(value).replace("_", " ").capitalize()
-
-
-def format_number(value: float) -> str:
-    if pd.isna(value):
-        return "0"
-    return f"{value:,.0f}"
-
-
-def format_percent(value: float) -> str:
-    if pd.isna(value):
-        return "0.0%"
-    return f"{value:.1f}%"
-
-
-def format_krw(value: float) -> str:
-    if pd.isna(value):
-        return "KRW 0"
-    if abs(value) >= 1_000_000_000_000:
-        return f"KRW {value / 1_000_000_000_000:.1f}T"
-    if abs(value) >= 1_000_000_000:
-        return f"KRW {value / 1_000_000_000:.1f}B"
-    if abs(value) >= 1_000_000:
-        return f"KRW {value / 1_000_000:.1f}M"
-    return f"KRW {value:,.0f}"
-
-
-def html_escape(value: str) -> str:
-    return (
-        str(value)
-        .replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace('"', "&quot;")
+elif page == "Prediction and Targeting":
+    page_intro(
+        page,
+        "Next-30-day repeat probability from a trailing 90-day observation window",
+        "Use scores to prioritize controlled CRM tests and service recovery, not automatic exclusion.",
+        "Validation is time-based but still uses synthetic behavior; scores require calibration and drift checks before deployment.",
+    )
+    metrics = data["model_metrics"]
+    st.dataframe(
+        metrics[["model", "roc_auc", "pr_auc", "precision", "recall", "f1", "selected_model_flag"]],
+        width="stretch",
+        hide_index=True,
+    )
+    left, right = st.columns(2)
+    left.plotly_chart(
+        horizontal_bar(data["importance"], "importance", "feature", "Model importance"),
+        width="stretch",
+    )
+    segments = data["targeting"].groupby("risk_segment", as_index=False).agg(
+        users=("user_id", "count"), avg_repeat_probability=("repeat_probability", "mean")
+    )
+    right.plotly_chart(horizontal_bar(segments, "users", "risk_segment", "Users"), width="stretch")
+    pattern("Targeting rules combine probability with recent inactivity, value, and failed-transaction context.")
+    scenario = data["campaign"]
+    st.dataframe(
+        scenario[["uplift_scenario", "fee_proxy_scenario", "absolute_uplift_assumption", "incremental_repeat_users", "value_impact_proxy_krw", "assumption_note"]],
+        width="stretch",
+        hide_index=True,
     )
 
 
-def inject_css() -> None:
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background: {COLOR_PAGE};
-            color: {COLOR_TEXT};
-        }}
-        [data-testid="stHeader"] {{
-            background: rgba(246, 248, 251, 0.94);
-        }}
-        .block-container {{
-            padding-top: 1.3rem;
-            padding-bottom: 3rem;
-            max-width: 1500px;
-        }}
-        h1, h2, h3, p, label, span {{
-            letter-spacing: 0;
-        }}
-        h1, h2, h3 {{
-            color: {COLOR_TEXT};
-        }}
-        [data-testid="stWidgetLabel"] p,
-        [data-testid="stWidgetLabel"] label,
-        [data-testid="stMarkdownContainer"] p,
-        .stSlider label p,
-        .stSelectbox label p,
-        .stMultiSelect label p,
-        .stTextInput label p,
-        .stTextArea label p {{
-            color: {COLOR_TEXT} !important;
-            font-weight: 650;
-        }}
-        div[data-baseweb="select"] > div {{
-            background-color: #FFFFFF !important;
-            border-color: #CBD5E1 !important;
-            color: {COLOR_TEXT} !important;
-            box-shadow: none !important;
-        }}
-        div[data-baseweb="select"] span,
-        div[data-baseweb="select"] input,
-        div[data-baseweb="select"] svg {{
-            color: {COLOR_TEXT} !important;
-            fill: {COLOR_TEXT} !important;
-        }}
-        div[data-baseweb="popover"],
-        div[data-baseweb="menu"] {{
-            background-color: #FFFFFF !important;
-            color: {COLOR_TEXT} !important;
-        }}
-        div[data-baseweb="menu"] li,
-        div[data-baseweb="menu"] div {{
-            color: {COLOR_TEXT} !important;
-        }}
-        div[data-baseweb="tag"] {{
-            background-color: #EAF4F4 !important;
-            border: 1px solid #B8DAD9 !important;
-            color: {COLOR_TEXT} !important;
-        }}
-        div[data-baseweb="tag"] span,
-        div[data-baseweb="tag"] svg {{
-            color: {COLOR_TEXT} !important;
-            fill: {COLOR_TEXT} !important;
-        }}
-        input, textarea {{
-            background-color: #FFFFFF !important;
-            color: {COLOR_TEXT} !important;
-        }}
-        .stButton button,
-        .stDownloadButton button {{
-            background-color: {COLOR_NAVY} !important;
-            border: 1px solid {COLOR_NAVY} !important;
-            color: #FFFFFF !important;
-            border-radius: 8px !important;
-            font-weight: 700 !important;
-        }}
-        .stButton button:disabled,
-        .stDownloadButton button:disabled {{
-            background-color: #E5E7EB !important;
-            border-color: #E5E7EB !important;
-            color: #98A2B3 !important;
-        }}
-        div[data-testid="stSidebar"] {{
-            background: #FFFFFF;
-            border-right: 1px solid {COLOR_BORDER};
-        }}
-        .hero {{
-            border: 1px solid {COLOR_BORDER};
-            border-radius: 12px;
-            background: linear-gradient(135deg, #FFFFFF 0%, #ECF5F5 100%);
-            padding: 24px 28px;
-            margin-bottom: 18px;
-        }}
-        .hero h1 {{
-            margin: 0 0 8px 0;
-            font-size: 2.15rem;
-            line-height: 1.08;
-        }}
-        .hero p {{
-            margin: 0;
-            color: {COLOR_MUTED};
-            font-size: 1rem;
-        }}
-        .hero-chip {{
-            display: inline-block;
-            margin-top: 14px;
-            margin-right: 8px;
-            padding: 7px 10px;
-            border: 1px solid #C9D5DF;
-            border-radius: 999px;
-            background: #F8FAFC;
-            color: #344054;
-            font-size: 0.84rem;
-            font-weight: 650;
-        }}
-        .metric-card {{
-            min-height: 120px;
-            border: 1px solid {COLOR_BORDER};
-            border-radius: 10px;
-            background: {COLOR_CARD};
-            padding: 16px 16px 14px 16px;
-            box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
-        }}
-        .metric-label {{
-            color: {COLOR_MUTED};
-            font-size: 0.78rem;
-            font-weight: 760;
-            text-transform: uppercase;
-            letter-spacing: 0.03em;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }}
-        .info-icon {{
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            border: 1px solid #B8C2CC;
-            color: #667085;
-            font-size: 11px;
-            line-height: 16px;
-            cursor: help;
-            text-transform: none;
-            letter-spacing: 0;
-        }}
-        .metric-value {{
-            color: {COLOR_TEXT};
-            font-size: 1.6rem;
-            line-height: 1.15;
-            font-weight: 780;
-            margin-bottom: 6px;
-        }}
-        .metric-help {{
-            color: {COLOR_MUTED};
-            font-size: 0.82rem;
-            line-height: 1.35;
-        }}
-        .section-title {{
-            margin-top: 18px;
-            margin-bottom: 4px;
-            font-size: 1.28rem;
-            font-weight: 780;
-            color: {COLOR_TEXT};
-        }}
-        .section-subtitle {{
-            margin-bottom: 14px;
-            color: {COLOR_MUTED};
-            font-size: 0.96rem;
-        }}
-        .insight-box, .action-box {{
-            border: 1px solid {COLOR_BORDER};
-            border-radius: 10px;
-            background: {COLOR_CARD};
-            padding: 15px 16px;
-            min-height: 118px;
-            box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
-        }}
-        .insight-box {{
-            border-left: 4px solid {COLOR_TEAL};
-        }}
-        .action-box {{
-            border-left: 4px solid {COLOR_ORANGE};
-        }}
-        .box-kicker {{
-            color: {COLOR_TEAL};
-            font-size: 0.76rem;
-            font-weight: 780;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            margin-bottom: 6px;
-        }}
-        .box-title {{
-            color: {COLOR_TEXT};
-            font-size: 1.03rem;
-            font-weight: 760;
-            margin-bottom: 5px;
-        }}
-        .box-text {{
-            color: {COLOR_MUTED};
-            font-size: 0.92rem;
-            line-height: 1.45;
-        }}
-        .rule-card {{
-            border: 1px solid {COLOR_BORDER};
-            border-radius: 10px;
-            background: {COLOR_CARD};
-            padding: 15px 16px;
-            min-height: 136px;
-            box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
-        }}
-        .rule-card h3 {{
-            margin-top: 0;
-            margin-bottom: 8px;
-            font-size: 1.02rem;
-        }}
-        .rule-card p {{
-            color: {COLOR_MUTED};
-            font-size: 0.92rem;
-            line-height: 1.45;
-        }}
-        .small-note {{
-            color: {COLOR_MUTED};
-            font-size: 0.86rem;
-            line-height: 1.4;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True,
+elif page == "FX Market Readiness":
+    page_intro(
+        page,
+        "Next-day volatility regime classification and transaction success by historical regime",
+        "Use high-volatility signals for staffing, monitoring, rate-change messaging, and campaign timing.",
+        "Yahoo Finance market data is real historical data; product outcomes are synthetic and the signal is not a trading forecast.",
     )
-
-
-def render_header(language: str) -> None:
-    subtitle = (
-        "Product, marketing, retention, and FX market analytics case study for a global FX fintech platform."
-        if language == "English"
-        else "글로벌 FX 핀테크 플랫폼을 위한 제품, 마케팅, 리텐션, FX 시장 분석 포트폴리오입니다."
+    source = data["fx_source"].iloc[0]
+    st.caption(
+        f"Market source: {source['provider']} | {source['first_observation']} to "
+        f"{source['last_observation']} | {source['tickers']}"
     )
-    chip = (
-        "Aligned with product analytics, KPI dashboarding, data marts, retention, cohort, and FX market analysis"
-        if language == "English"
-        else "제품 분석, KPI 대시보드, 데이터 마트, 리텐션, 코호트, FX 시장 분석 역량을 보여줍니다"
-    )
-    st.markdown(
-        f"""
-        <div class="hero">
-            <h1>FX Fintech Product Analytics Lab</h1>
-            <p>{html_escape(subtitle)}</p>
-            <span class="hero-chip">{html_escape(chip)}</span>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-
-def section_header(language: str, page: str) -> None:
-    st.markdown(
-        f"""
-        <div class="section-title">{html_escape(page_label(language, page))}</div>
-        <div class="section-subtitle">{html_escape(PAGE_SUBTITLES[page][language])}</div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-
-def metric_card(label: str, value: str, tooltip: str = "", caption: str = "") -> None:
-    safe_tooltip = html_escape(tooltip or KPI_INFO.get(label, label))
-    st.markdown(
-        f"""
-        <div class="metric-card">
-            <div class="metric-label">
-                <span>{html_escape(label)}</span>
-                <span class="info-icon" title="{safe_tooltip}">i</span>
-            </div>
-            <div class="metric-value">{html_escape(value)}</div>
-            <div class="metric-help">{html_escape(caption)}</div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-
-def insight_box(kicker: str, title: str, text: str, action: bool = False) -> None:
-    css_class = "action-box" if action else "insight-box"
-    st.markdown(
-        f"""
-        <div class="{css_class}">
-            <div class="box-kicker">{html_escape(kicker)}</div>
-            <div class="box-title">{html_escape(title)}</div>
-            <div class="box-text">{html_escape(text)}</div>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-
-def rule_card(title: str, text: str) -> None:
-    st.markdown(
-        f"""
-        <div class="rule-card">
-            <h3>{html_escape(title)}</h3>
-            <p>{html_escape(text)}</p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-
-def style_plotly(fig: go.Figure, height: int = 430) -> go.Figure:
-    fig.update_layout(
-        height=height,
-        margin=dict(l=20, r=20, t=58, b=42),
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(0,0,0,0)",
-        font=dict(color=COLOR_TEXT, size=13),
-        title=dict(font=dict(color=COLOR_TEXT, size=18), x=0),
-        legend=dict(orientation="h", yanchor="bottom", y=1.03, xanchor="left", x=0),
-        hoverlabel=dict(bgcolor="white", font_size=12, font_color=COLOR_TEXT),
-    )
-    fig.update_xaxes(
-        showgrid=False,
-        linecolor=COLOR_BORDER,
-        tickfont=dict(color=COLOR_TEXT),
-        title_font=dict(color=COLOR_TEXT),
-    )
-    fig.update_yaxes(
-        showgrid=True,
-        gridcolor=COLOR_BORDER,
-        zeroline=False,
-        tickfont=dict(color=COLOR_TEXT),
-        title_font=dict(color=COLOR_TEXT),
-    )
-    return fig
-
-
-def to_csv_bytes(df: pd.DataFrame) -> bytes:
-    return df.to_csv(index=False).encode("utf-8-sig")
-
-
-def product_funnel_chart(df: pd.DataFrame) -> go.Figure:
-    steps = [
-        ("Valid signups", "valid_signups"),
-        ("KYC completed", "kyc_completed"),
-        ("Bank linked", "bank_linked"),
-        ("First exchange", "first_successful_exchange"),
-        ("Activated 14d", "activated_within_14_days"),
-    ]
-    chart_df = pd.DataFrame({"Step": [x[0] for x in steps], "Users": [df.loc[0, x[1]] for x in steps]})
-    fig = px.bar(chart_df, x="Step", y="Users", text="Users", color_discrete_sequence=[COLOR_TEAL], title="Product Onboarding Funnel")
-    fig.update_traces(texttemplate="%{text:,.0f}", textposition="outside", cliponaxis=False)
-    fig.update_xaxes(title="")
-    fig.update_yaxes(title="Users")
-    return style_plotly(fig)
-
-
-def monthly_signups_activation_chart(df: pd.DataFrame) -> go.Figure:
-    chart_df = df.copy()
-    chart_df["signup_month"] = pd.to_datetime(chart_df["signup_month"])
-    fig = make_subplots(specs=[[{"secondary_y": True}]])
-    fig.add_bar(x=chart_df["signup_month"], y=chart_df["valid_signups"], name="Valid signups", marker_color=COLOR_TEAL, secondary_y=False)
-    fig.add_trace(
-        go.Scatter(
-            x=chart_df["signup_month"],
-            y=chart_df["activation_rate_14d"],
-            name="14-day activation rate",
-            mode="lines+markers",
-            line=dict(color=COLOR_ORANGE, width=3),
-            marker=dict(size=8),
+    st.dataframe(data["fx_metrics"], width="stretch", hide_index=True)
+    left, right = st.columns(2)
+    left.plotly_chart(
+        px.bar(
+            data["fx_behavior"],
+            x="market_regime_at_transaction",
+            y="success_rate",
+            labels={"success_rate": "Transaction success %"},
+            title="Synthetic transactions by simulated regime",
         ),
-        secondary_y=True,
+        width="stretch",
     )
-    fig.update_layout(title="Monthly Signups and 14-Day Activation Rate")
-    fig.update_yaxes(title_text="Valid signups", secondary_y=False)
-    fig.update_yaxes(title_text="Activation rate", ticksuffix="%", secondary_y=True)
-    fig.update_xaxes(title="")
-    return style_plotly(fig, height=450)
-
-
-def horizontal_rate_chart(df: pd.DataFrame, label_col: str, value_col: str, title: str, color: str, height: int = 410) -> go.Figure:
-    chart_df = df.copy().sort_values(value_col, ascending=True)
-    fig = px.bar(chart_df, x=value_col, y=label_col, orientation="h", text=value_col, color_discrete_sequence=[color], title=title)
-    fig.update_traces(texttemplate="%{text:.1f}%", textposition="outside", cliponaxis=False)
-    fig.update_xaxes(title="", ticksuffix="%")
-    fig.update_yaxes(title="")
-    return style_plotly(fig, height=height)
-
-
-def segment_mix_chart(df: pd.DataFrame, title: str = "Audience Segment Mix") -> go.Figure:
-    chart_df = df["risk_segment"].value_counts().rename_axis("Segment").reset_index(name="Users")
-    fig = px.bar(chart_df, x="Users", y="Segment", orientation="h", text="Users", color_discrete_sequence=[COLOR_TEAL], title=title)
-    fig.update_traces(texttemplate="%{text:,.0f}", textposition="outside", cliponaxis=False)
-    fig.update_xaxes(title="Users")
-    fig.update_yaxes(title="")
-    return style_plotly(fig, height=390)
-
-
-def recommendation_mix_chart(df: pd.DataFrame) -> go.Figure:
-    chart_df = df["recommended_action"].value_counts().head(8).rename_axis("Action").reset_index(name="Users")
-    fig = px.bar(chart_df, x="Users", y="Action", orientation="h", text="Users", color_discrete_sequence=[COLOR_NAVY], title="Top Recommended Retention Actions")
-    fig.update_traces(texttemplate="%{text:,.0f}", textposition="outside", cliponaxis=False)
-    fig.update_xaxes(title="Users")
-    fig.update_yaxes(title="")
-    return style_plotly(fig, height=390)
-
-
-def probability_distribution_chart(df: pd.DataFrame) -> go.Figure:
-    fig = px.histogram(df, x="repeat_probability", nbins=30, color_discrete_sequence=[COLOR_TEAL], title="Repeat Likelihood Distribution")
-    fig.update_xaxes(title="Repeat likelihood", tickformat=".0%")
-    fig.update_yaxes(title="Users")
-    return style_plotly(fig, height=390)
-
-
-def cohort_heatmap(df: pd.DataFrame) -> go.Figure:
-    chart_df = df[df["months_since_first_transaction"] > 0].copy()
-    chart_df["cohort_month"] = pd.to_datetime(chart_df["cohort_month"]).dt.strftime("%Y-%m")
-    pivot = chart_df.pivot(index="cohort_month", columns="months_since_first_transaction", values="retention_rate").sort_index()
-    fig = px.imshow(pivot, aspect="auto", color_continuous_scale="Teal", text_auto=".1f", title="Cohort Retention Heatmap, M1-M6")
-    fig.update_xaxes(title="Months since first exchange")
-    fig.update_yaxes(title="First exchange cohort")
-    fig.update_coloraxes(colorbar_title="Retention %")
-    return style_plotly(fig, height=460)
-
-
-def fx_regime_chart(behavior: pd.DataFrame, activity: pd.DataFrame) -> go.Figure:
-    chart_df = activity.merge(
-        behavior[["market_regime_at_transaction", "success_rate"]],
-        left_on="market_regime",
-        right_on="market_regime_at_transaction",
-        how="left",
-    )
-    chart_df["market_regime"] = pd.Categorical(chart_df["market_regime"], categories=["low", "normal", "high"], ordered=True)
-    chart_df = chart_df.sort_values("market_regime")
-    chart_df["Regime"] = chart_df["market_regime"].map(clean_label)
-    fig = make_subplots(specs=[[{"secondary_y": True}]])
-    fig.add_bar(
-        x=chart_df["Regime"],
-        y=chart_df["attempts_per_regime_hour"],
-        text=chart_df["attempts_per_regime_hour"],
-        texttemplate="%{text:.2f}",
-        textposition="outside",
-        name="Attempts per hour",
-        marker_color=COLOR_TEAL,
-        secondary_y=False,
-    )
-    fig.add_trace(
-        go.Scatter(
-            x=chart_df["Regime"],
-            y=chart_df["success_rate"],
-            mode="lines+markers",
-            name="Success rate",
-            line=dict(color=COLOR_ORANGE, width=3),
-            marker=dict(size=9),
+    predictions = data["fx_predictions"].tail(120).copy()
+    right.plotly_chart(
+        px.scatter(
+            predictions,
+            x="date",
+            y="predicted_regime",
+            color="predicted_regime",
+            category_orders={"predicted_regime": ["low", "normal", "high"]},
+            title="Yahoo Finance out-of-time regime predictions",
         ),
-        secondary_y=True,
+        width="stretch",
     )
-    fig.update_layout(title="FX Regime Activity and Exchange Success")
-    fig.update_yaxes(title_text="Attempts per regime hour", secondary_y=False)
-    fig.update_yaxes(title_text="Success rate", ticksuffix="%", secondary_y=True)
-    fig.update_xaxes(title="FX regime")
-    return style_plotly(fig, height=430)
+    pattern("Readiness recommendations are tied to predicted regime and should be validated against operational outcomes.")
 
 
-def fx_volatility_probability_chart(predictions: pd.DataFrame) -> go.Figure:
-    chart_df = predictions.copy()
-    chart_df["date"] = pd.to_datetime(chart_df["date"])
-    recent = chart_df.tail(120)
-    fig = go.Figure()
-    fig.add_trace(
-        go.Scatter(
-            x=recent["date"],
-            y=recent["prob_high"],
-            mode="lines",
-            name="High-volatility probability",
-            line=dict(color=COLOR_ROSE, width=3),
-        )
+else:
+    page_intro(
+        page,
+        "Validity, completeness, duplicate, leakage, and modeling-window checks",
+        "Resolve error-level issues before metric release; document warnings and review-only outliers.",
+        "Missingness can be expected for conditionally optional fields and is not automatically a data defect.",
     )
-    fig.add_trace(
-        go.Scatter(
-            x=recent["date"],
-            y=recent["prob_normal"],
-            mode="lines",
-            name="Normal-volatility probability",
-            line=dict(color=COLOR_ORANGE, width=2),
-        )
+    st.dataframe(data["quality_summary"], width="stretch", hide_index=True)
+    issues = data["quality_issues"]
+    st.dataframe(issues[issues["issue_count"] > 0], width="stretch", hide_index=True)
+    pattern("Duplicate event keys are removed in the clean event view; transaction outliers are flagged but retained.")
+    st.markdown(
+        """
+        **Methodology**
+
+        - Activation: KYC, bank link, and first successful exchange within 14 days of signup.
+        - D30 repeat: another successful exchange within 30 days of first exchange.
+        - Repeat model: trailing 90-day features, chronological validation, following 30-day target.
+        - A/B test: simulated demonstration with user-level randomization.
+        - FX signal: lagged USD/KRW features with a chronological split.
+        """
     )
-    fig.add_trace(
-        go.Scatter(
-            x=recent["date"],
-            y=recent["prob_low"],
-            mode="lines",
-            name="Low-volatility probability",
-            line=dict(color=COLOR_TEAL, width=2),
-        )
-    )
-    fig.update_layout(title="Next-Day FX Volatility Signal, Recent Period")
-    fig.update_xaxes(title="")
-    fig.update_yaxes(title="Predicted probability", tickformat=".0%", range=[0, 1])
-    return style_plotly(fig, height=420)
-
-
-def fx_volatility_metrics_chart(metrics: pd.DataFrame) -> go.Figure:
-    chart_df = metrics.copy()
-    chart_df["Setup"] = chart_df["regime_definition"] + " | " + chart_df["model"]
-    chart_df = chart_df.sort_values("f1_macro", ascending=True)
-    fig = px.bar(
-        chart_df,
-        x="f1_macro",
-        y="Setup",
-        color="regime_definition",
-        orientation="h",
-        text="f1_macro",
-        title="FX Volatility Model Comparison by Macro F1",
-        color_discrete_sequence=[COLOR_TEAL, COLOR_NAVY],
-    )
-    fig.update_traces(texttemplate="%{text:.2f}", textposition="outside", cliponaxis=False)
-    fig.update_xaxes(title="Macro F1", tickformat=".0%", range=[0, max(0.7, chart_df["f1_macro"].max() + 0.08)])
-    fig.update_yaxes(title="")
-    return style_plotly(fig, height=500)
-
-
-def fx_volatility_feature_importance_chart(importance: pd.DataFrame) -> go.Figure:
-    chart_df = importance.copy().sort_values("importance", ascending=False).head(12).sort_values("importance", ascending=True)
-    fig = px.bar(
-        chart_df,
-        x="importance",
-        y="feature",
-        orientation="h",
-        text="importance",
-        color_discrete_sequence=[COLOR_NAVY],
-        title="Top Signals Used by the FX Volatility Model",
-    )
-    fig.update_traces(texttemplate="%{text:.3f}", textposition="outside", cliponaxis=False)
-    fig.update_xaxes(title="Signal strength")
-    fig.update_yaxes(title="")
-    return style_plotly(fig, height=430)
-
-
-def fx_volatility_confusion_chart(confusion: pd.DataFrame) -> go.Figure:
-    matrix = confusion.set_index("actual_regime")
-    matrix.index = matrix.index.str.replace("Actual ", "", regex=False).map(clean_label)
-    matrix.columns = matrix.columns.str.replace("Predicted ", "", regex=False).map(clean_label)
-    fig = px.imshow(
-        matrix,
-        text_auto=True,
-        aspect="auto",
-        color_continuous_scale="Teal",
-        title="FX Volatility Prediction Confusion Matrix",
-    )
-    fig.update_xaxes(title="Predicted regime")
-    fig.update_yaxes(title="Actual regime")
-    return style_plotly(fig, height=430)
-
-
-def value_segment_chart(df: pd.DataFrame) -> go.Figure:
-    fig = go.Figure()
-    fig.add_bar(x=df["value_segment"], y=df["target_rate_adoption_rate"], name="Target-rate adoption", marker_color=COLOR_NAVY)
-    fig.add_bar(x=df["value_segment"], y=df["rate_alert_adoption_rate"], name="Rate-alert adoption", marker_color=COLOR_TEAL)
-    fig.update_layout(title="Feature Adoption by Customer Value Segment", barmode="group")
-    fig.update_xaxes(title="")
-    fig.update_yaxes(title="Adoption rate", ticksuffix="%")
-    return style_plotly(fig, height=420)
-
-
-def metrics_chart(metrics: pd.DataFrame) -> go.Figure:
-    long_df = metrics.melt(id_vars="model", value_vars=["accuracy", "precision", "recall", "f1", "roc_auc"], var_name="Metric", value_name="Score")
-    fig = px.bar(long_df, x="model", y="Score", color="Metric", barmode="group", title="Repeat Prediction Model Comparison")
-    fig.update_yaxes(range=[0, 1], tickformat=".0%")
-    fig.update_xaxes(title="")
-    return style_plotly(fig, height=430)
-
-
-def feature_importance_chart(df: pd.DataFrame) -> go.Figure:
-    chart_df = df.copy().sort_values("importance", ascending=True)
-    chart_df["feature"] = chart_df["feature"].replace(
-        {
-            "transactions_90d": "Recent transactions",
-            "total_volume_90d": "Recent volume",
-            "recency_days": "Days since last transaction",
-            "transactions_all": "Lifetime transactions",
-            "failed_ratio_90d": "Recent failed transaction rate",
-        }
-    )
-    fig = px.bar(chart_df, x="importance", y="feature", orientation="h", text="importance", color_discrete_sequence=[COLOR_TEAL], title="Top Prediction Signals")
-    fig.update_traces(texttemplate="%{text:.2f}", textposition="outside", cliponaxis=False)
-    fig.update_xaxes(title="Relative signal strength")
-    fig.update_yaxes(title="")
-    return style_plotly(fig, height=390)
-
-
-def confusion_matrix_chart(confusion: pd.DataFrame) -> go.Figure:
-    chart_df = confusion.copy()
-    label_col = chart_df.columns[0]
-    chart_df = chart_df.set_index(label_col)
-    fig = px.imshow(
-        chart_df.values,
-        x=["Predicted no repeat", "Predicted repeat"],
-        y=["Actual no repeat", "Actual repeat"],
-        text_auto=True,
-        color_continuous_scale="Blues",
-        title="Where Predictions Were Right or Wrong",
-    )
-    fig.update_coloraxes(showscale=False)
-    return style_plotly(fig, height=390)
-
-
-def business_view(df: pd.DataFrame) -> pd.DataFrame:
-    view = df[BASE_EXPORT_FIELDS].copy()
-    view["repeat_probability"] = view["repeat_probability"].map(lambda x: f"{x:.1%}")
-    view["failed_ratio_90d"] = view["failed_ratio_90d"].map(lambda x: f"{x:.1%}")
-    view["total_volume_90d"] = view["total_volume_90d"].map(format_krw)
-    return view.rename(columns=FIELD_LABELS)
-
-
-def segment_options(language: str, targeting: pd.DataFrame) -> dict[str, str]:
-    ordered = [
-        "All users",
-        "Low repeat probability users",
-        "Medium repeat probability users",
-        "High repeat probability users",
-        "High-value at-risk users",
-        "No recent transaction users",
-        "High failed-ratio users",
-    ]
-    existing = ["All users"] + sorted(targeting["risk_segment"].dropna().unique().tolist())
-    labels = KO_SEGMENT_LABELS if language == "Korean" else SEGMENT_LABELS
-    options = [segment for segment in ordered if segment in existing]
-    extras = [segment for segment in existing if segment not in options]
-    return {labels.get(segment, segment): segment for segment in options + extras}
-
-
-def select_targets(targeting: pd.DataFrame, segment: str, threshold: float) -> pd.DataFrame:
-    selected = targeting.copy()
-    if segment != "All users":
-        selected = selected[selected["risk_segment"] == segment]
-    return selected[selected["repeat_probability"] >= threshold].copy()
-
-
-def target_summary(selected: pd.DataFrame) -> dict[str, float]:
-    if selected.empty:
-        return {"users": 0, "avg_probability": 0, "baseline_repeat_users": 0, "volume_90d": 0, "fee_proxy_90d": 0}
-    return {
-        "users": len(selected),
-        "avg_probability": selected["repeat_probability"].mean(),
-        "baseline_repeat_users": selected["repeat_probability"].sum(),
-        "volume_90d": selected["total_volume_90d"].sum(),
-        "fee_proxy_90d": selected["estimated_fee_proxy_90d"].sum(),
-    }
-
-
-def overall_d30_rate(d30_by_channel: pd.DataFrame) -> float:
-    users = d30_by_channel["first_exchange_users"].sum()
-    repeats = d30_by_channel["d30_repeat_users"].sum()
-    return 100 * repeats / users if users else 0
-
-
-def render_executive_overview(language: str, data: dict[str, pd.DataFrame]) -> None:
-    section_header(language, "Executive Overview")
-    funnel = data["funnel"].loc[0]
-    targeting = data["targeting"]
-    d30_rate = overall_d30_rate(data["d30_channel"])
-    priority_users = targeting["risk_segment"].isin(["High-value at-risk users", "High failed-ratio users", "Low repeat probability users"]).sum()
-
-    cols = st.columns(4)
-    cards = [
-        ("Valid signups", format_number(funnel["valid_signups"]), KPI_INFO["Valid signups"], "Onboarding eligible users"),
-        ("14-day activation rate", format_percent(data["lifecycle"].loc[0, "activation_rate_14d"]), KPI_INFO["14-day activation rate"], "Early product activation"),
-        ("D30 repeat rate", format_percent(d30_rate), KPI_INFO["D30 repeat rate"], "After first exchange"),
-        ("Expected repeat users", format_number(targeting["repeat_probability"].sum()), KPI_INFO["Expected repeat users"], "From prediction scores"),
-    ]
-    for col, (label, value, tip, caption) in zip(cols, cards):
-        with col:
-            metric_card(label, value, tip, caption)
-
-    cols = st.columns(4)
-    cards = [
-        ("Priority users", format_number(priority_users), KPI_INFO["Priority users"], "Retention or support action"),
-        ("Avg repeat likelihood", format_percent(targeting["repeat_probability"].mean() * 100), KPI_INFO["Avg repeat likelihood"], "Scored user base"),
-        ("Recent segment volume", format_krw(targeting["total_volume_90d"].sum()), KPI_INFO["Recent segment volume"], "Last 90 days"),
-        ("Failed transaction rate", format_percent(targeting["failed_ratio_90d"].mean() * 100), KPI_INFO["Failed transaction rate"], "Modeling audience average"),
-    ]
-    for col, (label, value, tip, caption) in zip(cols, cards):
-        with col:
-            metric_card(label, value, tip, caption)
-
-    left, right = st.columns(2)
-    with left:
-        st.plotly_chart(monthly_signups_activation_chart(data["monthly"]), width="stretch")
-    with right:
-        st.plotly_chart(segment_mix_chart(targeting, "Repeat Likelihood and Risk Segment Mix"), width="stretch")
-
-    left, right = st.columns(2)
-    with left:
-        st.plotly_chart(recommendation_mix_chart(targeting), width="stretch")
-    with right:
-        channel_df = data["channel_funnel"].copy()
-        channel_df["channel_label"] = channel_df["acquisition_channel"].map(clean_label)
-        st.plotly_chart(horizontal_rate_chart(channel_df, "channel_label", "activation_rate_14d", "Activation Quality by Acquisition Channel", COLOR_TEAL), width="stretch")
-
-    insights = st.columns(3)
-    with insights[0]:
-        insight_box("Growth signal", "Activation and acquisition quality should be read together", "The dashboard separates signup volume from activation quality so marketing growth does not hide onboarding friction.")
-    with insights[1]:
-        insight_box("Retention signal", "Predicted repeat users create campaign planning input", "The model score turns product behavior into prioritized lifecycle audiences, not automatic decisions.")
-    with insights[2]:
-        insight_box("FX context", "Volatility affects operations", "FX regime behavior is included because transaction reliability matters more during high-volatility market periods.")
-
-
-def render_growth_funnel(language: str, data: dict[str, pd.DataFrame]) -> None:
-    section_header(language, "Growth & Funnel Analytics")
-    funnel = data["funnel"].loc[0]
-    activation_rate = data["lifecycle"].loc[0, "activation_rate_14d"]
-    first_exchange_rate = 100 * funnel["first_successful_exchange"] / funnel["valid_signups"]
-
-    cols = st.columns(4)
-    cards = [
-        ("Valid signups", format_number(funnel["valid_signups"]), KPI_INFO["Valid signups"], "Top of onboarding funnel"),
-        ("Activated users", format_number(funnel["activated_within_14_days"]), KPI_INFO["Activated users"], "Activated within 14 days"),
-        ("14-day activation rate", format_percent(activation_rate), KPI_INFO["14-day activation rate"], "Early lifecycle quality"),
-        ("First exchange rate", format_percent(first_exchange_rate), "Share of valid signups who completed first successful exchange.", "Conversion to core value"),
-    ]
-    for col, (label, value, tip, caption) in zip(cols, cards):
-        with col:
-            metric_card(label, value, tip, caption)
-
-    left, right = st.columns(2)
-    with left:
-        st.plotly_chart(product_funnel_chart(data["funnel"]), width="stretch")
-    with right:
-        st.plotly_chart(monthly_signups_activation_chart(data["monthly"]), width="stretch")
-
-    channel_df = data["channel_funnel"].copy()
-    channel_df["channel_label"] = channel_df["acquisition_channel"].map(clean_label)
-    repeat_df = data["d30_channel"].copy()
-    repeat_df["channel_label"] = repeat_df["acquisition_channel"].map(clean_label)
-    left, right = st.columns(2)
-    with left:
-        st.plotly_chart(horizontal_rate_chart(channel_df, "channel_label", "activation_rate_14d", "14-Day Activation by Acquisition Channel", COLOR_TEAL), width="stretch")
-    with right:
-        st.plotly_chart(horizontal_rate_chart(repeat_df, "channel_label", "d30_repeat_rate", "D30 Repeat by Acquisition Channel", COLOR_NAVY), width="stretch")
-
-    insights = st.columns(3)
-    with insights[0]:
-        insight_box("Marketing decision", "Separate channel volume from quality", "A channel that scales signups can still require onboarding improvements if activation quality is weaker.")
-    with insights[1]:
-        insight_box("Product decision", "Funnel drop-offs become UX hypotheses", "KYC, bank linking, and first exchange should be reviewed as separate activation steps.")
-    with insights[2]:
-        insight_box("Next analysis", "Connect campaign spend when available", "CAC and payback can be added later to turn channel quality into budget allocation guidance.")
-
-
-def render_retention_cohort(language: str, data: dict[str, pd.DataFrame]) -> None:
-    section_header(language, "Retention & Cohort Analytics")
-    d30_rate = overall_d30_rate(data["d30_channel"])
-    value = data["value"]
-    support = data["support"]
-
-    cols = st.columns(4)
-    cards = [
-        ("D30 repeat rate", format_percent(d30_rate), KPI_INFO["D30 repeat rate"], "Weighted across channels"),
-        ("Value segments", format_number(len(value)), "Customer value groups used for product and lifecycle analysis.", "Q1-Q4 value groups"),
-        ("Avg high-value volume", format_krw(value["avg_total_volume_krw"].max()), "Highest average volume among value segments.", "Value proxy"),
-        ("Support groups", format_number(len(support)), "Support interaction groups used to compare repeat behavior.", "Interpret with caveat"),
-    ]
-    for col, (label, value_text, tip, caption) in zip(cols, cards):
-        with col:
-            metric_card(label, value_text, tip, caption)
-
-    left, right = st.columns(2)
-    repeat_df = data["d30_channel"].copy()
-    repeat_df["channel_label"] = repeat_df["acquisition_channel"].map(clean_label)
-    with left:
-        st.plotly_chart(horizontal_rate_chart(repeat_df, "channel_label", "d30_repeat_rate", "D30 Repeat by Acquisition Channel", COLOR_TEAL), width="stretch")
-    with right:
-        st.plotly_chart(cohort_heatmap(data["cohort"]), width="stretch")
-
-    support_df = support.copy()
-    support_df["support_label"] = support_df["support_group"].map(clean_label)
-    left, right = st.columns(2)
-    with left:
-        st.plotly_chart(value_segment_chart(data["value"]), width="stretch")
-    with right:
-        st.plotly_chart(horizontal_rate_chart(support_df, "support_label", "d30_repeat_rate", "D30 Repeat by Support Interaction Group", COLOR_ORANGE), width="stretch")
-
-    insight_box("Caveat", "Support ticket impact is observational", "Higher repeat among ticketed users may reflect stronger user engagement, not support causing retention. Treat this as a hypothesis for deeper analysis.")
-
-
-def render_feature_insights(language: str, data: dict[str, pd.DataFrame]) -> None:
-    section_header(language, "Product Feature Insights")
-    lifecycle = data["lifecycle"].loc[0]
-    cols = st.columns(4)
-    cards = [
-        ("Rate-alert users", format_number(lifecycle["rate_alert_users"]), "Users who adopted rate-alert features.", "Feature adoption"),
-        ("Target-rate users", format_number(lifecycle["target_rate_users"]), "Users who adopted target-rate order features.", "Feature adoption"),
-        ("Avg activation days", f"{lifecycle['avg_activation_days']:.1f}", "Average days from onboarding to activation.", "Early product speed"),
-        ("Activated users", format_number(lifecycle["activated_within_14_days"]), KPI_INFO["Activated users"], "Within 14 days"),
-    ]
-    for col, (label, value, tip, caption) in zip(cols, cards):
-        with col:
-            metric_card(label, value, tip, caption)
-
-    combo = data["feature_combo"].copy()
-    combo["feature_label"] = combo["feature_group"].map(clean_label)
-    comparison = data["feature_comparison"].copy()
-    comparison["group_label"] = comparison["user_group"].map(clean_label)
-
-    left, right = st.columns(2)
-    with left:
-        st.plotly_chart(horizontal_rate_chart(combo, "feature_label", "d30_repeat_rate", "D30 Repeat by Feature Adoption Combination", COLOR_TEAL), width="stretch")
-    with right:
-        st.plotly_chart(horizontal_rate_chart(comparison, "group_label", "d30_repeat_rate", "Feature Adoption Retention Comparison", COLOR_NAVY), width="stretch")
-
-    st.plotly_chart(value_segment_chart(data["value"]), width="stretch")
-
-    cols = st.columns(3)
-    with cols[0]:
-        insight_box("UX hypothesis", "Prompt rate alerts after first exchange", "Users who complete a first exchange may be ready for rate-alert education because they already showed exchange intent.")
-    with cols[1]:
-        insight_box("Product hypothesis", "Target-rate orders may fit high-value users", "High-value users show deeper product engagement and may benefit from planned-exchange tools.")
-    with cols[2]:
-        insight_box("Caveat", "Observed relationship, not proof of causality", "Feature users may already be more engaged. A controlled experiment should test feature education.")
-
-
-def render_campaign_targeting(language: str, data: dict[str, pd.DataFrame]) -> None:
-    section_header(language, "Campaign Targeting Studio")
-    targeting = data["targeting"]
-
-    col1, col2 = st.columns([1.2, 1])
-    with col1:
-        objective = st.selectbox("Campaign objective", list(GOAL_ACTIONS.keys()), help="Business goal that the CRM campaign should support.")
-    with col2:
-        threshold = st.slider("Minimum repeat likelihood", 0.0, 1.0, 0.35, 0.01, help="Minimum predicted repeat probability required for a user to enter the selected audience.")
-
-    options = segment_options(language, targeting)
-    segment_display = st.selectbox("Target segment", list(options.keys()), help="Audience group created from prediction score, recent activity, value, and transaction failure behavior.")
-    selected = select_targets(targeting, options[segment_display], threshold)
-    summary = target_summary(selected)
-
-    cols = st.columns(4)
-    cards = [
-        ("Target audience", format_number(summary["users"]), KPI_INFO["Target audience"], "Users matching this setup"),
-        ("Avg repeat likelihood", format_percent(summary["avg_probability"] * 100), KPI_INFO["Avg repeat likelihood"], "Selected users"),
-        ("Baseline repeat users", format_number(summary["baseline_repeat_users"]), KPI_INFO["Baseline repeat users"], "Before campaign"),
-        ("Recent segment volume", format_krw(summary["volume_90d"]), KPI_INFO["Recent segment volume"], "Last 90 days"),
-    ]
-    for col, (label, value, tip, caption) in zip(cols, cards):
-        with col:
-            metric_card(label, value, tip, caption)
-
-    left, right = st.columns([1, 1])
-    with left:
-        insight_box("Recommended campaign action", objective, GOAL_ACTIONS[objective], action=True)
-        st.download_button(
-            "Download target users",
-            data=to_csv_bytes(selected[BASE_EXPORT_FIELDS]),
-            file_name="fx_retention_targets.csv",
-            mime="text/csv",
-            disabled=selected.empty,
-        )
-    with right:
-        if selected.empty:
-            st.warning("No users selected. Lower the threshold or choose a broader segment.")
-        else:
-            st.plotly_chart(segment_mix_chart(selected, "Selected Audience Mix"), width="stretch")
-
-    st.dataframe(business_view(selected).head(500), width="stretch", hide_index=True)
-
-
-def render_segment_explorer(language: str, data: dict[str, pd.DataFrame]) -> None:
-    section_header(language, "Segment Explorer")
-    targeting = data["targeting"]
-
-    filters = st.columns(6)
-    with filters[0]:
-        probability_range = st.slider("Repeat likelihood", 0.0, 1.0, (0.0, 1.0), 0.01)
-    with filters[1]:
-        recency_range = st.slider("Days since last transaction", int(targeting["recency_days"].min()), int(targeting["recency_days"].max()), (int(targeting["recency_days"].min()), int(targeting["recency_days"].max())))
-    with filters[2]:
-        tx_range = st.slider("Recent transactions", int(targeting["transactions_90d"].min()), int(targeting["transactions_90d"].max()), (int(targeting["transactions_90d"].min()), int(targeting["transactions_90d"].max())))
-    with filters[3]:
-        failed_range = st.slider("Failed transaction rate", 0.0, float(targeting["failed_ratio_90d"].max()), (0.0, float(targeting["failed_ratio_90d"].max())), 0.01)
-    with filters[4]:
-        channels = st.multiselect("Acquisition channel", sorted(targeting["acquisition_channel"].dropna().unique()), default=sorted(targeting["acquisition_channel"].dropna().unique()))
-    with filters[5]:
-        values = st.multiselect("Value segment", sorted(targeting["value_segment"].dropna().unique()), default=sorted(targeting["value_segment"].dropna().unique()))
-
-    options = segment_options(language, targeting)
-    segment_display = st.multiselect("Risk segment", list(options.keys()), default=list(options.keys()))
-    selected_segments = [options[x] for x in segment_display]
-
-    mask = (
-        targeting["repeat_probability"].between(*probability_range)
-        & targeting["recency_days"].between(*recency_range)
-        & targeting["transactions_90d"].between(*tx_range)
-        & targeting["failed_ratio_90d"].between(*failed_range)
-        & targeting["acquisition_channel"].isin(channels)
-        & targeting["value_segment"].isin(values)
-    )
-    if "All users" not in selected_segments:
-        mask = mask & targeting["risk_segment"].isin(selected_segments)
-
-    filtered = targeting[mask].copy()
-    cols = st.columns(3)
-    with cols[0]:
-        metric_card("Target audience", format_number(len(filtered)), KPI_INFO["Target audience"], "Filtered users")
-    with cols[1]:
-        metric_card("Avg repeat likelihood", format_percent(filtered["repeat_probability"].mean() * 100 if len(filtered) else 0), KPI_INFO["Avg repeat likelihood"], "Filtered average")
-    with cols[2]:
-        metric_card("Expected repeat users", format_number(filtered["repeat_probability"].sum()), KPI_INFO["Expected repeat users"], "Filtered baseline")
-
-    st.download_button("Download filtered users", data=to_csv_bytes(filtered[BASE_EXPORT_FIELDS]), file_name="fx_filtered_users.csv", mime="text/csv", disabled=filtered.empty)
-    st.dataframe(business_view(filtered).head(1000), width="stretch", hide_index=True)
-
-
-def render_campaign_simulator(language: str, data: dict[str, pd.DataFrame]) -> None:
-    section_header(language, "Campaign Simulator")
-    targeting = data["targeting"]
-    options = segment_options(language, targeting)
-
-    col1, col2, col3, col4 = st.columns(4)
-    with col1:
-        segment_display = st.selectbox("Audience segment", list(options.keys()), key="sim_segment")
-    with col2:
-        threshold = st.slider("Minimum repeat likelihood", 0.0, 1.0, 0.35, 0.01, key="sim_threshold")
-    with col3:
-        uplift = st.slider("Expected campaign uplift", 0.0, 0.30, 0.05, 0.01, format="%.0f%%")
-    with col4:
-        fee_rate = st.number_input("Fee proxy rate", min_value=0.0, max_value=0.01, value=FEE_RATE_PROXY, step=0.00005, format="%.5f")
-
-    selected = select_targets(targeting, options[segment_display], threshold)
-    if selected.empty:
-        st.warning("No users selected. Lower the threshold or choose a broader segment.")
-        return
-
-    baseline = selected["repeat_probability"].sum()
-    after = np.minimum(selected["repeat_probability"] * (1 + uplift), 1).sum()
-    incremental = after - baseline
-    incremental_volume = incremental * selected["total_volume_90d"].mean()
-    fee_proxy = incremental_volume * fee_rate
-
-    cols = st.columns(5)
-    cards = [
-        ("Target audience", format_number(len(selected)), KPI_INFO["Target audience"], "Campaign audience"),
-        ("Baseline repeat users", format_number(baseline), KPI_INFO["Baseline repeat users"], "Before campaign"),
-        ("Expected repeat users", format_number(after), KPI_INFO["Expected repeat users"], "After campaign"),
-        ("Incremental repeat users", format_number(incremental), KPI_INFO["Incremental repeat users"], "Added users"),
-        ("Fee proxy impact", format_krw(fee_proxy), KPI_INFO["Fee proxy impact"], "Directional estimate"),
-    ]
-    for col, (label, value, tip, caption) in zip(cols, cards):
-        with col:
-            metric_card(label, value, tip, caption)
-
-    scenario = pd.DataFrame({"Scenario": ["Before campaign", "After campaign"], "Expected repeat users": [baseline, after]})
-    fig = px.bar(scenario, x="Scenario", y="Expected repeat users", text="Expected repeat users", color_discrete_sequence=[COLOR_TEAL], title="Campaign Impact Estimate")
-    fig.update_traces(texttemplate="%{text:,.0f}", textposition="outside", cliponaxis=False)
-    fig.update_yaxes(title="Expected repeat users")
-    st.plotly_chart(style_plotly(fig), width="stretch")
-    insight_box("Planning caveat", "Simulation is directional", "This uses an uplift assumption and should be validated with controlled campaign measurement.", action=True)
-
-
-def render_data_mart_quality(language: str, data: dict[str, pd.DataFrame]) -> None:
-    section_header(language, "Data Mart & Quality")
-    modeling = data["modeling_check"].loc[0]
-
-    cols = st.columns(4)
-    cards = [
-        ("Snapshot rows", format_number(modeling["snapshot_rows"]), "Rows in the modeling user-month snapshot table.", "modeling_user_month_snapshots"),
-        ("Modeled users", format_number(modeling["users"]), "Unique users represented in the modeling table.", "User coverage"),
-        ("Target rate", format_percent(modeling["positive_target_rate"] * 100), "Share of rows where target_repeat_30d is positive.", "Prediction target balance"),
-        ("Date coverage", f"{modeling['min_observation_date']} to {modeling['max_observation_date']}", "Observation window available for modeling.", "Time coverage"),
-    ]
-    for col, (label, value, tip, caption) in zip(cols, cards):
-        with col:
-            metric_card(label, value, tip, caption)
-
-    st.markdown("#### Data mart assets")
-    mart_df = pd.DataFrame(
-        [
-            ["mart_user_lifecycle", "User-level onboarding, activation, feature adoption, and repeat behavior."],
-            ["modeling_user_month_snapshots", "Monthly user snapshot table used for repeat transaction prediction."],
-            ["product_funnel / channel funnel", "Dashboard-ready funnel and acquisition channel marts."],
-            ["fx_regime marts", "Transaction behavior and success metrics by FX market regime."],
-            ["support and value segmentation marts", "Support interaction and customer value proxy analysis."],
-        ],
-        columns=["Asset", "Purpose"],
-    )
-    st.dataframe(mart_df, width="stretch", hide_index=True)
-
-    st.markdown("#### Modeling table quality check")
-    st.dataframe(data["modeling_check"], width="stretch", hide_index=True)
-
-    cols = st.columns(3)
-    with cols[0]:
-        rule_card("Target definition", "target_repeat_30d marks whether the user repeated exchange activity within the next 30 days after the observation date.")
-    with cols[1]:
-        rule_card("Feature window", "The model uses behavioral features such as recent transactions, recency, volume, and failed transaction ratio.")
-    with cols[2]:
-        rule_card("Portfolio caveat", "This project uses synthetic data to demonstrate product analytics, data mart design, and decision-support workflow.")
-
-
-def render_prediction_quality(language: str, data: dict[str, pd.DataFrame]) -> None:
-    section_header(language, "Prediction Quality")
-    metrics = data["metrics"]
-    best = metrics.sort_values("roc_auc", ascending=False).iloc[0]
-
-    cols = st.columns(4)
-    cards = [
-        ("Best model", str(best["model"]), "Model selected by strongest ROC-AUC in the current comparison.", "Repeat prediction"),
-        ("Model ROC-AUC", format_percent(best["roc_auc"] * 100), KPI_INFO["Model ROC-AUC"], "Ranking quality"),
-        ("F1 score", format_percent(best["f1"] * 100), "Balance between precision and recall.", "Classification quality"),
-        ("Recall", format_percent(best["recall"] * 100), "Share of actual repeat users the model identified.", "CRM coverage"),
-    ]
-    for col, (label, value, tip, caption) in zip(cols, cards):
-        with col:
-            metric_card(label, value, tip, caption)
-
-    insight_box("Business framing", "Decision support, not autopilot", "The repeat model helps prioritize CRM audiences. Product and CRM teams should still validate campaigns with experiments.")
-
-    left, right = st.columns(2)
-    with left:
-        st.plotly_chart(metrics_chart(metrics), width="stretch")
-    with right:
-        st.plotly_chart(feature_importance_chart(data["importance"]), width="stretch")
-
-    left, right = st.columns(2)
-    with left:
-        st.plotly_chart(confusion_matrix_chart(data["confusion"]), width="stretch")
-    with right:
-        st.plotly_chart(probability_distribution_chart(data["targeting"]), width="stretch")
-
-    st.markdown("#### Classification report")
-    st.dataframe(data["classification"], width="stretch", hide_index=True)
-
-
-def render_fx_market_intelligence(language: str, data: dict[str, pd.DataFrame]) -> None:
-    section_header(language, "FX Market Intelligence")
-    fx_metrics = data["fx_vol_metrics"]
-    fx_predictions = data["fx_vol_predictions"]
-    fx_importance = data["fx_vol_importance"]
-    fx_confusion = data["fx_vol_confusion"]
-    fx_regime_comparison = data["fx_vol_regime_comparison"]
-    fx_regime_metadata = data["fx_vol_regime_metadata"]
-
-    if not fx_metrics.empty and not fx_predictions.empty:
-        latest = fx_predictions.copy()
-        latest["date"] = pd.to_datetime(latest["date"])
-        latest_row = latest.sort_values("date").iloc[-1]
-        selected = fx_metrics[fx_metrics["selected_model_flag"] == 1]
-        best = selected.iloc[0] if not selected.empty else fx_metrics.sort_values("f1_macro", ascending=False).iloc[0]
-        latest_regime = clean_label(latest_row["predicted_regime"])
-        latest_date = latest_row["date"].strftime("%Y-%m-%d")
-
-        st.markdown("#### Real-Market Volatility Prediction Signal")
-        cols = st.columns(4)
-        if language == "Korean":
-            cards = [
-                ("Next-day regime", latest_regime, "다음 거래일의 USD/KRW 변동성 구간 예측입니다.", latest_date),
-                ("High-vol probability", format_percent(latest_row["prob_high"] * 100), "다음 거래일이 고변동성일 가능성입니다.", "Operational readiness"),
-                ("Best setup", f"{best['model']}", "현재 비교에서 선택된 FX 변동성 예측 모델입니다.", str(best["regime_definition"])),
-                ("Macro F1", format_percent(best["f1_macro"] * 100), "Low, normal, high 각 클래스의 F1을 평균낸 성능 지표입니다.", "Model quality"),
-            ]
-        else:
-            cards = [
-                ("Next-day regime", latest_regime, "Predicted USD/KRW volatility regime for the next trading day.", latest_date),
-                ("High-vol probability", format_percent(latest_row["prob_high"] * 100), "Estimated chance that the next trading day is a high-volatility period.", "Operational readiness"),
-                ("Best setup", f"{best['model']}", "Selected FX volatility model in the current comparison.", str(best["regime_definition"])),
-                ("Macro F1", format_percent(best["f1_macro"] * 100), "Average F1 across low, normal, and high volatility classes.", "Model quality"),
-            ]
-        for col, (label, value, tip, caption) in zip(cols, cards):
-            with col:
-                metric_card(label, value, tip, caption)
-
-        if latest_row["predicted_regime"] == "high":
-            action_title = "Prepare high-volatility operations"
-            action_text = "Increase transaction monitoring, prepare rate-change messaging, and make support teams aware before market movement creates user friction."
-        elif latest_row["predicted_regime"] == "normal":
-            action_title = "Maintain normal readiness"
-            action_text = "Use standard monitoring and lifecycle messaging, while watching for sudden movement in the high-volatility probability."
-        else:
-            action_title = "Use calm-market windows"
-            action_text = "Normal operations are enough. This can be a good moment for feature education, rate-alert adoption, and target-rate order prompts."
-        insight_box("Recommended operating action", action_title, action_text, action=True)
-
-        left, right = st.columns([1.25, 1])
-        with left:
-            st.plotly_chart(fx_volatility_probability_chart(fx_predictions), width="stretch")
-        with right:
-            st.plotly_chart(fx_volatility_metrics_chart(fx_metrics), width="stretch")
-
-        left, right = st.columns(2)
-        with left:
-            if not fx_importance.empty:
-                st.plotly_chart(fx_volatility_feature_importance_chart(fx_importance), width="stretch")
-        with right:
-            if not fx_confusion.empty:
-                st.plotly_chart(fx_volatility_confusion_chart(fx_confusion), width="stretch")
-
-        left, right = st.columns(2)
-        with left:
-            st.markdown("#### Regime definition comparison")
-            if not fx_regime_comparison.empty:
-                display_cols = [
-                    col
-                    for col in [
-                        "regime_definition",
-                        "best_model_by_f1",
-                        "best_f1_macro",
-                        "best_model_by_balanced_accuracy",
-                        "best_balanced_accuracy",
-                    ]
-                    if col in fx_regime_comparison.columns
-                ]
-                st.dataframe(fx_regime_comparison[display_cols], width="stretch", hide_index=True)
-        with right:
-            st.markdown("#### Regime definition metadata")
-            if not fx_regime_metadata.empty:
-                st.dataframe(fx_regime_metadata, width="stretch", hide_index=True)
-
-        st.download_button(
-            "Download FX volatility predictions",
-            data=to_csv_bytes(fx_predictions),
-            file_name="fx_volatility_predictions.csv",
-            mime="text/csv",
-        )
-    else:
-        insight_box(
-            "FX prediction module",
-            "Prediction outputs are not available yet",
-            "Run the FX volatility regime notebook to create model metrics, predictions, feature importance, and regime comparison CSV files.",
-        )
-
-    st.markdown("#### Product Behavior Under FX Regimes")
-    behavior = data["fx_behavior"]
-    activity = data["fx_activity"]
-    high = behavior[behavior["market_regime_at_transaction"] == "high"].iloc[0]
-
-    cols = st.columns(4)
-    cards = [
-        ("High-vol attempts", format_number(high["transaction_attempts"]), "Transaction attempts observed during high-volatility FX regime.", "Synthetic regime behavior"),
-        ("High-vol success rate", format_percent(high["success_rate"]), "Exchange success rate during high-volatility FX regime.", "Operational reliability"),
-        ("High-vol completed volume", format_krw(high["completed_volume_krw"]), "Completed transaction volume during high-volatility regime.", "FX context"),
-        ("Regime types", format_number(behavior["market_regime_at_transaction"].nunique()), "Low, normal, and high FX volatility regimes.", "Market context"),
-    ]
-    for col, (label, value, tip, caption) in zip(cols, cards):
-        with col:
-            metric_card(label, value, tip, caption)
-
-    left, right = st.columns(2)
-    with left:
-        st.plotly_chart(fx_regime_chart(behavior, activity), width="stretch")
-    with right:
-        failure = data["failure_reason"].copy()
-        failure["regime_reason"] = failure["market_regime_at_transaction"].map(clean_label) + " - " + failure["failure_reason"].map(clean_label)
-        st.plotly_chart(horizontal_rate_chart(failure, "regime_reason", "share_within_regime", "Failure Reason Share by FX Regime", COLOR_ROSE, height=430), width="stretch")
-
-    cols = st.columns(3)
-    with cols[0]:
-        insight_box("Operational signal", "High volatility needs readiness", "If attempts increase while success rate weakens, operations should prepare transaction monitoring and support messaging.")
-    with cols[1]:
-        insight_box("Product signal", "Rate-change communication matters", "During high volatility, users may need clearer rate movement, execution, and reliability messaging.")
-    with cols[2]:
-        insight_box("Prediction layer", "FX model is now connected", "Real-market volatility prediction is shown above, while this section explains why market regimes matter for product operations.")
-
-
-def main() -> None:
-    inject_css()
-    data = load_dashboard_data()
-
-    with st.sidebar:
-        language = st.radio("Language / 언어", ["English", "Korean"], horizontal=True)
-        page_options = [page_label(language, page) for page in PAGES]
-        selected_label = st.radio("Navigation" if language == "English" else "탐색", page_options)
-        selected_page = PAGES[page_options.index(selected_label)]
-        st.markdown("---")
-        st.caption("FX Fintech Product Analytics Lab")
-        st.caption("Core DA: product, marketing, KPI, retention, cohort, SQL marts")
-        st.caption("Flex DA: FX market intelligence and future time-series prediction")
-
-    render_header(language)
-
-    if selected_page == "Executive Overview":
-        render_executive_overview(language, data)
-    elif selected_page == "Growth & Funnel Analytics":
-        render_growth_funnel(language, data)
-    elif selected_page == "Retention & Cohort Analytics":
-        render_retention_cohort(language, data)
-    elif selected_page == "Product Feature Insights":
-        render_feature_insights(language, data)
-    elif selected_page == "Campaign Targeting Studio":
-        render_campaign_targeting(language, data)
-    elif selected_page == "Segment Explorer":
-        render_segment_explorer(language, data)
-    elif selected_page == "Campaign Simulator":
-        render_campaign_simulator(language, data)
-    elif selected_page == "Data Mart & Quality":
-        render_data_mart_quality(language, data)
-    elif selected_page == "Prediction Quality":
-        render_prediction_quality(language, data)
-    elif selected_page == "FX Market Intelligence":
-        render_fx_market_intelligence(language, data)
-
-
-if __name__ == "__main__":
-    main()

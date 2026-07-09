@@ -1,0 +1,18 @@
+{
+  "provider": "Yahoo Finance",
+  "library": "yfinance",
+  "tickers": {
+    "USDKRW": "USDKRW=X",
+    "JPYKRW": "JPYKRW=X",
+    "EURKRW": "EURKRW=X",
+    "SGDKRW": "SGDKRW=X"
+  },
+  "requested_start_date": "2016-01-01",
+  "requested_end_date_exclusive": "2026-07-10",
+  "first_observation": "2016-01-01",
+  "last_observation": "2026-07-09",
+  "rows": 2737,
+  "downloaded_at_utc": "2026-07-09T06:54:22.168053+00:00",
+  "cache_path": "data/external/yahoo_fx_daily.csv",
+  "data_classification": "external historical market data; not synthetic"
+}

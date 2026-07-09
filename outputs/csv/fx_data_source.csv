@@ -1,0 +1,2 @@
+provider,library,tickers,first_observation,last_observation,rows,cache_path,load_mode,data_classification
+Yahoo Finance,yfinance,"USDKRW:USDKRW=X, JPYKRW:JPYKRW=X, EURKRW:EURKRW=X, SGDKRW:SGDKRW=X",2016-01-01,2026-07-09,2737,data/external/yahoo_fx_daily.csv,local_cache,external historical market data; not synthetic

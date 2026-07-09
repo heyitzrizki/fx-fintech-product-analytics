@@ -1,6 +1,5 @@
-feature,importance
-transactions_90d,0.5419572
-total_volume_90d,0.20666923
-recency_days,0.11358927
-transactions_all,0.078238025
-failed_ratio_90d,0.059546307
+feature,importance,method
+transactions_90d,0.8562013397606973,absolute standardized coefficient
+recency_days,0.22395274435739357,absolute standardized coefficient
+failed_ratio_90d,0.1306329018545001,absolute standardized coefficient
+total_volume_90d,0.05951053479117111,absolute standardized coefficient
