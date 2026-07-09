@@ -1,2 +1,2 @@
 audience_users,baseline_expected_repeat_users,uplift_scenario,absolute_uplift_assumption,incremental_repeat_users,median_recent_volume_proxy_krw,incremental_volume_proxy_krw,fee_proxy_scenario,fee_proxy_rate_assumption,value_impact_proxy_krw,assumption_note
-18994,8264.338194523913,base,0.05,949.7,2389770.5,2269565043.85,base,0.00025,567391.2609625,Directional scenario only; not forecast revenue or causal impact.
+18768,8114.598887828064,base,0.05,938.4000000000001,2323655.5,2180518321.2000003,base,0.00025,545129.5803,Directional scenario only; not forecast revenue or causal impact.

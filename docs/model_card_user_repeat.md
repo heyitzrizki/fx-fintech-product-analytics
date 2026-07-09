@@ -11,7 +11,7 @@ Rank users by likelihood of repeating an exchange in the 30 days after a monthly
 - Target: `target_repeat_30d` in the following 30 days.
 - Split: first 70% of observation dates for training, next 15% for threshold and model selection, and final 15% for chronological testing.
 
-Logistic Regression, Random Forest, XGBoost, LightGBM, and CatBoost are included in the reproducible model comparison. Selection balances ROC-AUC, PR-AUC, F1, interpretability, and reliability. The fitted artifact stores the feature list, decision threshold, and windows.
+Logistic Regression, Random Forest, XGBoost, LightGBM, and CatBoost are included in the reproducible model comparison. CatBoost is selected as the performance winner using validation ROC-AUC, with validation PR-AUC as the tie-breaker. Logistic Regression remains the interpretability baseline. The fitted artifact stores the feature list, decision threshold, and windows.
 
 ## Intended use
 

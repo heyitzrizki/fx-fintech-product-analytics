@@ -1,5 +1,5 @@
 feature,importance,method
-transactions_90d,0.7827855535892986,absolute standardized coefficient
-recency_days,0.19978407358971068,absolute standardized coefficient
-failed_ratio_90d,0.13260950360935517,absolute standardized coefficient
-total_volume_90d,0.07865575901588891,absolute standardized coefficient
+transactions_90d,59.76146356149772,tree feature importance
+total_volume_90d,16.673632596395755,tree feature importance
+recency_days,14.714501327113926,tree feature importance
+failed_ratio_90d,8.850402514992602,tree feature importance

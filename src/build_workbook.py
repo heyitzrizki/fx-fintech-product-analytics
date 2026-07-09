@@ -855,42 +855,21 @@ repeat_model_metrics.sort_values(
     md("## 2.3 Model Evaluation"),
     code(
         """
-# Use validation performance for model selection
-best_validation_auc = repeat_model_metrics["validation_roc_auc"].max()
-best_validation_f1 = repeat_model_metrics["f1"].max()
-
-logistic_result = repeat_model_metrics[
-    repeat_model_metrics["model"] == "Logistic Regression"
-].iloc[0]
-
-if (
-    logistic_result["validation_roc_auc"] >= best_validation_auc - 0.01
-    and logistic_result["f1"] >= best_validation_f1 - 0.02
-):
-    selected_repeat_model_name = "Logistic Regression"
-    repeat_selection_reason = (
-        "Selected for interpretability because more complex models "
-        "did not materially improve validation performance."
+# Select the performance winner using validation data only
+performance_winner = (
+    repeat_model_metrics
+    .sort_values(
+        ["validation_roc_auc", "validation_pr_auc"],
+        ascending=False
     )
-else:
-    eligible_models = repeat_model_metrics[
-        repeat_model_metrics["validation_roc_auc"]
-        >= best_validation_auc - 0.01
-    ]
+    .iloc[0]
+)
 
-    selected_repeat_model_name = (
-        eligible_models
-        .sort_values(
-            ["validation_pr_auc", "f1"],
-            ascending=False
-        )
-        .iloc[0]["model"]
-    )
-
-    repeat_selection_reason = (
-        "Selected for the strongest balance of validation ranking "
-        "and positive-class performance."
-    )
+selected_repeat_model_name = performance_winner["model"]
+repeat_selection_reason = (
+    "Selected as the performance winner based on the highest "
+    "validation ROC-AUC, with validation PR-AUC as the tie-breaker."
+)
 
 repeat_model_metrics["selected_model_flag"] = (
     repeat_model_metrics["model"] == selected_repeat_model_name

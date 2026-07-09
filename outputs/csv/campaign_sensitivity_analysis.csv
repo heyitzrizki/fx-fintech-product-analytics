@@ -1,10 +1,10 @@
 audience_users,baseline_expected_repeat_users,uplift_scenario,absolute_uplift_assumption,incremental_repeat_users,median_recent_volume_proxy_krw,incremental_volume_proxy_krw,fee_proxy_scenario,fee_proxy_rate_assumption,value_impact_proxy_krw,assumption_note
-18994,8264.338194523913,low,0.02,379.88,2389770.5,907826017.54,low,0.00015,136173.90263099998,Directional scenario only; not forecast revenue or causal impact.
-18994,8264.338194523913,low,0.02,379.88,2389770.5,907826017.54,base,0.00025,226956.504385,Directional scenario only; not forecast revenue or causal impact.
-18994,8264.338194523913,low,0.02,379.88,2389770.5,907826017.54,high,0.00035,317739.106139,Directional scenario only; not forecast revenue or causal impact.
-18994,8264.338194523913,base,0.05,949.7,2389770.5,2269565043.85,low,0.00015,340434.75657749997,Directional scenario only; not forecast revenue or causal impact.
-18994,8264.338194523913,base,0.05,949.7,2389770.5,2269565043.85,base,0.00025,567391.2609625,Directional scenario only; not forecast revenue or causal impact.
-18994,8264.338194523913,base,0.05,949.7,2389770.5,2269565043.85,high,0.00035,794347.7653475,Directional scenario only; not forecast revenue or causal impact.
-18994,8264.338194523913,high,0.08,1519.52,2389770.5,3631304070.16,low,0.00015,544695.6105239999,Directional scenario only; not forecast revenue or causal impact.
-18994,8264.338194523913,high,0.08,1519.52,2389770.5,3631304070.16,base,0.00025,907826.01754,Directional scenario only; not forecast revenue or causal impact.
-18994,8264.338194523913,high,0.08,1519.52,2389770.5,3631304070.16,high,0.00035,1270956.424556,Directional scenario only; not forecast revenue or causal impact.
+18768,8114.598887828064,low,0.02,375.36,2323655.5,872207328.48,low,0.00015,130831.09927199999,Directional scenario only; not forecast revenue or causal impact.
+18768,8114.598887828064,low,0.02,375.36,2323655.5,872207328.48,base,0.00025,218051.83212,Directional scenario only; not forecast revenue or causal impact.
+18768,8114.598887828064,low,0.02,375.36,2323655.5,872207328.48,high,0.00035,305272.564968,Directional scenario only; not forecast revenue or causal impact.
+18768,8114.598887828064,base,0.05,938.4000000000001,2323655.5,2180518321.2000003,low,0.00015,327077.74818,Directional scenario only; not forecast revenue or causal impact.
+18768,8114.598887828064,base,0.05,938.4000000000001,2323655.5,2180518321.2000003,base,0.00025,545129.5803,Directional scenario only; not forecast revenue or causal impact.
+18768,8114.598887828064,base,0.05,938.4000000000001,2323655.5,2180518321.2000003,high,0.00035,763181.4124200001,Directional scenario only; not forecast revenue or causal impact.
+18768,8114.598887828064,high,0.08,1501.44,2323655.5,3488829313.92,low,0.00015,523324.39708799997,Directional scenario only; not forecast revenue or causal impact.
+18768,8114.598887828064,high,0.08,1501.44,2323655.5,3488829313.92,base,0.00025,872207.32848,Directional scenario only; not forecast revenue or causal impact.
+18768,8114.598887828064,high,0.08,1501.44,2323655.5,3488829313.92,high,0.00035,1221090.259872,Directional scenario only; not forecast revenue or causal impact.

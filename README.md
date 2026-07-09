@@ -34,7 +34,7 @@ The main workbook is [notebooks/00_fx_fintech_product_analytics_workbook.ipynb](
 6. evaluates a simulated onboarding experiment;
 7. exports campaign scenarios and dashboard files.
 
-The repeat-model comparison includes Logistic Regression, Random Forest, XGBoost, LightGBM, and CatBoost. Logistic Regression is retained when more complex models improve validation performance only marginally.
+The repeat-model comparison includes Logistic Regression, Random Forest, XGBoost, LightGBM, and CatBoost. CatBoost is selected as the performance winner using validation ROC-AUC, with validation PR-AUC as the tie-breaker.
 
 ## Key findings
 
@@ -70,10 +70,11 @@ The product findings below come from synthetic behavior and demonstrate analysis
 
 ### Repeat prediction and targeting
 
-- Logistic Regression is selected with test ROC-AUC 0.777, PR-AUC 0.755, and F1 0.681.
-- CatBoost records a slightly higher test ROC-AUC of 0.779 and F1 of 0.683, but the gain is too small to outweigh the simpler explanation and deployment of Logistic Regression.
-- Recent transaction count is the strongest model signal, followed by recency, failed-transaction ratio, and recent volume. Importance describes model dependence, not causal effect.
-- The latest targeting table contains 5,978 users with no recent transaction, 2,261 with a high failed-transaction ratio, and 104 high-value users with below-threshold repeat likelihood.
+- CatBoost is selected as the performance winner with validation ROC-AUC 0.739 and validation PR-AUC 0.702.
+- On the chronological test period, CatBoost records ROC-AUC 0.779, PR-AUC 0.756, and F1 0.683.
+- Logistic Regression remains the simpler interpretability baseline with test ROC-AUC 0.777 and F1 0.681, showing that CatBoost's performance gain is real but modest.
+- Recent transaction count is the strongest CatBoost signal, followed by recent volume, recency, and failed-transaction ratio. Importance describes model dependence, not causal effect.
+- The latest targeting table contains 5,978 users with no recent transaction, 2,260 with a high failed-transaction ratio, and 180 high-value users with below-threshold repeat likelihood.
 
 ### A/B test findings (simulated)
 
@@ -89,9 +90,9 @@ The generated treatment group therefore shows higher feature adoption and first 
 
 ### Campaign sensitivity
 
-- The scenario audience contains 18,994 users.
-- Under the explicitly assumed base case of five-point uplift, the simulator estimates approximately 950 incremental repeat users and KRW 2.27 billion of incremental volume proxy.
-- Applying the base 0.025% fee proxy produces approximately KRW 567 thousand of value impact. These are directional sensitivity outputs, not revenue forecasts or causal estimates.
+- The scenario audience contains 18,768 users.
+- Under the explicitly assumed base case of five-point uplift, the simulator estimates approximately 938 incremental repeat users and KRW 2.18 billion of incremental volume proxy.
+- Applying the base 0.025% fee proxy produces approximately KRW 545 thousand of value impact. These are directional sensitivity outputs, not revenue forecasts or causal estimates.
 
 ### Data quality
 
