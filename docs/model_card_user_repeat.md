@@ -9,9 +9,9 @@ Rank users by likelihood of repeating an exchange in the 30 days after a monthly
 - Unit: user-month snapshot.
 - Features: recency, transaction count, transaction volume, and failed-attempt ratio from the trailing 90 days.
 - Target: `target_repeat_30d` in the following 30 days.
-- Validation: last 20% of observation dates; no random split.
+- Split: first 70% of observation dates for training, next 15% for threshold and model selection, and final 15% for chronological testing.
 
-Logistic Regression, Random Forest, XGBoost, LightGBM, and CatBoost are attempted. Optional libraries are skipped when unavailable. Selection balances ROC-AUC, PR-AUC, F1, interpretability, and reliability. The fitted artifact stores the feature list, decision threshold, and windows.
+Logistic Regression, Random Forest, XGBoost, LightGBM, and CatBoost are included in the reproducible model comparison. Selection balances ROC-AUC, PR-AUC, F1, interpretability, and reliability. The fitted artifact stores the feature list, decision threshold, and windows.
 
 ## Intended use
 

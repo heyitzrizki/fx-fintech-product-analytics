@@ -14,9 +14,9 @@ repeat_users AS (
         MAX(
             CASE
                 WHEN datetime(t.transaction_timestamp)
-                     > datetime(ft.first_transaction_at, '+21 days')
+                     > datetime(ft.first_transaction_at)
                  AND datetime(t.transaction_timestamp)
-                     <= datetime(ft.first_transaction_at, '+45 days')
+                     <= datetime(ft.first_transaction_at, '+30 days')
                 THEN 1
                 ELSE 0
             END
@@ -78,7 +78,6 @@ ORDER BY
         WHEN 'One support ticket' THEN 2
         WHEN 'Multiple support tickets' THEN 3
     END;
-
 
 
 

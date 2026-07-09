@@ -52,12 +52,16 @@ elif page == "Funnel and Retention":
     st.plotly_chart(cohort_heatmap(data["cohort"]), width="stretch")
 
 
-elif page == "Feature Adoption and A/B Test":
+elif page == "Feature Adoption and Simulated A/B Test":
     page_intro(
         page,
         "Feature adoption within 7 days and repeat-rate association",
         "Use the onboarding prompt experiment to test adoption lift; treat observational retention gaps as hypotheses.",
-        "Experiment assignment and outcomes are simulated and are not production causal evidence.",
+        "Simulated experiment analysis to demonstrate A/B testing logic; assignment and outcomes are not production causal evidence.",
+    )
+    st.warning(
+        "The experiment table below contains generated assignment and outcomes. "
+        "It demonstrates the evaluation method and does not estimate real product uplift."
     )
     left, right = st.columns(2)
     left.plotly_chart(

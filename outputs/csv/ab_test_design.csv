@@ -1,7 +1,7 @@
 field,definition
-data_source,"Simulated randomized assignment and outcomes; demonstration only, not production causal evidence."
+data_source,Simulated randomized assignment and outcomes; not production causal evidence.
 unit_of_randomization,User
-control,Existing onboarding with no feature prompt
+control,Existing onboarding without a feature prompt
 treatment,Onboarding prompt introducing rate-alert or target-rate order
 primary_metric,Feature adoption within 7 days
 secondary_metric,First exchange within 14 days

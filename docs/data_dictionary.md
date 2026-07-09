@@ -1,5 +1,7 @@
 # Data Dictionary
 
+The most important reading rule is the grain: confirm what one row represents before joining tables or calculating a rate. Product behavior comes from the synthetic SQLite database; the FX prediction section uses the separate Yahoo Finance cache.
+
 | Table | Grain | Important fields | Use |
 |---|---|---|---|
 | `users` | One row per user | signup, KYC, bank link, channel | Onboarding funnel |

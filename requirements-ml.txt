@@ -1,3 +1,1 @@
 -r requirements.txt
-# Optional comparison model. The workflow skips it when unavailable.
-catboost>=1.2

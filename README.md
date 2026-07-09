@@ -14,11 +14,13 @@ The core question is whether acquired users reach a first successful exchange, r
 
 ## Dataset and assumptions
 
-`data/fx_fintech_product_analytics.db` contains synthetic users, events, transactions, support tickets, marketing spend, and monthly modeling snapshots. These product results are illustrative and are not Switchwon performance.
+`data/fx_fintech_product_analytics.db` contains synthetic users, events, transactions, support tickets, marketing spend, and monthly modeling snapshots. These product results are illustrative and do not represent any real company performance.
 
 The volatility model uses external historical daily FX data downloaded from Yahoo Finance for USD/KRW, JPY/KRW, EUR/KRW, and SGD/KRW. The fixed snapshot is cached at `data/external/yahoo_fx_daily.csv` for reproducibility. The database also contains a legacy simulated `fx_rates_hourly` table; it is not used to train the volatility model.
 
-Repeat prediction uses a trailing 90-day observation window through each `observation_date`; `target_repeat_30d` covers the following 30 days. The validation split is chronological. Campaign uplift and fee rates are explicit scenario assumptions. The A/B test assignment and outcomes are simulated because no production experiment table exists.
+Repeat prediction uses a trailing 90-day observation window through each `observation_date`; `target_repeat_30d` covers the following 30 days. D30 product retention is a separate metric: another successful exchange within 30 days after the first exchange. The model split is chronological. Campaign uplift and fee rates are explicit scenario assumptions.
+
+The experiment section is a simulated experiment analysis to demonstrate A/B testing logic. Both assignment and outcomes are generated because no production experiment table exists, so the reported uplift is not production causal evidence.
 
 ## Analysis workflow
 
@@ -32,6 +34,8 @@ The main workbook is [notebooks/00_fx_fintech_product_analytics_workbook.ipynb](
 6. evaluates a simulated onboarding experiment;
 7. exports campaign scenarios and dashboard files.
 
+The repeat-model comparison includes Logistic Regression, Random Forest, XGBoost, LightGBM, and CatBoost. Logistic Regression is retained when more complex models improve validation performance only marginally.
+
 Key descriptive findings in the supplied synthetic data:
 
 - 9,649 of 44,974 valid signups activate within 14 days (21.45%).
@@ -41,7 +45,7 @@ Key descriptive findings in the supplied synthetic data:
 
 ## Dashboard
 
-The six pages are Executive Summary, Funnel and Retention, Feature Adoption and A/B Test, Prediction and Targeting, FX Market Readiness, and Data Quality and Methodology. Each page states the metric, decision, and caveat.
+The six pages are Executive Summary, Funnel and Retention, Feature Adoption and Simulated A/B Test, Prediction and Targeting, FX Market Readiness, and Data Quality and Methodology. Each page states the metric, decision, and caveat.
 
 ## Run
 

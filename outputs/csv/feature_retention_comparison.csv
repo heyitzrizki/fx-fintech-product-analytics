@@ -1,5 +1,5 @@
 comparison_type,user_group,first_exchange_users,d30_repeat_users,d30_repeat_rate
-Rate-alert adoption,Rate-alert users,13777,7555,54.84
-Rate-alert adoption,Non-rate-alert users,12014,3208,26.7
-Target-rate adoption,Target-rate users,15595,8110,52.0
-Target-rate adoption,Manual-only users,10196,2653,26.02
+Rate-alert adoption,Rate-alert users,13777,8982,65.2
+Rate-alert adoption,Non-rate-alert users,12014,4486,37.34
+Target-rate adoption,Target-rate users,15595,9904,63.51
+Target-rate adoption,Manual-only users,10196,3564,34.95

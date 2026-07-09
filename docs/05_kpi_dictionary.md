@@ -195,24 +195,24 @@ This shows that the largest bottleneck occurs in fast activation after the first
 
 ### Definition
 
-A D30 repeat user is a user who completes another successful exchange around one month after the first successful exchange.
+A D30 repeat user completes another successful exchange after the first exchange and no later than 30 days after that first exchange.
 
 ### SQL Logic
 
 ```sql
-datetime(transaction_timestamp) > datetime(first_transaction_at, '+21 days')
-AND datetime(transaction_timestamp) <= datetime(first_transaction_at, '+45 days')
+datetime(transaction_timestamp) > datetime(first_transaction_at)
+AND datetime(transaction_timestamp) <= datetime(first_transaction_at, '+30 days')
 ```
 
 ### Business Meaning
 
-FX transactions may not happen every day, so a 21-to-45-day window is used instead of requiring activity on exactly day 30.
+The metric measures any successful repeat exchange during days 1–30 after the first exchange. It does not require activity on exactly day 30.
 
 ## 9. D30 Repeat Rate
 
 ### Definition
 
-D30 repeat rate is the percentage of first-exchange users who complete another successful exchange within the D30 repeat window.
+D30 repeat rate is the percentage of first-exchange users who complete another successful exchange within 30 days after the first exchange.
 
 ### Formula
 
@@ -245,8 +245,8 @@ MAX(
 
 | Group | First-Exchange Users | D30 Repeat Rate |
 |---|---:|---:|
-| Manual-only users | 10,196 | 26.02% |
-| Target-rate users | 15,595 | 52.00% |
+| Manual-only users | 10,196 | 34.95% |
+| Target-rate users | 15,595 | 63.51% |
 
 ### Business Meaning
 
@@ -278,8 +278,8 @@ rate_alert_user_flag = 1
 
 | Group | First-Exchange Users | D30 Repeat Rate |
 |---|---:|---:|
-| Non-rate-alert users | 12,014 | 26.70% |
-| Rate-alert users | 13,777 | 54.84% |
+| Non-rate-alert users | 12,014 | 37.34% |
+| Rate-alert users | 13,777 | 65.20% |
 
 ### Business Meaning
 
@@ -308,10 +308,10 @@ Neither feature
 
 | Feature Group | First-Exchange Users | D30 Repeat Rate |
 |---|---:|---:|
-| Both target-rate and rate-alert | 10,884 | 59.04% |
-| Rate-alert only | 2,893 | 39.03% |
-| Target-rate only | 4,711 | 35.75% |
-| Neither feature | 7,303 | 20.87% |
+| Both target-rate and rate-alert | 10,884 | 69.81% |
+| Rate-alert only | 2,893 | 47.84% |
+| Target-rate only | 4,711 | 48.95% |
+| Neither feature | 7,303 | 29.85% |
 
 ### Business Meaning
 
@@ -467,9 +467,9 @@ Multiple support tickets
 
 | Support Group | First-Exchange Users | D30 Repeat Rate |
 |---|---:|---:|
-| No support ticket | 15,153 | 41.06% |
-| One support ticket | 8,042 | 41.98% |
-| Multiple support tickets | 2,596 | 44.88% |
+| No support ticket | 15,153 | 51.71% |
+| One support ticket | 8,042 | 52.70% |
+| Multiple support tickets | 2,596 | 53.70% |
 
 ### Business Meaning
 

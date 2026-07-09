@@ -1,540 +1,540 @@
 date,actual_regime,predicted_regime,prob_high,prob_low,prob_normal,recommended_action
-2024-06-07,high,high,0.43909935013376333,0.21748131646684563,0.34341933339939107,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-06-07,high,high,0.4390993501337632,0.21748131646684565,0.343419333399391,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2024-06-10,low,low,0.10047978417916756,0.5989264641018587,0.3005937517189738,Normal monitoring; use calmer periods for product education.
 2024-06-11,low,low,0.0662671065496273,0.661455115009457,0.2722777784409158,Normal monitoring; use calmer periods for product education.
-2024-06-12,normal,normal,0.29979797313103856,0.279626265637829,0.4205757612311327,Maintain standard staffing and transaction monitoring.
-2024-06-13,low,normal,0.11838051591147604,0.4069998875712494,0.4746195965172745,Maintain standard staffing and transaction monitoring.
+2024-06-12,normal,normal,0.2997979731310385,0.279626265637829,0.42057576123113277,Maintain standard staffing and transaction monitoring.
+2024-06-13,low,normal,0.11838051591147605,0.4069998875712492,0.4746195965172745,Maintain standard staffing and transaction monitoring.
 2024-06-14,normal,normal,0.12161437219972558,0.3696807410043093,0.508704886795965,Maintain standard staffing and transaction monitoring.
-2024-06-17,low,low,0.08517129538588261,0.6408820776374711,0.2739466269766459,Normal monitoring; use calmer periods for product education.
-2024-06-18,low,low,0.08834374459487673,0.6107255176267787,0.30093073777834417,Normal monitoring; use calmer periods for product education.
-2024-06-19,low,low,0.06500333939127521,0.648410970801796,0.2865856898069288,Normal monitoring; use calmer periods for product education.
-2024-06-20,normal,normal,0.10013896712133266,0.4209056505236979,0.47895538235496915,Maintain standard staffing and transaction monitoring.
-2024-06-21,low,low,0.06348078493378147,0.627670488630437,0.30884872643578154,Normal monitoring; use calmer periods for product education.
-2024-06-24,low,low,0.0777321197655855,0.6415137837024446,0.28075409653196975,Normal monitoring; use calmer periods for product education.
-2024-06-25,low,low,0.10295088847632096,0.5738119939198076,0.32323711760387147,Normal monitoring; use calmer periods for product education.
+2024-06-17,low,low,0.0851712953858826,0.6408820776374711,0.2739466269766459,Normal monitoring; use calmer periods for product education.
+2024-06-18,low,low,0.08834374459487673,0.6107255176267786,0.30093073777834417,Normal monitoring; use calmer periods for product education.
+2024-06-19,low,low,0.06500333939127521,0.6484109708017959,0.2865856898069289,Normal monitoring; use calmer periods for product education.
+2024-06-20,normal,normal,0.10013896712133266,0.42090565052369777,0.4789553823549691,Maintain standard staffing and transaction monitoring.
+2024-06-21,low,low,0.06348078493378147,0.627670488630437,0.3088487264357815,Normal monitoring; use calmer periods for product education.
+2024-06-24,low,low,0.0777321197655855,0.6415137837024447,0.28075409653196975,Normal monitoring; use calmer periods for product education.
+2024-06-25,low,low,0.10295088847632096,0.5738119939198076,0.3232371176038716,Normal monitoring; use calmer periods for product education.
 2024-06-26,low,low,0.051896990422453576,0.6485693458933116,0.2995336636842348,Normal monitoring; use calmer periods for product education.
-2024-06-27,normal,normal,0.10788890482909491,0.420193177801477,0.47191791736942795,Maintain standard staffing and transaction monitoring.
-2024-06-28,normal,high,0.3520022440023541,0.29724037044018015,0.3507573855574656,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-07-01,low,low,0.07873179087539209,0.6720053413894211,0.24926286773518674,Normal monitoring; use calmer periods for product education.
-2024-07-02,low,low,0.05107015294447034,0.6524684685275012,0.2964613785280284,Normal monitoring; use calmer periods for product education.
+2024-06-27,normal,normal,0.10788890482909491,0.42019317780147697,0.47191791736942795,Maintain standard staffing and transaction monitoring.
+2024-06-28,normal,high,0.3520022440023541,0.29724037044018015,0.35075738555746566,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-07-01,low,low,0.07873179087539209,0.6720053413894211,0.2492628677351868,Normal monitoring; use calmer periods for product education.
+2024-07-02,low,low,0.05107015294447034,0.6524684685275013,0.2964613785280285,Normal monitoring; use calmer periods for product education.
 2024-07-03,low,normal,0.09469264066875578,0.41929172609244325,0.48601563323880087,Maintain standard staffing and transaction monitoring.
-2024-07-04,normal,low,0.07110540715677872,0.6294772971385719,0.29941729570464964,Normal monitoring; use calmer periods for product education.
-2024-07-05,low,normal,0.12271214610493708,0.3912391877145229,0.48604866618054005,Maintain standard staffing and transaction monitoring.
+2024-07-04,normal,low,0.07110540715677874,0.6294772971385719,0.29941729570464964,Normal monitoring; use calmer periods for product education.
+2024-07-05,low,normal,0.12271214610493708,0.39123918771452276,0.48604866618054005,Maintain standard staffing and transaction monitoring.
 2024-07-08,normal,low,0.09204291670505524,0.64867745277707,0.25927963051787395,Normal monitoring; use calmer periods for product education.
-2024-07-09,low,low,0.09051977950826885,0.6576154218998214,0.2518647985919098,Normal monitoring; use calmer periods for product education.
-2024-07-10,low,low,0.08820475154487474,0.6427800713496106,0.2690151771055147,Normal monitoring; use calmer periods for product education.
+2024-07-09,low,low,0.09051977950826885,0.6576154218998215,0.25186479859190974,Normal monitoring; use calmer periods for product education.
+2024-07-10,low,low,0.08820475154487474,0.6427800713496107,0.26901517710551476,Normal monitoring; use calmer periods for product education.
 2024-07-11,normal,normal,0.3583297154516062,0.2627424591951347,0.37892782535325914,Maintain standard staffing and transaction monitoring.
 2024-07-12,low,low,0.19871162457292776,0.40831741781782244,0.39297095760925,Normal monitoring; use calmer periods for product education.
-2024-07-15,normal,low,0.17076963250785654,0.46453499792620667,0.3646953695659368,Normal monitoring; use calmer periods for product education.
+2024-07-15,normal,low,0.17076963250785657,0.46453499792620667,0.3646953695659368,Normal monitoring; use calmer periods for product education.
 2024-07-16,low,low,0.115640452691219,0.6127697909841365,0.27158975632464394,Normal monitoring; use calmer periods for product education.
-2024-07-17,low,low,0.11364683450445032,0.5475584471150529,0.3387947183804968,Normal monitoring; use calmer periods for product education.
-2024-07-18,normal,low,0.13123802814745675,0.5429991755244206,0.325762796328123,Normal monitoring; use calmer periods for product education.
-2024-07-19,low,low,0.12067714730698224,0.5994688027674048,0.2798540499256127,Normal monitoring; use calmer periods for product education.
-2024-07-22,low,low,0.14905859950925232,0.5911443065011868,0.2597970939895605,Normal monitoring; use calmer periods for product education.
-2024-07-23,low,low,0.1659367253705504,0.5720637577407706,0.26199951688867945,Normal monitoring; use calmer periods for product education.
-2024-07-24,low,low,0.20432903318814,0.44390346969295513,0.35176749711890526,Normal monitoring; use calmer periods for product education.
+2024-07-17,low,low,0.11364683450445032,0.547558447115053,0.3387947183804968,Normal monitoring; use calmer periods for product education.
+2024-07-18,normal,low,0.13123802814745675,0.5429991755244206,0.32576279632812294,Normal monitoring; use calmer periods for product education.
+2024-07-19,low,low,0.12067714730698223,0.5994688027674048,0.27985404992561264,Normal monitoring; use calmer periods for product education.
+2024-07-22,low,low,0.14905859950925232,0.591144306501187,0.2597970939895605,Normal monitoring; use calmer periods for product education.
+2024-07-23,low,low,0.1659367253705504,0.5720637577407707,0.26199951688867945,Normal monitoring; use calmer periods for product education.
+2024-07-24,low,low,0.20432903318814,0.44390346969295513,0.3517674971189052,Normal monitoring; use calmer periods for product education.
 2024-07-25,low,normal,0.2176981319990711,0.3590531841585156,0.4232486838424138,Maintain standard staffing and transaction monitoring.
-2024-07-26,low,low,0.11086673473580938,0.649596719854731,0.23953654540946037,Normal monitoring; use calmer periods for product education.
-2024-07-29,low,low,0.11516266127998674,0.6087341627228952,0.27610317599711887,Normal monitoring; use calmer periods for product education.
-2024-07-30,low,low,0.12318835696876944,0.6525315506977128,0.22428009233351834,Normal monitoring; use calmer periods for product education.
-2024-07-31,high,normal,0.27998720273313843,0.3249362102277084,0.3950765870391534,Maintain standard staffing and transaction monitoring.
+2024-07-26,low,low,0.11086673473580938,0.6495967198547311,0.2395365454094604,Normal monitoring; use calmer periods for product education.
+2024-07-29,low,low,0.11516266127998674,0.608734162722895,0.27610317599711887,Normal monitoring; use calmer periods for product education.
+2024-07-30,low,low,0.12318835696876944,0.652531550697713,0.22428009233351834,Normal monitoring; use calmer periods for product education.
+2024-07-31,high,normal,0.27998720273313843,0.3249362102277083,0.3950765870391533,Maintain standard staffing and transaction monitoring.
 2024-08-01,low,low,0.15788783745747778,0.5536121802634365,0.2884999822790856,Normal monitoring; use calmer periods for product education.
-2024-08-02,normal,high,0.40695481703729036,0.24766869171098568,0.3453764912517239,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-08-05,normal,high,0.4615932735662067,0.21403937433693238,0.32436735209686146,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-08-06,low,normal,0.26646721148648655,0.31616741128892306,0.41736537722459033,Maintain standard staffing and transaction monitoring.
+2024-08-02,normal,high,0.40695481703729036,0.2476686917109857,0.3453764912517239,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-08-05,normal,high,0.4615932735662068,0.21403937433693235,0.3243673520968614,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-08-06,low,normal,0.2664672114864865,0.31616741128892306,0.4173653772245903,Maintain standard staffing and transaction monitoring.
 2024-08-07,low,low,0.10760906947855423,0.5963697863603599,0.29602114416108577,Normal monitoring; use calmer periods for product education.
-2024-08-08,low,low,0.10925732331550417,0.571894744415255,0.3188479322692409,Normal monitoring; use calmer periods for product education.
-2024-08-09,normal,high,0.39719059872956597,0.24845562771832236,0.35435377355211173,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-08-12,normal,low,0.16319812624176677,0.466515750781806,0.37028612297642743,Normal monitoring; use calmer periods for product education.
-2024-08-13,normal,normal,0.12743830126488043,0.4053224227882054,0.467239275946914,Maintain standard staffing and transaction monitoring.
-2024-08-14,normal,high,0.43478058676718645,0.22567320305593808,0.3395462101768756,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-08-15,normal,high,0.4457518193078777,0.22102389540811296,0.33322428528400977,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-08-16,high,normal,0.08057509789805914,0.43246708837527464,0.4869578137266662,Maintain standard staffing and transaction monitoring.
-2024-08-19,high,high,0.6192921485140018,0.14876080811036493,0.23194704337563352,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-08-08,low,low,0.10925732331550417,0.571894744415255,0.31884793226924085,Normal monitoring; use calmer periods for product education.
+2024-08-09,normal,high,0.39719059872956597,0.24845562771832239,0.35435377355211173,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-08-12,normal,low,0.16319812624176677,0.46651575078180596,0.37028612297642743,Normal monitoring; use calmer periods for product education.
+2024-08-13,normal,normal,0.12743830126488043,0.40532242278820535,0.46723927594691406,Maintain standard staffing and transaction monitoring.
+2024-08-14,normal,high,0.4347805867671864,0.22567320305593808,0.3395462101768755,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-08-15,normal,high,0.44575181930787766,0.22102389540811293,0.33322428528400977,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-08-16,high,normal,0.08057509789805914,0.4324670883752747,0.48695781372666613,Maintain standard staffing and transaction monitoring.
+2024-08-19,high,high,0.6192921485140018,0.14876080811036496,0.23194704337563352,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2024-08-20,low,high,0.6212281071768667,0.14117063661950272,0.23760125620363085,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-08-21,normal,normal,0.3356260422086623,0.25136934402335653,0.4130046137679814,Maintain standard staffing and transaction monitoring.
+2024-08-21,normal,normal,0.3356260422086623,0.25136934402335653,0.41300461376798137,Maintain standard staffing and transaction monitoring.
 2024-08-22,normal,normal,0.17582438123923622,0.321916377973927,0.5022592407868369,Maintain standard staffing and transaction monitoring.
 2024-08-23,high,high,0.5757371185202147,0.13472130032793908,0.28954158115184664,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-08-26,low,normal,0.30219710191331206,0.28748320426510066,0.41031969382158734,Maintain standard staffing and transaction monitoring.
+2024-08-26,low,normal,0.30219710191331206,0.2874832042651007,0.41031969382158734,Maintain standard staffing and transaction monitoring.
 2024-08-27,low,normal,0.17094492903586617,0.3916978458793656,0.4373572250847686,Maintain standard staffing and transaction monitoring.
 2024-08-28,normal,normal,0.19939441931047847,0.3117787576622848,0.4888268230272364,Maintain standard staffing and transaction monitoring.
 2024-08-29,low,normal,0.15735335704625644,0.34609759031007903,0.4965490526436645,Maintain standard staffing and transaction monitoring.
-2024-08-30,low,high,0.594874026844141,0.1457729691225765,0.2593530040332828,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-09-02,low,low,0.11470886286362324,0.4894971099208555,0.39579402721552126,Normal monitoring; use calmer periods for product education.
+2024-08-30,low,high,0.5948740268441409,0.1457729691225765,0.2593530040332828,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-09-02,low,low,0.11470886286362324,0.48949710992085543,0.3957940272155212,Normal monitoring; use calmer periods for product education.
 2024-09-03,low,low,0.08978956298610528,0.5083447932452001,0.4018656437686947,Normal monitoring; use calmer periods for product education.
-2024-09-04,normal,normal,0.125794441105098,0.3702670524496362,0.503938506445266,Maintain standard staffing and transaction monitoring.
-2024-09-05,low,low,0.08957641219572217,0.5488026622027377,0.3616209256015404,Normal monitoring; use calmer periods for product education.
+2024-09-04,normal,normal,0.125794441105098,0.37026705244963615,0.503938506445266,Maintain standard staffing and transaction monitoring.
+2024-09-05,low,low,0.08957641219572217,0.5488026622027375,0.36162092560154047,Normal monitoring; use calmer periods for product education.
 2024-09-06,low,normal,0.14392249156497178,0.34106211292970345,0.5150153955053246,Maintain standard staffing and transaction monitoring.
-2024-09-09,low,normal,0.12891280989923343,0.3983664092343782,0.4727207808663881,Maintain standard staffing and transaction monitoring.
-2024-09-10,low,low,0.086572918274904,0.594825017673047,0.3186020640520492,Normal monitoring; use calmer periods for product education.
-2024-09-11,low,low,0.12178463365860108,0.4501221880702198,0.4280931782711789,Normal monitoring; use calmer periods for product education.
+2024-09-09,low,normal,0.12891280989923343,0.3983664092343782,0.4727207808663882,Maintain standard staffing and transaction monitoring.
+2024-09-10,low,low,0.08657291827490399,0.594825017673047,0.31860206405204916,Normal monitoring; use calmer periods for product education.
+2024-09-11,low,low,0.12178463365860107,0.4501221880702198,0.4280931782711789,Normal monitoring; use calmer periods for product education.
 2024-09-12,low,low,0.07263371864613044,0.6384982679152864,0.2888680134385831,Normal monitoring; use calmer periods for product education.
-2024-09-13,normal,normal,0.14943833972893383,0.36598389896506944,0.484577761305997,Maintain standard staffing and transaction monitoring.
-2024-09-16,normal,normal,0.24609026059782912,0.3525013192675177,0.4014084201346535,Maintain standard staffing and transaction monitoring.
+2024-09-13,normal,normal,0.14943833972893386,0.36598389896506944,0.48457776130599695,Maintain standard staffing and transaction monitoring.
+2024-09-16,normal,normal,0.24609026059782912,0.3525013192675177,0.40140842013465344,Maintain standard staffing and transaction monitoring.
 2024-09-17,low,low,0.18187886027466912,0.41088937859333624,0.40723176113199466,Normal monitoring; use calmer periods for product education.
-2024-09-18,low,low,0.06189092658097517,0.6422337249178007,0.2958753485012236,Normal monitoring; use calmer periods for product education.
-2024-09-19,normal,normal,0.15529646411161854,0.3748973009451719,0.4698062349432096,Maintain standard staffing and transaction monitoring.
-2024-09-20,low,normal,0.11167986443929578,0.43090743043948804,0.45741270512121607,Maintain standard staffing and transaction monitoring.
-2024-09-23,low,low,0.05451515773360641,0.5625478177684291,0.3829370244979642,Normal monitoring; use calmer periods for product education.
+2024-09-18,low,low,0.06189092658097517,0.6422337249178007,0.2958753485012237,Normal monitoring; use calmer periods for product education.
+2024-09-19,normal,normal,0.15529646411161854,0.3748973009451718,0.4698062349432096,Maintain standard staffing and transaction monitoring.
+2024-09-20,low,normal,0.11167986443929577,0.430907430439488,0.4574127051212162,Maintain standard staffing and transaction monitoring.
+2024-09-23,low,low,0.05451515773360641,0.5625478177684293,0.3829370244979642,Normal monitoring; use calmer periods for product education.
 2024-09-24,normal,low,0.060660212345288116,0.6465832302126934,0.29275655744201873,Normal monitoring; use calmer periods for product education.
 2024-09-25,normal,normal,0.16003116945763365,0.3741269464393545,0.46584188410301214,Maintain standard staffing and transaction monitoring.
-2024-09-26,high,high,0.3906804728877002,0.258943887846311,0.3503756392659888,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-09-26,high,high,0.3906804728877002,0.25894388784631095,0.3503756392659888,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2024-09-27,low,high,0.634200385361195,0.1299443338448561,0.23585528079394924,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-09-30,normal,normal,0.228786321067731,0.3041893967397121,0.46702428219255726,Maintain standard staffing and transaction monitoring.
-2024-10-01,normal,normal,0.16217261353166285,0.3123086044808382,0.5255187819874991,Maintain standard staffing and transaction monitoring.
-2024-10-02,low,normal,0.14146324198991783,0.40644795182716786,0.45208880618291464,Maintain standard staffing and transaction monitoring.
-2024-10-03,normal,high,0.42163214376510494,0.22393760517276537,0.3544302510621295,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-10-04,normal,high,0.541160323813103,0.16266694307367957,0.2961727331132176,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-10-07,low,low,0.12965760220880015,0.47545035624464616,0.39489204154655383,Normal monitoring; use calmer periods for product education.
-2024-10-08,low,normal,0.14162391466751748,0.3910305285335532,0.4673455567989297,Maintain standard staffing and transaction monitoring.
-2024-10-09,low,normal,0.1336315690648754,0.3939118232992989,0.4724566076358261,Maintain standard staffing and transaction monitoring.
-2024-10-10,normal,normal,0.11164439727278537,0.36336137640100724,0.5249942263262076,Maintain standard staffing and transaction monitoring.
-2024-10-11,low,low,0.1006764045704869,0.5356050761698881,0.3637185192596252,Normal monitoring; use calmer periods for product education.
-2024-10-14,normal,normal,0.14692480653801168,0.360094754268267,0.4929804391937214,Maintain standard staffing and transaction monitoring.
-2024-10-15,normal,low,0.1233470248016385,0.4704429471091741,0.40621002808918755,Normal monitoring; use calmer periods for product education.
+2024-09-30,normal,normal,0.228786321067731,0.3041893967397121,0.4670242821925572,Maintain standard staffing and transaction monitoring.
+2024-10-01,normal,normal,0.16217261353166285,0.3123086044808382,0.5255187819874992,Maintain standard staffing and transaction monitoring.
+2024-10-02,low,normal,0.14146324198991783,0.4064479518271679,0.45208880618291464,Maintain standard staffing and transaction monitoring.
+2024-10-03,normal,high,0.421632143765105,0.22393760517276542,0.3544302510621295,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-10-04,normal,high,0.5411603238131031,0.16266694307367954,0.29617273311321757,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-10-07,low,low,0.12965760220880015,0.4754503562446462,0.3948920415465538,Normal monitoring; use calmer periods for product education.
+2024-10-08,low,normal,0.14162391466751748,0.3910305285335532,0.46734555679892975,Maintain standard staffing and transaction monitoring.
+2024-10-09,low,normal,0.1336315690648754,0.39391182329929897,0.472456607635826,Maintain standard staffing and transaction monitoring.
+2024-10-10,normal,normal,0.11164439727278537,0.3633613764010073,0.5249942263262076,Maintain standard staffing and transaction monitoring.
+2024-10-11,low,low,0.1006764045704869,0.535605076169888,0.3637185192596252,Normal monitoring; use calmer periods for product education.
+2024-10-14,normal,normal,0.1469248065380117,0.36009475426826704,0.49298043919372136,Maintain standard staffing and transaction monitoring.
+2024-10-15,normal,low,0.1233470248016385,0.47044294710917417,0.40621002808918755,Normal monitoring; use calmer periods for product education.
 2024-10-16,low,low,0.1245428774330714,0.5011095518399714,0.3743475707269574,Normal monitoring; use calmer periods for product education.
-2024-10-17,normal,normal,0.1685952459964695,0.40478093504340706,0.42662381896012386,Maintain standard staffing and transaction monitoring.
-2024-10-18,low,low,0.12908323644548414,0.5287350007493321,0.34218176280518386,Normal monitoring; use calmer periods for product education.
-2024-10-21,normal,normal,0.27130251986804027,0.3079051633828967,0.420792316749063,Maintain standard staffing and transaction monitoring.
-2024-10-22,low,low,0.1309960891930795,0.52942476815891,0.33957914264801015,Normal monitoring; use calmer periods for product education.
-2024-10-23,low,low,0.12445936901618684,0.4985252593333404,0.37701537165047283,Normal monitoring; use calmer periods for product education.
-2024-10-24,low,low,0.14998109177444452,0.5228236221619662,0.3271952860635897,Normal monitoring; use calmer periods for product education.
-2024-10-25,normal,normal,0.18734513544126524,0.34072938787241747,0.47192547668631746,Maintain standard staffing and transaction monitoring.
-2024-10-28,normal,low,0.11615066255970967,0.5625137150534945,0.32133562238679586,Normal monitoring; use calmer periods for product education.
+2024-10-17,normal,normal,0.16859524599646947,0.4047809350434071,0.42662381896012386,Maintain standard staffing and transaction monitoring.
+2024-10-18,low,low,0.12908323644548417,0.5287350007493321,0.34218176280518386,Normal monitoring; use calmer periods for product education.
+2024-10-21,normal,normal,0.27130251986804027,0.30790516338289664,0.420792316749063,Maintain standard staffing and transaction monitoring.
+2024-10-22,low,low,0.13099608919307948,0.52942476815891,0.33957914264801015,Normal monitoring; use calmer periods for product education.
+2024-10-23,low,low,0.12445936901618684,0.4985252593333404,0.3770153716504728,Normal monitoring; use calmer periods for product education.
+2024-10-24,low,low,0.14998109177444452,0.5228236221619662,0.3271952860635896,Normal monitoring; use calmer periods for product education.
+2024-10-25,normal,normal,0.18734513544126524,0.34072938787241747,0.4719254766863175,Maintain standard staffing and transaction monitoring.
+2024-10-28,normal,low,0.1161506625597097,0.5625137150534945,0.3213356223867958,Normal monitoring; use calmer periods for product education.
 2024-10-29,low,normal,0.17262373072785966,0.3668384758000222,0.4605377934721183,Maintain standard staffing and transaction monitoring.
-2024-10-30,low,normal,0.14587070208281855,0.35337111416959033,0.5007581837475912,Maintain standard staffing and transaction monitoring.
-2024-10-31,normal,low,0.1313602485645958,0.4719589875864493,0.39668076384895506,Normal monitoring; use calmer periods for product education.
-2024-11-01,normal,low,0.08513282589306644,0.608311621673725,0.30655555243320826,Normal monitoring; use calmer periods for product education.
-2024-11-04,normal,low,0.05715949937331663,0.6080940142855071,0.33474648634117576,Normal monitoring; use calmer periods for product education.
-2024-11-05,low,low,0.08623813683447812,0.5975782076585573,0.31618365550696426,Normal monitoring; use calmer periods for product education.
+2024-10-30,low,normal,0.14587070208281852,0.35337111416959033,0.5007581837475912,Maintain standard staffing and transaction monitoring.
+2024-10-31,normal,low,0.1313602485645958,0.4719589875864492,0.39668076384895506,Normal monitoring; use calmer periods for product education.
+2024-11-01,normal,low,0.08513282589306644,0.608311621673725,0.3065555524332082,Normal monitoring; use calmer periods for product education.
+2024-11-04,normal,low,0.05715949937331664,0.6080940142855072,0.3347464863411757,Normal monitoring; use calmer periods for product education.
+2024-11-05,low,low,0.08623813683447812,0.5975782076585574,0.31618365550696426,Normal monitoring; use calmer periods for product education.
 2024-11-06,high,high,0.41798802842291327,0.2303124140100293,0.35169955756705723,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-11-07,high,high,0.44416479177198653,0.2229202136280368,0.33291499459997653,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-11-07,high,high,0.44416479177198653,0.2229202136280368,0.3329149945999766,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2024-11-08,high,high,0.659901359067046,0.12435080818326945,0.2157478327496846,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2024-11-11,low,normal,0.2451513921169752,0.35995394839639255,0.394894659486632,Maintain standard staffing and transaction monitoring.
-2024-11-12,normal,normal,0.24847053808558425,0.371335785513308,0.38019367640110785,Maintain standard staffing and transaction monitoring.
-2024-11-13,normal,high,0.6008517076106304,0.1390758435180453,0.2600724488713244,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-11-14,low,high,0.6822273777844179,0.11946920978383199,0.1983034124317498,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-11-15,normal,high,0.6251793970370645,0.1406709818156776,0.23414962114725765,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-11-18,low,normal,0.17197163969926418,0.3585156499819807,0.4695127103187552,Maintain standard staffing and transaction monitoring.
-2024-11-19,low,normal,0.1243784340820263,0.40790589070720296,0.4677156752107707,Maintain standard staffing and transaction monitoring.
+2024-11-12,normal,normal,0.24847053808558428,0.371335785513308,0.3801936764011079,Maintain standard staffing and transaction monitoring.
+2024-11-13,normal,high,0.6008517076106306,0.13907584351804528,0.2600724488713244,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-11-14,low,high,0.6822273777844179,0.11946920978383199,0.19830341243174981,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-11-15,normal,high,0.6251793970370646,0.14067098181567758,0.23414962114725765,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-11-18,low,normal,0.1719716396992642,0.3585156499819807,0.4695127103187552,Maintain standard staffing and transaction monitoring.
+2024-11-19,low,normal,0.1243784340820263,0.40790589070720296,0.46771567521077073,Maintain standard staffing and transaction monitoring.
 2024-11-20,normal,normal,0.19567161049571222,0.3156268213532223,0.4887015681510657,Maintain standard staffing and transaction monitoring.
-2024-11-21,low,low,0.14599806462576834,0.45618459351672114,0.3978173418575106,Normal monitoring; use calmer periods for product education.
-2024-11-22,low,low,0.13956698817564223,0.43814873978154206,0.42228427204281566,Normal monitoring; use calmer periods for product education.
-2024-11-25,normal,low,0.1055107838111087,0.4533131787271896,0.44117603746170203,Normal monitoring; use calmer periods for product education.
-2024-11-26,low,normal,0.16182347030809516,0.3209495168795122,0.5172270128123928,Maintain standard staffing and transaction monitoring.
-2024-11-27,normal,normal,0.13768488400943235,0.4190331444370029,0.4432819715535651,Maintain standard staffing and transaction monitoring.
-2024-11-28,low,normal,0.12341996910400241,0.42802150804981254,0.44855852284618547,Maintain standard staffing and transaction monitoring.
-2024-11-29,normal,low,0.11619140501123469,0.45373127389347395,0.4300773210952915,Normal monitoring; use calmer periods for product education.
-2024-12-02,low,low,0.14282462931931056,0.43384929197498306,0.4233260787057063,Normal monitoring; use calmer periods for product education.
-2024-12-03,normal,high,0.5575527052636915,0.1618801195944904,0.2805671751418185,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-12-04,low,normal,0.2211237908448812,0.35388381386456574,0.42499239529055294,Maintain standard staffing and transaction monitoring.
+2024-11-21,low,low,0.14599806462576834,0.4561845935167211,0.3978173418575106,Normal monitoring; use calmer periods for product education.
+2024-11-22,low,low,0.13956698817564223,0.43814873978154206,0.4222842720428157,Normal monitoring; use calmer periods for product education.
+2024-11-25,normal,low,0.10551078381110872,0.4533131787271896,0.44117603746170214,Normal monitoring; use calmer periods for product education.
+2024-11-26,low,normal,0.16182347030809516,0.3209495168795123,0.5172270128123929,Maintain standard staffing and transaction monitoring.
+2024-11-27,normal,normal,0.13768488400943235,0.41903314443700296,0.4432819715535651,Maintain standard staffing and transaction monitoring.
+2024-11-28,low,normal,0.12341996910400241,0.4280215080498125,0.44855852284618547,Maintain standard staffing and transaction monitoring.
+2024-11-29,normal,low,0.11619140501123469,0.453731273893474,0.43007732109529145,Normal monitoring; use calmer periods for product education.
+2024-12-02,low,low,0.1428246293193106,0.43384929197498306,0.4233260787057063,Normal monitoring; use calmer periods for product education.
+2024-12-03,normal,high,0.5575527052636916,0.16188011959449042,0.2805671751418185,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-12-04,low,normal,0.2211237908448812,0.3538838138645658,0.42499239529055294,Maintain standard staffing and transaction monitoring.
 2024-12-05,normal,low,0.12280597548138959,0.47360372951846835,0.40359029500014193,Normal monitoring; use calmer periods for product education.
-2024-12-06,high,high,0.609515138489342,0.1455035180936835,0.2449813434169743,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-12-06,high,high,0.6095151384893421,0.14550351809368348,0.2449813434169743,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2024-12-09,low,normal,0.28436826092636064,0.33502410785258346,0.380607631221056,Maintain standard staffing and transaction monitoring.
-2024-12-10,normal,low,0.23754392045036762,0.4465884870230726,0.31586759252656,Normal monitoring; use calmer periods for product education.
-2024-12-11,low,high,0.5859293890662814,0.15860347788059792,0.25546713305312047,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-12-10,normal,low,0.23754392045036762,0.4465884870230726,0.31586759252655994,Normal monitoring; use calmer periods for product education.
+2024-12-11,low,high,0.5859293890662816,0.1586034778805979,0.25546713305312047,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2024-12-12,low,low,0.22381228150754204,0.47741524173025185,0.29877247676220664,Normal monitoring; use calmer periods for product education.
-2024-12-13,normal,low,0.164805756186757,0.5189973218584938,0.3161969219547497,Normal monitoring; use calmer periods for product education.
-2024-12-16,low,low,0.19478578038356426,0.48765277273198376,0.31756144688445237,Normal monitoring; use calmer periods for product education.
-2024-12-17,low,low,0.21454570085580837,0.4686399987229108,0.316814300421281,Normal monitoring; use calmer periods for product education.
-2024-12-18,high,low,0.2577696403642418,0.4493545463404312,0.29287581329532747,Normal monitoring; use calmer periods for product education.
-2024-12-19,high,high,0.4944924116838586,0.20002148097914105,0.3054861073370004,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-12-20,normal,normal,0.29300115705992097,0.32802599523788256,0.3789728477021966,Maintain standard staffing and transaction monitoring.
-2024-12-23,low,low,0.23423627529610966,0.42582603148506065,0.3399376932188297,Normal monitoring; use calmer periods for product education.
+2024-12-13,normal,low,0.164805756186757,0.5189973218584937,0.3161969219547498,Normal monitoring; use calmer periods for product education.
+2024-12-16,low,low,0.19478578038356426,0.4876527727319838,0.31756144688445237,Normal monitoring; use calmer periods for product education.
+2024-12-17,low,low,0.21454570085580837,0.46863999872291073,0.316814300421281,Normal monitoring; use calmer periods for product education.
+2024-12-18,high,low,0.25776964036424177,0.4493545463404312,0.2928758132953275,Normal monitoring; use calmer periods for product education.
+2024-12-19,high,high,0.4944924116838586,0.20002148097914108,0.3054861073370004,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-12-20,normal,normal,0.29300115705992097,0.32802599523788256,0.37897284770219647,Maintain standard staffing and transaction monitoring.
+2024-12-23,low,low,0.23423627529610963,0.4258260314850606,0.3399376932188297,Normal monitoring; use calmer periods for product education.
 2024-12-24,normal,normal,0.18285324560488916,0.3927995576589126,0.42434719673619853,Maintain standard staffing and transaction monitoring.
-2024-12-25,low,low,0.20290781989517986,0.42365194321527433,0.37344023688954575,Normal monitoring; use calmer periods for product education.
-2024-12-26,normal,normal,0.325068881063354,0.3083537267573216,0.36657739217932467,Maintain standard staffing and transaction monitoring.
-2024-12-27,normal,high,0.598744868372209,0.14641109009929,0.2548440415285009,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2024-12-30,low,low,0.17333882202417444,0.47943415087486024,0.3472270271009655,Normal monitoring; use calmer periods for product education.
-2024-12-31,normal,normal,0.27779305982873326,0.35260863484013677,0.3695983053311304,Maintain standard staffing and transaction monitoring.
-2025-01-02,low,normal,0.23184695864332774,0.35821825317856737,0.40993478817810536,Maintain standard staffing and transaction monitoring.
+2024-12-25,low,low,0.20290781989517986,0.4236519432152744,0.37344023688954575,Normal monitoring; use calmer periods for product education.
+2024-12-26,normal,normal,0.325068881063354,0.30835372675732153,0.36657739217932467,Maintain standard staffing and transaction monitoring.
+2024-12-27,normal,high,0.5987448683722089,0.14641109009929,0.25484404152850093,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2024-12-30,low,low,0.17333882202417442,0.47943415087486013,0.3472270271009655,Normal monitoring; use calmer periods for product education.
+2024-12-31,normal,normal,0.27779305982873326,0.3526086348401367,0.3695983053311304,Maintain standard staffing and transaction monitoring.
+2025-01-02,low,normal,0.23184695864332774,0.35821825317856737,0.40993478817810525,Maintain standard staffing and transaction monitoring.
 2025-01-03,normal,low,0.18657231335861907,0.4594350146051044,0.353992672036277,Normal monitoring; use calmer periods for product education.
-2025-01-06,normal,high,0.548310243272742,0.1810553917046302,0.27063436502262755,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-01-07,normal,high,0.5388949315237649,0.1657980115299584,0.295307056946277,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-01-08,normal,normal,0.24493616629593465,0.3123108579087797,0.44275297579528583,Maintain standard staffing and transaction monitoring.
+2025-01-06,normal,high,0.5483102432727421,0.1810553917046302,0.27063436502262755,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-01-07,normal,high,0.5388949315237648,0.1657980115299584,0.29530705694627707,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-01-08,normal,normal,0.24493616629593468,0.3123108579087797,0.44275297579528583,Maintain standard staffing and transaction monitoring.
 2025-01-09,low,normal,0.14589299694382732,0.36954662187902043,0.48456038117715206,Maintain standard staffing and transaction monitoring.
-2025-01-10,high,high,0.5452675881242889,0.16798459111278216,0.28674782076292865,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-01-10,high,high,0.545267588124289,0.16798459111278213,0.2867478207629287,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2025-01-13,normal,low,0.18614263608309806,0.43303139785096845,0.3808259660659333,Normal monitoring; use calmer periods for product education.
-2025-01-14,low,normal,0.2310753431293383,0.32049201030031793,0.44843264657034426,Maintain standard staffing and transaction monitoring.
-2025-01-15,high,high,0.6350009670247909,0.1222520850601569,0.24274694791505183,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-01-16,high,normal,0.2765264652780793,0.3337774131536758,0.38969612156824524,Maintain standard staffing and transaction monitoring.
+2025-01-14,low,normal,0.23107534312933828,0.32049201030031793,0.44843264657034426,Maintain standard staffing and transaction monitoring.
+2025-01-15,high,high,0.6350009670247909,0.12225208506015689,0.24274694791505183,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-01-16,high,normal,0.2765264652780793,0.3337774131536759,0.38969612156824524,Maintain standard staffing and transaction monitoring.
 2025-01-17,low,normal,0.21208621857748935,0.36701018748202474,0.42090359394048615,Maintain standard staffing and transaction monitoring.
 2025-01-20,high,high,0.6413851848635427,0.1307148106142887,0.2279000045221683,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2025-01-21,normal,high,0.697852262011696,0.10452086689512582,0.19762687109317773,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2025-01-22,normal,low,0.27098578003006957,0.3823025130042503,0.34671170696568027,Normal monitoring; use calmer periods for product education.
 2025-01-23,low,low,0.21855849431462548,0.3963013336656791,0.38514017201969547,Normal monitoring; use calmer periods for product education.
 2025-01-24,normal,normal,0.23284826349856808,0.3580773582933825,0.40907437820804976,Maintain standard staffing and transaction monitoring.
-2025-01-27,normal,normal,0.25610833353314355,0.32204625562619993,0.42184541084065635,Maintain standard staffing and transaction monitoring.
-2025-01-28,high,high,0.6107451908178897,0.1382075301680103,0.25104727901409973,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-01-29,low,high,0.5903690371186892,0.15636239754890147,0.2532685653324097,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-01-30,low,low,0.21532222189624917,0.4560151917338763,0.32866258636987455,Normal monitoring; use calmer periods for product education.
+2025-01-27,normal,normal,0.2561083335331436,0.3220462556262,0.42184541084065635,Maintain standard staffing and transaction monitoring.
+2025-01-28,high,high,0.6107451908178897,0.13820753016801027,0.25104727901409973,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-01-29,low,high,0.5903690371186893,0.15636239754890147,0.2532685653324097,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-01-30,low,low,0.21532222189624914,0.4560151917338763,0.3286625863698745,Normal monitoring; use calmer periods for product education.
 2025-01-31,high,normal,0.2591179104724623,0.3585407324944749,0.3823413570330628,Maintain standard staffing and transaction monitoring.
-2025-02-03,low,normal,0.25423155067292086,0.3322812958933816,0.41348715343369774,Maintain standard staffing and transaction monitoring.
+2025-02-03,low,normal,0.25423155067292086,0.3322812958933816,0.4134871534336978,Maintain standard staffing and transaction monitoring.
 2025-02-04,normal,high,0.5197402570592962,0.18695813747850654,0.2933016054621975,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2025-02-05,normal,normal,0.22697844001758596,0.3427049417660545,0.4303166182163599,Maintain standard staffing and transaction monitoring.
-2025-02-06,low,low,0.17614832398335348,0.4512387203888131,0.37261295562783364,Normal monitoring; use calmer periods for product education.
-2025-02-07,normal,high,0.5900658292347635,0.15076971405431513,0.2591644567109219,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-02-10,low,low,0.1790153323361018,0.4660357266327572,0.3549489410311409,Normal monitoring; use calmer periods for product education.
-2025-02-11,low,low,0.16031265517169513,0.5030864675359733,0.33660087729233124,Normal monitoring; use calmer periods for product education.
-2025-02-12,low,normal,0.15706567286221285,0.3824190778713696,0.46051524926641735,Maintain standard staffing and transaction monitoring.
-2025-02-13,normal,normal,0.10494547695132371,0.436914459753827,0.4581400632948493,Maintain standard staffing and transaction monitoring.
-2025-02-14,normal,low,0.16963346617231398,0.422598850429108,0.40776768339857816,Normal monitoring; use calmer periods for product education.
-2025-02-17,normal,low,0.10915651072518273,0.5887983110700451,0.3020451782047722,Normal monitoring; use calmer periods for product education.
-2025-02-18,low,low,0.11079836457806262,0.5467893188542035,0.34241231656773397,Normal monitoring; use calmer periods for product education.
+2025-02-06,low,low,0.17614832398335348,0.4512387203888131,0.3726129556278336,Normal monitoring; use calmer periods for product education.
+2025-02-07,normal,high,0.5900658292347635,0.1507697140543151,0.2591644567109219,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-02-10,low,low,0.1790153323361018,0.4660357266327574,0.3549489410311409,Normal monitoring; use calmer periods for product education.
+2025-02-11,low,low,0.16031265517169513,0.5030864675359733,0.3366008772923312,Normal monitoring; use calmer periods for product education.
+2025-02-12,low,normal,0.15706567286221287,0.3824190778713696,0.46051524926641735,Maintain standard staffing and transaction monitoring.
+2025-02-13,normal,normal,0.1049454769513237,0.436914459753827,0.4581400632948493,Maintain standard staffing and transaction monitoring.
+2025-02-14,normal,low,0.16963346617231403,0.42259885042910805,0.4077676833985782,Normal monitoring; use calmer periods for product education.
+2025-02-17,normal,low,0.10915651072518273,0.5887983110700452,0.3020451782047722,Normal monitoring; use calmer periods for product education.
+2025-02-18,low,low,0.11079836457806262,0.5467893188542035,0.3424123165677339,Normal monitoring; use calmer periods for product education.
 2025-02-19,low,low,0.0705888952533975,0.6200115963078466,0.3093995084387564,Normal monitoring; use calmer periods for product education.
-2025-02-20,normal,low,0.10263753720397438,0.5584575685876522,0.338904894208373,Normal monitoring; use calmer periods for product education.
-2025-02-21,low,low,0.10222943812693852,0.5910451664858701,0.3067253953871911,Normal monitoring; use calmer periods for product education.
-2025-02-24,normal,low,0.12702781896310075,0.4564260782816916,0.41654610275520754,Normal monitoring; use calmer periods for product education.
-2025-02-25,low,low,0.07167251906401818,0.6389528806287541,0.2893746003072279,Normal monitoring; use calmer periods for product education.
-2025-02-26,low,low,0.06346288451338629,0.6229547338231738,0.3135823816634402,Normal monitoring; use calmer periods for product education.
-2025-02-27,high,normal,0.14304423295840155,0.3671956144490898,0.4897601525925081,Maintain standard staffing and transaction monitoring.
-2025-02-28,normal,normal,0.09848654674642547,0.41243130254433646,0.4890821507092378,Maintain standard staffing and transaction monitoring.
-2025-03-03,low,low,0.0880084382921066,0.6163594204896918,0.2956321412182019,Normal monitoring; use calmer periods for product education.
+2025-02-20,normal,low,0.10263753720397438,0.5584575685876523,0.338904894208373,Normal monitoring; use calmer periods for product education.
+2025-02-21,low,low,0.10222943812693852,0.5910451664858702,0.30672539538719107,Normal monitoring; use calmer periods for product education.
+2025-02-24,normal,low,0.12702781896310075,0.45642607828169157,0.41654610275520754,Normal monitoring; use calmer periods for product education.
+2025-02-25,low,low,0.0716725190640182,0.638952880628754,0.2893746003072279,Normal monitoring; use calmer periods for product education.
+2025-02-26,low,low,0.06346288451338629,0.6229547338231738,0.31358238166344016,Normal monitoring; use calmer periods for product education.
+2025-02-27,high,normal,0.14304423295840155,0.3671956144490899,0.4897601525925081,Maintain standard staffing and transaction monitoring.
+2025-02-28,normal,normal,0.09848654674642547,0.41243130254433646,0.4890821507092377,Maintain standard staffing and transaction monitoring.
+2025-03-03,low,low,0.0880084382921066,0.616359420489692,0.2956321412182019,Normal monitoring; use calmer periods for product education.
 2025-03-04,low,low,0.12803305005013807,0.54788961887277,0.3240773310770922,Normal monitoring; use calmer periods for product education.
-2025-03-05,normal,high,0.3887503667072182,0.2550815033840203,0.3561681299087616,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-03-06,low,normal,0.22909869876565364,0.3369003974582382,0.4340009037761085,Maintain standard staffing and transaction monitoring.
+2025-03-05,normal,high,0.38875036670721813,0.2550815033840203,0.3561681299087616,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-03-06,low,normal,0.22909869876565367,0.3369003974582382,0.4340009037761085,Maintain standard staffing and transaction monitoring.
 2025-03-07,low,normal,0.172242270911373,0.35748821533288394,0.470269513755743,Maintain standard staffing and transaction monitoring.
 2025-03-10,normal,normal,0.1672541317426284,0.3760846517801719,0.45666121647719965,Maintain standard staffing and transaction monitoring.
-2025-03-11,normal,low,0.1581521828431855,0.5262815643131629,0.3155662528436519,Normal monitoring; use calmer periods for product education.
-2025-03-12,low,normal,0.2795428230732667,0.3009544895692709,0.41950268735746254,Maintain standard staffing and transaction monitoring.
-2025-03-13,low,low,0.18353312448905756,0.45127731417083083,0.3651895613401115,Normal monitoring; use calmer periods for product education.
-2025-03-14,low,low,0.16592498459970187,0.5565828574862046,0.2774921579140934,Normal monitoring; use calmer periods for product education.
-2025-03-17,normal,low,0.1046353475879485,0.6179466990307367,0.2774179533813146,Normal monitoring; use calmer periods for product education.
-2025-03-18,normal,normal,0.1708261837046341,0.37918235740168554,0.4499914588936809,Maintain standard staffing and transaction monitoring.
-2025-03-19,low,normal,0.1698082739594347,0.35931761126099465,0.470874114779571,Maintain standard staffing and transaction monitoring.
+2025-03-11,normal,low,0.1581521828431855,0.5262815643131629,0.315566252843652,Normal monitoring; use calmer periods for product education.
+2025-03-12,low,normal,0.2795428230732667,0.3009544895692709,0.4195026873574625,Maintain standard staffing and transaction monitoring.
+2025-03-13,low,low,0.18353312448905756,0.4512773141708309,0.36518956134011143,Normal monitoring; use calmer periods for product education.
+2025-03-14,low,low,0.16592498459970187,0.5565828574862045,0.2774921579140934,Normal monitoring; use calmer periods for product education.
+2025-03-17,normal,low,0.10463534758794849,0.6179466990307367,0.27741795338131453,Normal monitoring; use calmer periods for product education.
+2025-03-18,normal,normal,0.1708261837046341,0.37918235740168543,0.4499914588936808,Maintain standard staffing and transaction monitoring.
+2025-03-19,low,normal,0.16980827395943468,0.35931761126099465,0.470874114779571,Maintain standard staffing and transaction monitoring.
 2025-03-20,high,normal,0.2612157253982316,0.3063181908340405,0.43246608376772827,Maintain standard staffing and transaction monitoring.
 2025-03-21,low,low,0.22203947476561745,0.39228759352306225,0.3856729317113205,Normal monitoring; use calmer periods for product education.
-2025-03-24,low,low,0.18450185167907956,0.4816408671440828,0.33385728117683783,Normal monitoring; use calmer periods for product education.
-2025-03-25,low,low,0.16152308843233176,0.48548464401470004,0.35299226755296836,Normal monitoring; use calmer periods for product education.
-2025-03-26,low,low,0.18496315974834532,0.48246947076592017,0.3325673694857347,Normal monitoring; use calmer periods for product education.
-2025-03-27,low,low,0.16177634751765685,0.4908130026267657,0.34741064985557735,Normal monitoring; use calmer periods for product education.
+2025-03-24,low,low,0.18450185167907956,0.48164086714408283,0.3338572811768379,Normal monitoring; use calmer periods for product education.
+2025-03-25,low,low,0.1615230884323318,0.4854846440147,0.3529922675529683,Normal monitoring; use calmer periods for product education.
+2025-03-26,low,low,0.18496315974834532,0.48246947076592017,0.3325673694857346,Normal monitoring; use calmer periods for product education.
+2025-03-27,low,low,0.16177634751765682,0.49081300262676575,0.3474106498555773,Normal monitoring; use calmer periods for product education.
 2025-03-28,normal,low,0.10949131866862083,0.5592935182476375,0.33121516308374205,Normal monitoring; use calmer periods for product education.
-2025-03-31,low,low,0.16322671026636687,0.4844102822051827,0.3523630075284506,Normal monitoring; use calmer periods for product education.
-2025-04-01,low,low,0.10222557362093039,0.48156527631627205,0.416209150062798,Normal monitoring; use calmer periods for product education.
+2025-03-31,low,low,0.16322671026636687,0.4844102822051826,0.3523630075284506,Normal monitoring; use calmer periods for product education.
+2025-04-01,low,low,0.10222557362093039,0.48156527631627205,0.4162091500627981,Normal monitoring; use calmer periods for product education.
 2025-04-02,low,normal,0.17820609444436636,0.35399069769638997,0.4678032078592438,Maintain standard staffing and transaction monitoring.
-2025-04-03,high,high,0.479116513625473,0.1986522877669311,0.32223119860759597,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-04-04,normal,high,0.5660265498612208,0.16253692645654633,0.2714365236822328,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-04-07,normal,normal,0.3780961211181363,0.2275713387449617,0.3943325401369022,Maintain standard staffing and transaction monitoring.
-2025-04-08,high,normal,0.2370364581869556,0.32704378733673084,0.43591975447631376,Maintain standard staffing and transaction monitoring.
-2025-04-09,high,high,0.41318845311389507,0.2617513670975602,0.32506017978854485,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-04-10,normal,high,0.6896508278932233,0.10980541463596825,0.20054375747080835,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-04-11,high,high,0.6223352073613063,0.1281195617604035,0.24954523087829064,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-04-14,low,high,0.6647675194497629,0.11934573159239119,0.21588674895784585,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-04-15,normal,high,0.38962069617383216,0.26027242929793765,0.35010687452823014,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-04-16,normal,high,0.6205477849755588,0.12731354103373319,0.2521386739907081,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-04-17,normal,high,0.3754782542762785,0.3182232605420147,0.3062984851817067,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-04-22,normal,normal,0.30927271721625776,0.3253640245707979,0.365363258212944,Maintain standard staffing and transaction monitoring.
-2025-04-23,low,high,0.41273264983359753,0.24852958929147945,0.3387377608749227,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-04-03,high,high,0.4791165136254729,0.1986522877669311,0.322231198607596,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-04-04,normal,high,0.5660265498612208,0.1625369264565463,0.27143652368223276,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-04-07,normal,normal,0.3780961211181363,0.2275713387449617,0.3943325401369023,Maintain standard staffing and transaction monitoring.
+2025-04-08,high,normal,0.2370364581869556,0.32704378733673084,0.4359197544763137,Maintain standard staffing and transaction monitoring.
+2025-04-09,high,high,0.413188453113895,0.2617513670975602,0.32506017978854496,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-04-10,normal,high,0.6896508278932233,0.10980541463596828,0.20054375747080835,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-04-11,high,high,0.6223352073613063,0.1281195617604035,0.24954523087829067,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-04-14,low,high,0.6647675194497629,0.11934573159239117,0.21588674895784585,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-04-15,normal,high,0.38962069617383216,0.2602724292979377,0.3501068745282301,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-04-16,normal,high,0.6205477849755588,0.12731354103373316,0.2521386739907081,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-04-17,normal,high,0.3754782542762785,0.3182232605420147,0.30629848518170677,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-04-22,normal,normal,0.3092727172162577,0.3253640245707979,0.365363258212944,Maintain standard staffing and transaction monitoring.
+2025-04-23,low,high,0.41273264983359753,0.24852958929147942,0.3387377608749227,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2025-04-24,low,high,0.37621969102220093,0.27217673871545833,0.3516035702623409,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-04-25,normal,normal,0.34536332315955603,0.2708517691451352,0.3837849076953082,Maintain standard staffing and transaction monitoring.
-2025-04-28,low,normal,0.32085653633390465,0.3340116225481972,0.3451318411178978,Maintain standard staffing and transaction monitoring.
+2025-04-25,normal,normal,0.34536332315955603,0.2708517691451352,0.38378490769530826,Maintain standard staffing and transaction monitoring.
+2025-04-28,low,normal,0.32085653633390465,0.3340116225481973,0.34513184111789785,Maintain standard staffing and transaction monitoring.
 2025-04-29,low,low,0.27303940840102886,0.38271655316448594,0.3442440384344851,Normal monitoring; use calmer periods for product education.
-2025-04-30,normal,high,0.6321920902514775,0.16078304133462676,0.20702486841389614,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-05-01,normal,high,0.6518453667798585,0.13821584178404103,0.20993879143610028,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-04-30,normal,high,0.6321920902514773,0.16078304133462676,0.2070248684138961,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-05-01,normal,high,0.6518453667798586,0.138215841784041,0.2099387914361003,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2025-05-02,high,high,0.6432461499958108,0.13079825589803032,0.22595559410615892,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2025-05-05,high,high,0.7189936415485191,0.10875980168950362,0.17224655676197728,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-05-06,low,high,0.47263432096373464,0.22357429677584092,0.3037913822604244,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-05-07,high,high,0.6463395530604845,0.13118761437998228,0.22247283255953323,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-05-08,normal,normal,0.2602948185005253,0.2940304543279649,0.44567472717150974,Maintain standard staffing and transaction monitoring.
+2025-05-06,low,high,0.47263432096373464,0.22357429677584095,0.30379138226042446,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-05-07,high,high,0.6463395530604845,0.13118761437998228,0.22247283255953326,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-05-08,normal,normal,0.2602948185005253,0.29403045432796493,0.4456747271715098,Maintain standard staffing and transaction monitoring.
 2025-05-09,normal,high,0.5778609897907536,0.15431489511006413,0.26782411509918247,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-05-12,high,high,0.7010740777308544,0.11045126734272878,0.1884746549264163,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-05-12,high,high,0.7010740777308544,0.11045126734272878,0.18847465492641635,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2025-05-13,low,high,0.5324372796860102,0.1567777292768168,0.3107849910371731,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-05-14,normal,high,0.6135781226025636,0.14604156759104928,0.24038030980638697,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-05-15,normal,high,0.6577060448057835,0.12784010997869594,0.21445384521552024,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-05-16,low,normal,0.2862954940062391,0.2956859848159932,0.41801852117776783,Maintain standard staffing and transaction monitoring.
-2025-05-19,normal,normal,0.25036270422910956,0.3167790636452357,0.43285823212565483,Maintain standard staffing and transaction monitoring.
-2025-05-20,low,low,0.1347558137931461,0.444972192872691,0.42027199333416276,Normal monitoring; use calmer periods for product education.
-2025-05-21,high,high,0.5857882265086825,0.14970771455366239,0.2645040589376558,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-05-14,normal,high,0.6135781226025636,0.14604156759104928,0.24038030980638694,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-05-15,normal,high,0.6577060448057835,0.1278401099786959,0.21445384521552024,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-05-16,low,normal,0.28629549400623905,0.2956859848159932,0.41801852117776783,Maintain standard staffing and transaction monitoring.
+2025-05-19,normal,normal,0.25036270422910956,0.3167790636452357,0.4328582321256549,Maintain standard staffing and transaction monitoring.
+2025-05-20,low,low,0.1347558137931461,0.4449721928726911,0.42027199333416276,Normal monitoring; use calmer periods for product education.
+2025-05-21,high,high,0.5857882265086823,0.14970771455366236,0.26450405893765583,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2025-05-22,normal,normal,0.24767604939441773,0.2879071931980655,0.4644167574075166,Maintain standard staffing and transaction monitoring.
-2025-05-23,high,high,0.5531960506697986,0.14020583302511744,0.30659811630508416,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-05-26,low,normal,0.2825451565125653,0.31752439388450887,0.3999304496029261,Maintain standard staffing and transaction monitoring.
-2025-05-27,normal,normal,0.1880039535316934,0.3016062128218341,0.5103898336464727,Maintain standard staffing and transaction monitoring.
-2025-05-28,low,normal,0.19444581049630894,0.3273753173359694,0.4781788721677219,Maintain standard staffing and transaction monitoring.
-2025-05-29,low,high,0.5042732839257823,0.16587737175861036,0.3298493443156075,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-05-30,normal,normal,0.1589597164262966,0.319718100844667,0.5213221827290369,Maintain standard staffing and transaction monitoring.
+2025-05-23,high,high,0.5531960506697986,0.1402058330251174,0.30659811630508405,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-05-26,low,normal,0.28254515651256523,0.31752439388450887,0.39993044960292606,Maintain standard staffing and transaction monitoring.
+2025-05-27,normal,normal,0.1880039535316934,0.30160621282183403,0.5103898336464726,Maintain standard staffing and transaction monitoring.
+2025-05-28,low,normal,0.19444581049630894,0.3273753173359694,0.47817887216772187,Maintain standard staffing and transaction monitoring.
+2025-05-29,low,high,0.5042732839257824,0.16587737175861034,0.32984934431560736,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-05-30,normal,normal,0.1589597164262966,0.31971810084466706,0.5213221827290369,Maintain standard staffing and transaction monitoring.
 2025-06-02,normal,normal,0.1083868944884089,0.36364132529340515,0.5279717802181858,Maintain standard staffing and transaction monitoring.
-2025-06-03,low,low,0.1549915682972474,0.46051840764754204,0.38449002405521043,Normal monitoring; use calmer periods for product education.
+2025-06-03,low,low,0.15499156829724742,0.46051840764754204,0.38449002405521043,Normal monitoring; use calmer periods for product education.
 2025-06-04,high,high,0.5006428378704563,0.18023462510525368,0.3191225370242898,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-06-05,normal,normal,0.23719372247126483,0.31613373104427445,0.4466725464844605,Maintain standard staffing and transaction monitoring.
-2025-06-06,low,normal,0.1642336772651993,0.38639986280077243,0.4493664599340284,Maintain standard staffing and transaction monitoring.
+2025-06-05,normal,normal,0.2371937224712648,0.31613373104427445,0.44667254648446053,Maintain standard staffing and transaction monitoring.
+2025-06-06,low,normal,0.16423367726519933,0.3863998628007725,0.4493664599340284,Maintain standard staffing and transaction monitoring.
 2025-06-09,normal,normal,0.15915973506018563,0.31755019590867445,0.52329006903114,Maintain standard staffing and transaction monitoring.
 2025-06-10,normal,high,0.4482769048525439,0.18570611276292498,0.36601698238453156,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2025-06-11,low,normal,0.15592035649497377,0.31757015492361645,0.5265094885814098,Maintain standard staffing and transaction monitoring.
 2025-06-12,high,high,0.6058539137109757,0.13759165038898696,0.25655443590003707,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2025-06-13,high,high,0.6665399580272797,0.12244632510817012,0.21101371686455006,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-06-16,normal,high,0.49212080228248034,0.17176410021829908,0.3361150974992207,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-06-17,high,high,0.6005907660762934,0.1469522848675435,0.25245694905616295,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-06-18,normal,normal,0.19348525498402538,0.34010617020527184,0.4664085748107026,Maintain standard staffing and transaction monitoring.
-2025-06-19,low,normal,0.24904898461498587,0.33504633771321973,0.41590467767179456,Maintain standard staffing and transaction monitoring.
+2025-06-16,normal,high,0.4921208022824803,0.1717641002182991,0.3361150974992207,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-06-17,high,high,0.6005907660762934,0.14695228486754347,0.252456949056163,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-06-18,normal,normal,0.19348525498402538,0.3401061702052719,0.4664085748107026,Maintain standard staffing and transaction monitoring.
+2025-06-19,low,normal,0.2490489846149859,0.33504633771321973,0.41590467767179456,Maintain standard staffing and transaction monitoring.
 2025-06-20,normal,normal,0.21250247327380659,0.3506603727438813,0.43683715398231215,Maintain standard staffing and transaction monitoring.
-2025-06-23,normal,high,0.6624156101464095,0.13050470671555842,0.20707968313803185,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-06-23,normal,high,0.6624156101464094,0.13050470671555844,0.20707968313803185,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2025-06-24,normal,normal,0.2904337900081721,0.2980342508481647,0.41153195914366286,Maintain standard staffing and transaction monitoring.
-2025-06-25,low,normal,0.2069985103478027,0.35691917416198465,0.436082315490213,Maintain standard staffing and transaction monitoring.
-2025-06-26,low,high,0.6000099443408793,0.13763736523531547,0.2623526904238052,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-06-27,normal,low,0.13646579531331873,0.43210920784496587,0.43142499684171554,Normal monitoring; use calmer periods for product education.
-2025-06-30,high,high,0.473074011033354,0.16097497491225213,0.3659510140543938,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-06-25,low,normal,0.2069985103478027,0.3569191741619846,0.4360823154902129,Maintain standard staffing and transaction monitoring.
+2025-06-26,low,high,0.6000099443408794,0.13763736523531542,0.2623526904238052,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-06-27,normal,low,0.13646579531331873,0.4321092078449659,0.4314249968417155,Normal monitoring; use calmer periods for product education.
+2025-06-30,high,high,0.4730740110333539,0.16097497491225216,0.3659510140543938,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2025-07-01,normal,normal,0.2422430821181849,0.31410829402653073,0.4436486238552847,Maintain standard staffing and transaction monitoring.
-2025-07-02,low,normal,0.16619785265398213,0.38604215889505034,0.4477599884509677,Maintain standard staffing and transaction monitoring.
+2025-07-02,low,normal,0.16619785265398213,0.3860421588950503,0.44775998845096776,Maintain standard staffing and transaction monitoring.
 2025-07-03,low,normal,0.3606898013770643,0.25083600722285704,0.3884741914000786,Maintain standard staffing and transaction monitoring.
-2025-07-04,low,normal,0.16782761732892046,0.3852728193286418,0.44689956334243786,Maintain standard staffing and transaction monitoring.
+2025-07-04,low,normal,0.1678276173289205,0.3852728193286419,0.4468995633424378,Maintain standard staffing and transaction monitoring.
 2025-07-07,normal,normal,0.22083327437130013,0.3859765307964387,0.39319019483226125,Maintain standard staffing and transaction monitoring.
-2025-07-08,low,low,0.21731088801211326,0.4254626932192505,0.35722641876863626,Normal monitoring; use calmer periods for product education.
-2025-07-09,low,low,0.1459798013037229,0.4808642004954572,0.37315599820081974,Normal monitoring; use calmer periods for product education.
+2025-07-08,low,low,0.21731088801211326,0.4254626932192505,0.3572264187686362,Normal monitoring; use calmer periods for product education.
+2025-07-09,low,low,0.14597980130372293,0.48086420049545725,0.3731559982008197,Normal monitoring; use calmer periods for product education.
 2025-07-10,low,low,0.14070446387336116,0.5203893090803134,0.3389062270463257,Normal monitoring; use calmer periods for product education.
-2025-07-11,normal,low,0.12853190164431008,0.49866683457690425,0.37280126377878575,Normal monitoring; use calmer periods for product education.
+2025-07-11,normal,low,0.12853190164431008,0.4986668345769043,0.37280126377878575,Normal monitoring; use calmer periods for product education.
 2025-07-14,low,low,0.1311202737567849,0.4622848410181366,0.4065948852250783,Normal monitoring; use calmer periods for product education.
-2025-07-15,low,normal,0.1775268342750852,0.36493432672756687,0.4575388389973482,Maintain standard staffing and transaction monitoring.
+2025-07-15,low,normal,0.1775268342750852,0.36493432672756687,0.4575388389973481,Maintain standard staffing and transaction monitoring.
 2025-07-16,low,normal,0.1550891624189754,0.38212093550704607,0.46278990207397863,Maintain standard staffing and transaction monitoring.
 2025-07-17,normal,normal,0.14833806995634435,0.3839504590523486,0.4677114709913075,Maintain standard staffing and transaction monitoring.
-2025-07-18,low,low,0.11948336911644467,0.5260352784582495,0.35448135242530565,Normal monitoring; use calmer periods for product education.
-2025-07-21,normal,normal,0.14919590601859778,0.35962451707116494,0.4911795769102374,Maintain standard staffing and transaction monitoring.
+2025-07-18,low,low,0.11948336911644468,0.5260352784582496,0.3544813524253056,Normal monitoring; use calmer periods for product education.
+2025-07-21,normal,normal,0.14919590601859775,0.359624517071165,0.49117957691023734,Maintain standard staffing and transaction monitoring.
 2025-07-22,low,low,0.14640574702960885,0.46336761107394414,0.3902266418964469,Normal monitoring; use calmer periods for product education.
 2025-07-23,normal,low,0.10883485759746357,0.5498574366202038,0.34130770578233205,Normal monitoring; use calmer periods for product education.
 2025-07-24,low,normal,0.1123647086756928,0.4038592184072461,0.48377607291706076,Maintain standard staffing and transaction monitoring.
 2025-07-25,normal,normal,0.09955390045355732,0.387084401652728,0.5133616978937144,Maintain standard staffing and transaction monitoring.
-2025-07-28,normal,normal,0.1245453153158093,0.375481056400005,0.4999736282841858,Maintain standard staffing and transaction monitoring.
-2025-07-29,low,low,0.10115579775593636,0.5807923503369817,0.3180518519070813,Normal monitoring; use calmer periods for product education.
-2025-07-30,low,normal,0.20710776826815688,0.3264434628186019,0.4664487689132409,Maintain standard staffing and transaction monitoring.
-2025-07-31,low,normal,0.12950500087492947,0.4310190520589718,0.4394759470660985,Maintain standard staffing and transaction monitoring.
-2025-08-01,low,high,0.38255043717155074,0.28068201205062254,0.3367675507778266,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-08-04,normal,low,0.1676772688068284,0.44699638830792077,0.385326342885251,Normal monitoring; use calmer periods for product education.
-2025-08-05,low,normal,0.1322074717886412,0.4149362757009929,0.45285625251036604,Maintain standard staffing and transaction monitoring.
+2025-07-28,normal,normal,0.12454531531580929,0.375481056400005,0.4999736282841858,Maintain standard staffing and transaction monitoring.
+2025-07-29,low,low,0.10115579775593636,0.5807923503369818,0.31805185190708124,Normal monitoring; use calmer periods for product education.
+2025-07-30,low,normal,0.20710776826815688,0.326443462818602,0.4664487689132408,Maintain standard staffing and transaction monitoring.
+2025-07-31,low,normal,0.12950500087492947,0.43101905205897184,0.43947594706609844,Maintain standard staffing and transaction monitoring.
+2025-08-01,low,high,0.38255043717155074,0.2806820120506226,0.3367675507778266,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-08-04,normal,low,0.1676772688068284,0.44699638830792066,0.385326342885251,Normal monitoring; use calmer periods for product education.
+2025-08-05,low,normal,0.1322074717886412,0.41493627570099295,0.45285625251036604,Maintain standard staffing and transaction monitoring.
 2025-08-06,low,low,0.06467975750769211,0.6339754951642462,0.30134474732806166,Normal monitoring; use calmer periods for product education.
-2025-08-07,low,normal,0.1828972615852463,0.380101552234852,0.43700118617990175,Maintain standard staffing and transaction monitoring.
-2025-08-08,low,normal,0.19537403396577435,0.3430246551939876,0.461601310840238,Maintain standard staffing and transaction monitoring.
-2025-08-11,low,low,0.06737596961519479,0.6809012198880589,0.2517228104967462,Normal monitoring; use calmer periods for product education.
-2025-08-12,normal,low,0.10601405330216035,0.4763908443827787,0.4175951023150613,Normal monitoring; use calmer periods for product education.
+2025-08-07,low,normal,0.1828972615852463,0.3801015522348519,0.4370011861799017,Maintain standard staffing and transaction monitoring.
+2025-08-08,low,normal,0.19537403396577435,0.3430246551939876,0.4616013108402379,Maintain standard staffing and transaction monitoring.
+2025-08-11,low,low,0.06737596961519479,0.6809012198880587,0.2517228104967462,Normal monitoring; use calmer periods for product education.
+2025-08-12,normal,low,0.10601405330216035,0.4763908443827786,0.41759510231506125,Normal monitoring; use calmer periods for product education.
 2025-08-13,low,normal,0.12662995774444913,0.399381280251708,0.4739887620038433,Maintain standard staffing and transaction monitoring.
-2025-08-14,normal,normal,0.12471957463944795,0.3517755473964587,0.5235048779640937,Maintain standard staffing and transaction monitoring.
+2025-08-14,normal,normal,0.12471957463944795,0.3517755473964587,0.5235048779640938,Maintain standard staffing and transaction monitoring.
 2025-08-15,low,low,0.0577548085520934,0.6872915200755759,0.2549536713723299,Normal monitoring; use calmer periods for product education.
 2025-08-18,low,low,0.05804800185505244,0.6757544512868816,0.2661975468580661,Normal monitoring; use calmer periods for product education.
-2025-08-19,low,low,0.047805217745572684,0.698173893504553,0.25402088874987416,Normal monitoring; use calmer periods for product education.
-2025-08-20,normal,low,0.03627869261601593,0.6937455565044357,0.26997575087954834,Normal monitoring; use calmer periods for product education.
-2025-08-21,low,low,0.051053809943871147,0.6667859943688146,0.28216019568731426,Normal monitoring; use calmer periods for product education.
-2025-08-22,high,normal,0.34798183732580235,0.2533422803571597,0.3986758823170379,Maintain standard staffing and transaction monitoring.
-2025-08-25,normal,low,0.07355684120783272,0.6566541049173825,0.2697890538747852,Normal monitoring; use calmer periods for product education.
-2025-08-26,low,normal,0.13328747778813313,0.3646809533529337,0.5020315688589332,Maintain standard staffing and transaction monitoring.
+2025-08-19,low,low,0.04780521774557269,0.6981738935045531,0.25402088874987416,Normal monitoring; use calmer periods for product education.
+2025-08-20,normal,low,0.03627869261601593,0.6937455565044357,0.2699757508795483,Normal monitoring; use calmer periods for product education.
+2025-08-21,low,low,0.05105380994387113,0.6667859943688145,0.2821601956873142,Normal monitoring; use calmer periods for product education.
+2025-08-22,high,normal,0.3479818373258024,0.2533422803571597,0.3986758823170379,Maintain standard staffing and transaction monitoring.
+2025-08-25,normal,low,0.07355684120783272,0.6566541049173825,0.26978905387478525,Normal monitoring; use calmer periods for product education.
+2025-08-26,low,normal,0.1332874777881331,0.3646809533529338,0.5020315688589332,Maintain standard staffing and transaction monitoring.
 2025-08-27,low,low,0.05736395546709947,0.66295584346052,0.27968020107238056,Normal monitoring; use calmer periods for product education.
-2025-08-28,normal,low,0.08854368144968143,0.49930740847234983,0.4121489100779686,Normal monitoring; use calmer periods for product education.
-2025-08-29,low,low,0.1149254474909526,0.4744372517341289,0.4106373007749187,Normal monitoring; use calmer periods for product education.
+2025-08-28,normal,low,0.08854368144968144,0.49930740847234983,0.4121489100779686,Normal monitoring; use calmer periods for product education.
+2025-08-29,low,low,0.1149254474909526,0.47443725173412893,0.4106373007749187,Normal monitoring; use calmer periods for product education.
 2025-09-01,low,low,0.07617007951516148,0.6668869462714963,0.2569429742133422,Normal monitoring; use calmer periods for product education.
-2025-09-02,low,low,0.1257767998653659,0.45760332748348265,0.41661987265115125,Normal monitoring; use calmer periods for product education.
-2025-09-03,low,low,0.08471054371466047,0.6139574586963686,0.3013319975889703,Normal monitoring; use calmer periods for product education.
+2025-09-02,low,low,0.1257767998653659,0.4576033274834826,0.41661987265115136,Normal monitoring; use calmer periods for product education.
+2025-09-03,low,low,0.08471054371466047,0.6139574586963689,0.30133199758897034,Normal monitoring; use calmer periods for product education.
 2025-09-04,low,low,0.08400461978147543,0.6125717979956683,0.30342358222285587,Normal monitoring; use calmer periods for product education.
-2025-09-05,normal,normal,0.09226941672425486,0.4048379090591599,0.5028926742165853,Maintain standard staffing and transaction monitoring.
-2025-09-08,low,low,0.057228987626518964,0.6197691111425301,0.32300190123095057,Normal monitoring; use calmer periods for product education.
-2025-09-09,low,low,0.050570724235693,0.6815527924344611,0.26787648332984565,Normal monitoring; use calmer periods for product education.
+2025-09-05,normal,normal,0.09226941672425486,0.4048379090591599,0.5028926742165855,Maintain standard staffing and transaction monitoring.
+2025-09-08,low,low,0.057228987626518964,0.6197691111425299,0.32300190123095057,Normal monitoring; use calmer periods for product education.
+2025-09-09,low,low,0.050570724235693,0.6815527924344611,0.2678764833298456,Normal monitoring; use calmer periods for product education.
 2025-09-10,low,low,0.0471668321805348,0.7260984053743247,0.22673476244514107,Normal monitoring; use calmer periods for product education.
-2025-09-11,low,low,0.032231099046941075,0.7242752450668812,0.2434936558861783,Normal monitoring; use calmer periods for product education.
-2025-09-12,low,low,0.07421098023051595,0.49031763536709494,0.435471384402389,Normal monitoring; use calmer periods for product education.
-2025-09-15,normal,low,0.050556219442709556,0.6461285221092254,0.303315258448065,Normal monitoring; use calmer periods for product education.
+2025-09-11,low,low,0.032231099046941075,0.7242752450668811,0.2434936558861783,Normal monitoring; use calmer periods for product education.
+2025-09-12,low,low,0.07421098023051595,0.490317635367095,0.435471384402389,Normal monitoring; use calmer periods for product education.
+2025-09-15,normal,low,0.05055621944270955,0.6461285221092254,0.303315258448065,Normal monitoring; use calmer periods for product education.
 2025-09-16,normal,low,0.050702739963885135,0.6816411382454612,0.267656121790654,Normal monitoring; use calmer periods for product education.
 2025-09-17,low,low,0.06695895984196319,0.6635657784366854,0.2694752617213511,Normal monitoring; use calmer periods for product education.
-2025-09-18,normal,normal,0.11660926870533596,0.38506096668001377,0.4983297646146503,Maintain standard staffing and transaction monitoring.
-2025-09-19,normal,normal,0.09666354516236911,0.38650971924375155,0.5168267355938794,Maintain standard staffing and transaction monitoring.
+2025-09-18,normal,normal,0.11660926870533596,0.38506096668001377,0.49832976461465034,Maintain standard staffing and transaction monitoring.
+2025-09-19,normal,normal,0.09666354516236911,0.3865097192437516,0.5168267355938794,Maintain standard staffing and transaction monitoring.
 2025-09-22,normal,low,0.047319964838484725,0.6330484872989628,0.3196315478625519,Normal monitoring; use calmer periods for product education.
-2025-09-23,low,low,0.05582461486087627,0.6718900733086665,0.2722853118304572,Normal monitoring; use calmer periods for product education.
-2025-09-24,normal,normal,0.12127930105931481,0.3650948741433128,0.5136258247973725,Maintain standard staffing and transaction monitoring.
-2025-09-25,low,normal,0.16109040814809214,0.3398626060726856,0.49904698577922263,Maintain standard staffing and transaction monitoring.
-2025-09-26,low,low,0.05901016983802162,0.5871108517669095,0.3538789783950687,Normal monitoring; use calmer periods for product education.
+2025-09-23,low,low,0.05582461486087627,0.6718900733086663,0.2722853118304572,Normal monitoring; use calmer periods for product education.
+2025-09-24,normal,normal,0.12127930105931481,0.36509487414331276,0.5136258247973724,Maintain standard staffing and transaction monitoring.
+2025-09-25,low,normal,0.16109040814809214,0.3398626060726856,0.4990469857792226,Maintain standard staffing and transaction monitoring.
+2025-09-26,low,low,0.05901016983802162,0.5871108517669095,0.35387897839506866,Normal monitoring; use calmer periods for product education.
 2025-09-29,normal,normal,0.12730660687132583,0.337755032121731,0.5349383610069434,Maintain standard staffing and transaction monitoring.
-2025-09-30,low,low,0.09443377713137087,0.6255751536701369,0.279991069198492,Normal monitoring; use calmer periods for product education.
-2025-10-01,low,low,0.05655921216507575,0.5757096934627727,0.3677310943721513,Normal monitoring; use calmer periods for product education.
-2025-10-02,low,normal,0.10200921078604926,0.4055672577252882,0.4924235314886627,Maintain standard staffing and transaction monitoring.
-2025-10-03,low,low,0.06837800956307225,0.5923383601909208,0.3392836302460068,Normal monitoring; use calmer periods for product education.
-2025-10-06,low,low,0.08307097478765202,0.5792820717685714,0.3376469534437759,Normal monitoring; use calmer periods for product education.
+2025-09-30,low,low,0.09443377713137087,0.6255751536701368,0.27999106919849204,Normal monitoring; use calmer periods for product education.
+2025-10-01,low,low,0.05655921216507575,0.5757096934627728,0.3677310943721513,Normal monitoring; use calmer periods for product education.
+2025-10-02,low,normal,0.10200921078604926,0.4055672577252881,0.4924235314886626,Maintain standard staffing and transaction monitoring.
+2025-10-03,low,low,0.06837800956307225,0.5923383601909209,0.33928363024600683,Normal monitoring; use calmer periods for product education.
+2025-10-06,low,low,0.08307097478765202,0.5792820717685715,0.3376469534437759,Normal monitoring; use calmer periods for product education.
 2025-10-07,low,low,0.09426942302575568,0.6290882917626275,0.27664228521161627,Normal monitoring; use calmer periods for product education.
 2025-10-08,normal,normal,0.1509675670520266,0.37022776619072,0.47880466675725325,Maintain standard staffing and transaction monitoring.
-2025-10-09,low,low,0.10386802022716779,0.5572587152988822,0.3388732644739495,Normal monitoring; use calmer periods for product education.
-2025-10-10,normal,normal,0.1702488303609346,0.3674058396105749,0.46234533002849026,Maintain standard staffing and transaction monitoring.
+2025-10-09,low,low,0.10386802022716779,0.557258715298882,0.3388732644739495,Normal monitoring; use calmer periods for product education.
+2025-10-10,normal,normal,0.1702488303609346,0.3674058396105748,0.4623453300284904,Maintain standard staffing and transaction monitoring.
 2025-10-13,low,low,0.1268947498423029,0.5628882655793415,0.31021698457835534,Normal monitoring; use calmer periods for product education.
-2025-10-14,low,normal,0.1638120376490512,0.3939396785759307,0.4422482837750183,Maintain standard staffing and transaction monitoring.
-2025-10-15,normal,low,0.15102272243657675,0.4267060404608136,0.4222712371026096,Normal monitoring; use calmer periods for product education.
-2025-10-16,low,low,0.1224733904172265,0.5749920768064345,0.3025345327763386,Normal monitoring; use calmer periods for product education.
-2025-10-17,low,low,0.09696314477462797,0.48736905860577334,0.4156677966195986,Normal monitoring; use calmer periods for product education.
-2025-10-20,low,low,0.0732140875150864,0.605893955211877,0.3208919572730364,Normal monitoring; use calmer periods for product education.
-2025-10-21,normal,normal,0.12061886240120466,0.34835258465877444,0.5310285529400207,Maintain standard staffing and transaction monitoring.
-2025-10-22,low,low,0.07397359843981717,0.6457469121111097,0.2802794894490731,Normal monitoring; use calmer periods for product education.
-2025-10-23,low,normal,0.13117476236058384,0.40312858412204156,0.46569665351737444,Maintain standard staffing and transaction monitoring.
+2025-10-14,low,normal,0.16381203764905122,0.39393967857593065,0.4422482837750183,Maintain standard staffing and transaction monitoring.
+2025-10-15,normal,low,0.15102272243657675,0.4267060404608136,0.42227123710260955,Normal monitoring; use calmer periods for product education.
+2025-10-16,low,low,0.1224733904172265,0.5749920768064345,0.30253453277633874,Normal monitoring; use calmer periods for product education.
+2025-10-17,low,low,0.09696314477462797,0.48736905860577334,0.4156677966195985,Normal monitoring; use calmer periods for product education.
+2025-10-20,low,low,0.0732140875150864,0.605893955211877,0.32089195727303643,Normal monitoring; use calmer periods for product education.
+2025-10-21,normal,normal,0.12061886240120466,0.34835258465877444,0.5310285529400206,Maintain standard staffing and transaction monitoring.
+2025-10-22,low,low,0.07397359843981717,0.6457469121111096,0.2802794894490731,Normal monitoring; use calmer periods for product education.
+2025-10-23,low,normal,0.13117476236058387,0.4031285841220415,0.46569665351737444,Maintain standard staffing and transaction monitoring.
 2025-10-24,low,low,0.08237914411704425,0.6439877675849207,0.27363308829803534,Normal monitoring; use calmer periods for product education.
-2025-10-27,normal,low,0.09612259645656392,0.6021012190289269,0.30177618451450955,Normal monitoring; use calmer periods for product education.
-2025-10-28,low,low,0.10221357606557649,0.533940004673769,0.3638464192606543,Normal monitoring; use calmer periods for product education.
-2025-10-29,low,normal,0.26082589546564744,0.2883532876874599,0.45082081684689335,Maintain standard staffing and transaction monitoring.
-2025-10-30,low,normal,0.13704984524733874,0.40538467058664845,0.4575654841660127,Maintain standard staffing and transaction monitoring.
-2025-10-31,low,low,0.0536172467518032,0.6802263375401841,0.26615641570801285,Normal monitoring; use calmer periods for product education.
+2025-10-27,normal,low,0.09612259645656392,0.6021012190289268,0.3017761845145095,Normal monitoring; use calmer periods for product education.
+2025-10-28,low,low,0.10221357606557649,0.5339400046737688,0.36384641926065425,Normal monitoring; use calmer periods for product education.
+2025-10-29,low,normal,0.2608258954656474,0.2883532876874598,0.4508208168468933,Maintain standard staffing and transaction monitoring.
+2025-10-30,low,normal,0.13704984524733874,0.4053846705866485,0.4575654841660127,Maintain standard staffing and transaction monitoring.
+2025-10-31,low,low,0.0536172467518032,0.6802263375401841,0.26615641570801274,Normal monitoring; use calmer periods for product education.
 2025-11-03,low,low,0.04863925664492311,0.6776816251600375,0.2736791181950395,Normal monitoring; use calmer periods for product education.
-2025-11-04,normal,normal,0.08519410966807699,0.452927238548685,0.4618786517832376,Maintain standard staffing and transaction monitoring.
+2025-11-04,normal,normal,0.08519410966807699,0.452927238548685,0.46187865178323756,Maintain standard staffing and transaction monitoring.
 2025-11-05,low,low,0.11492714621967393,0.5532246810970599,0.3318481726832656,Normal monitoring; use calmer periods for product education.
-2025-11-06,normal,normal,0.15753144461960344,0.37962838381315794,0.46284017156723833,Maintain standard staffing and transaction monitoring.
-2025-11-07,normal,normal,0.258746790934967,0.33008890947754765,0.4111642995874856,Maintain standard staffing and transaction monitoring.
-2025-11-10,low,low,0.13703512351354374,0.5823655668637071,0.2805993096227487,Normal monitoring; use calmer periods for product education.
+2025-11-06,normal,normal,0.15753144461960342,0.379628383813158,0.46284017156723845,Maintain standard staffing and transaction monitoring.
+2025-11-07,normal,normal,0.25874679093496694,0.33008890947754765,0.4111642995874856,Maintain standard staffing and transaction monitoring.
+2025-11-10,low,low,0.13703512351354374,0.5823655668637072,0.2805993096227487,Normal monitoring; use calmer periods for product education.
 2025-11-11,low,normal,0.2546013561863909,0.3311212809705459,0.41427736284306266,Maintain standard staffing and transaction monitoring.
-2025-11-12,normal,low,0.1595263749199402,0.4336830528995256,0.4067905721805341,Normal monitoring; use calmer periods for product education.
-2025-11-13,low,low,0.23729295990596674,0.38692414123955593,0.3757828988544774,Normal monitoring; use calmer periods for product education.
-2025-11-14,high,high,0.46305840381143726,0.23014682202165668,0.30679477416690604,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-11-12,normal,low,0.15952637491994023,0.4336830528995256,0.4067905721805341,Normal monitoring; use calmer periods for product education.
+2025-11-13,low,low,0.2372929599059668,0.3869241412395559,0.3757828988544775,Normal monitoring; use calmer periods for product education.
+2025-11-14,high,high,0.4630584038114373,0.23014682202165668,0.30679477416690604,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2025-11-17,high,low,0.20925745873286405,0.4360342704764994,0.3547082707906368,Normal monitoring; use calmer periods for product education.
 2025-11-18,low,low,0.18069078338656172,0.4352787518807349,0.38403046473270325,Normal monitoring; use calmer periods for product education.
-2025-11-19,normal,normal,0.23003153619764186,0.36887935656966253,0.4010891072326961,Maintain standard staffing and transaction monitoring.
+2025-11-19,normal,normal,0.23003153619764186,0.3688793565696625,0.4010891072326961,Maintain standard staffing and transaction monitoring.
 2025-11-20,normal,low,0.18721908898201453,0.43817313392817175,0.3746077770898137,Normal monitoring; use calmer periods for product education.
 2025-11-21,low,low,0.17246801139902626,0.4256593903225949,0.4018725982783789,Normal monitoring; use calmer periods for product education.
-2025-11-24,normal,normal,0.19263745080682407,0.40245813628408117,0.40490441290909507,Maintain standard staffing and transaction monitoring.
+2025-11-24,normal,normal,0.19263745080682407,0.40245813628408106,0.40490441290909507,Maintain standard staffing and transaction monitoring.
 2025-11-25,normal,normal,0.19855970058692396,0.3661681591445553,0.43527214026852096,Maintain standard staffing and transaction monitoring.
-2025-11-26,normal,high,0.619017545057634,0.13960142456232352,0.24138103038004224,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-11-27,normal,normal,0.1883390009097738,0.39757067857768724,0.4140903205125387,Maintain standard staffing and transaction monitoring.
-2025-11-28,low,high,0.6342464583768117,0.13170104203849994,0.23405249958468854,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-12-01,low,low,0.15291827717902368,0.5171833034076379,0.32989841941333853,Normal monitoring; use calmer periods for product education.
-2025-12-02,low,low,0.16673965423684986,0.4918979824187976,0.34136236334435216,Normal monitoring; use calmer periods for product education.
-2025-12-03,low,low,0.14052354239050982,0.4673335897046802,0.3921428679048102,Normal monitoring; use calmer periods for product education.
-2025-12-04,normal,low,0.15314223240881283,0.4307649728876586,0.4160927947035287,Normal monitoring; use calmer periods for product education.
+2025-11-26,normal,high,0.619017545057634,0.13960142456232355,0.24138103038004224,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-11-27,normal,normal,0.1883390009097738,0.3975706785776873,0.4140903205125387,Maintain standard staffing and transaction monitoring.
+2025-11-28,low,high,0.6342464583768116,0.13170104203849994,0.23405249958468852,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-12-01,low,low,0.15291827717902373,0.5171833034076379,0.3298984194133386,Normal monitoring; use calmer periods for product education.
+2025-12-02,low,low,0.16673965423684983,0.4918979824187976,0.3413623633443522,Normal monitoring; use calmer periods for product education.
+2025-12-03,low,low,0.1405235423905098,0.46733358970468014,0.39214286790481023,Normal monitoring; use calmer periods for product education.
+2025-12-04,normal,low,0.15314223240881286,0.4307649728876586,0.4160927947035288,Normal monitoring; use calmer periods for product education.
 2025-12-05,low,low,0.13131053011868501,0.556769626052379,0.3119198438289357,Normal monitoring; use calmer periods for product education.
-2025-12-08,low,low,0.14234854510567455,0.5429464217864318,0.31470503310789355,Normal monitoring; use calmer periods for product education.
-2025-12-09,low,low,0.12976315925774135,0.5508474546713148,0.31938938607094364,Normal monitoring; use calmer periods for product education.
-2025-12-10,low,low,0.10243997492587456,0.5647844982105121,0.3327755268636133,Normal monitoring; use calmer periods for product education.
-2025-12-11,low,normal,0.2010357749645526,0.38400282154573157,0.41496140348971583,Maintain standard staffing and transaction monitoring.
-2025-12-12,low,low,0.16228889898401844,0.44164288046293093,0.3960682205530508,Normal monitoring; use calmer periods for product education.
-2025-12-15,low,normal,0.21196945447523632,0.3307717864737631,0.45725875905100066,Maintain standard staffing and transaction monitoring.
-2025-12-16,low,low,0.09365341243548532,0.5314402747399067,0.3749063128246077,Normal monitoring; use calmer periods for product education.
-2025-12-17,low,low,0.11354197601245697,0.4440250999836878,0.4424329240038555,Normal monitoring; use calmer periods for product education.
-2025-12-18,low,low,0.07646848108119417,0.6181615197839867,0.305369999134819,Normal monitoring; use calmer periods for product education.
-2025-12-19,low,low,0.06868176130004747,0.6416649129702727,0.28965332572968017,Normal monitoring; use calmer periods for product education.
-2025-12-22,low,low,0.09440870414116492,0.6343038382492904,0.2712874576095451,Normal monitoring; use calmer periods for product education.
-2025-12-23,low,low,0.1395627987249363,0.582217406212229,0.27821979506283484,Normal monitoring; use calmer periods for product education.
-2025-12-24,high,high,0.46520841737426466,0.23073947100780354,0.30405211161793205,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2025-12-08,low,low,0.14234854510567455,0.5429464217864318,0.31470503310789366,Normal monitoring; use calmer periods for product education.
+2025-12-09,low,low,0.12976315925774135,0.5508474546713149,0.31938938607094364,Normal monitoring; use calmer periods for product education.
+2025-12-10,low,low,0.10243997492587456,0.5647844982105122,0.33277552686361334,Normal monitoring; use calmer periods for product education.
+2025-12-11,low,normal,0.2010357749645526,0.38400282154573157,0.4149614034897158,Maintain standard staffing and transaction monitoring.
+2025-12-12,low,low,0.16228889898401844,0.4416428804629309,0.3960682205530508,Normal monitoring; use calmer periods for product education.
+2025-12-15,low,normal,0.21196945447523632,0.3307717864737631,0.4572587590510007,Maintain standard staffing and transaction monitoring.
+2025-12-16,low,low,0.09365341243548532,0.531440274739907,0.3749063128246077,Normal monitoring; use calmer periods for product education.
+2025-12-17,low,low,0.11354197601245697,0.4440250999836877,0.44243292400385553,Normal monitoring; use calmer periods for product education.
+2025-12-18,low,low,0.07646848108119417,0.6181615197839869,0.305369999134819,Normal monitoring; use calmer periods for product education.
+2025-12-19,low,low,0.06868176130004747,0.6416649129702727,0.2896533257296802,Normal monitoring; use calmer periods for product education.
+2025-12-22,low,low,0.09440870414116492,0.6343038382492903,0.2712874576095451,Normal monitoring; use calmer periods for product education.
+2025-12-23,low,low,0.1395627987249363,0.5822174062122291,0.27821979506283484,Normal monitoring; use calmer periods for product education.
+2025-12-24,high,high,0.4652084173742647,0.23073947100780356,0.30405211161793205,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2025-12-26,low,high,0.6728220942626942,0.11397478239309301,0.21320312334421276,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2025-12-29,normal,normal,0.159507127900311,0.38273101166792584,0.4577618604317638,Maintain standard staffing and transaction monitoring.
+2025-12-29,normal,normal,0.159507127900311,0.38273101166792584,0.45776186043176387,Maintain standard staffing and transaction monitoring.
 2025-12-30,low,high,0.6275868329945021,0.12196716326492694,0.2504460037405705,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2025-12-31,normal,normal,0.1969945606697048,0.2974527325449806,0.5055527067853149,Maintain standard staffing and transaction monitoring.
 2026-01-02,low,normal,0.21390241652972325,0.3410204866500079,0.44507709682026886,Maintain standard staffing and transaction monitoring.
-2026-01-05,low,normal,0.1981348102177659,0.3615570766887377,0.44030811309349677,Maintain standard staffing and transaction monitoring.
+2026-01-05,low,normal,0.19813481021776594,0.36155707668873777,0.44030811309349677,Maintain standard staffing and transaction monitoring.
 2026-01-06,low,normal,0.13885980705139736,0.4244548711433931,0.43668532180520975,Maintain standard staffing and transaction monitoring.
-2026-01-07,low,low,0.1652227510569907,0.4489241105995677,0.3858531383434415,Normal monitoring; use calmer periods for product education.
-2026-01-08,low,normal,0.1483228317642226,0.4256748243697257,0.42600234386605185,Maintain standard staffing and transaction monitoring.
+2026-01-07,low,low,0.1652227510569907,0.44892411059956777,0.3858531383434415,Normal monitoring; use calmer periods for product education.
+2026-01-08,low,normal,0.14832283176422256,0.42567482436972576,0.42600234386605174,Maintain standard staffing and transaction monitoring.
 2026-01-09,low,normal,0.16189941005705377,0.4112121932373912,0.4268883967055552,Maintain standard staffing and transaction monitoring.
-2026-01-12,normal,normal,0.1643187968395392,0.37649245378303725,0.45918874937742404,Maintain standard staffing and transaction monitoring.
-2026-01-13,normal,normal,0.15191472839048759,0.41420189649097083,0.4338833751185421,Maintain standard staffing and transaction monitoring.
-2026-01-14,normal,normal,0.2239328313447354,0.3800621946549122,0.3960049740003526,Maintain standard staffing and transaction monitoring.
-2026-01-15,normal,low,0.14447284627376178,0.447711220270364,0.40781593345587414,Normal monitoring; use calmer periods for product education.
-2026-01-16,low,low,0.12011149482706072,0.5162426205903541,0.3636458845825854,Normal monitoring; use calmer periods for product education.
-2026-01-19,low,low,0.13518421951045143,0.5281803959386935,0.33663538455085545,Normal monitoring; use calmer periods for product education.
-2026-01-20,normal,low,0.11008718925510781,0.5236912632580667,0.36622154748682556,Normal monitoring; use calmer periods for product education.
-2026-01-21,normal,high,0.5054237248140883,0.1952882077966112,0.2992880673893009,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-01-22,low,low,0.16233009983884142,0.46179919243341877,0.3758707077277399,Normal monitoring; use calmer periods for product education.
-2026-01-23,high,normal,0.15653769142834545,0.42004269326078997,0.4234196153108649,Maintain standard staffing and transaction monitoring.
-2026-01-26,low,high,0.37541186299551077,0.2714749399832963,0.35311319702119337,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-01-27,normal,normal,0.306041650012698,0.2725935525818942,0.421364797405408,Maintain standard staffing and transaction monitoring.
-2026-01-28,low,high,0.5339256799944684,0.1530821232978181,0.31299219670771394,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-01-29,low,normal,0.26209895273904765,0.3242051100871261,0.4136959371738266,Maintain standard staffing and transaction monitoring.
-2026-01-30,high,high,0.5090465338821686,0.17975153932095922,0.3112019267968727,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-01-12,normal,normal,0.16431879683953918,0.37649245378303725,0.45918874937742404,Maintain standard staffing and transaction monitoring.
+2026-01-13,normal,normal,0.15191472839048753,0.41420189649097083,0.43388337511854214,Maintain standard staffing and transaction monitoring.
+2026-01-14,normal,normal,0.22393283134473543,0.38006219465491214,0.39600497400035256,Maintain standard staffing and transaction monitoring.
+2026-01-15,normal,low,0.14447284627376178,0.44771122027036403,0.4078159334558741,Normal monitoring; use calmer periods for product education.
+2026-01-16,low,low,0.12011149482706072,0.516242620590354,0.3636458845825854,Normal monitoring; use calmer periods for product education.
+2026-01-19,low,low,0.13518421951045143,0.5281803959386935,0.3366353845508554,Normal monitoring; use calmer periods for product education.
+2026-01-20,normal,low,0.11008718925510781,0.5236912632580668,0.36622154748682556,Normal monitoring; use calmer periods for product education.
+2026-01-21,normal,high,0.5054237248140883,0.19528820779661127,0.2992880673893008,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-01-22,low,low,0.16233009983884142,0.46179919243341877,0.37587070772773984,Normal monitoring; use calmer periods for product education.
+2026-01-23,high,normal,0.15653769142834545,0.4200426932607899,0.4234196153108649,Maintain standard staffing and transaction monitoring.
+2026-01-26,low,high,0.37541186299551077,0.27147493998329636,0.35311319702119326,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-01-27,normal,normal,0.30604165001269795,0.27259355258189416,0.421364797405408,Maintain standard staffing and transaction monitoring.
+2026-01-28,low,high,0.5339256799944684,0.1530821232978181,0.3129921967077139,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-01-29,low,normal,0.2620989527390477,0.3242051100871261,0.4136959371738266,Maintain standard staffing and transaction monitoring.
+2026-01-30,high,high,0.5090465338821687,0.17975153932095922,0.3112019267968727,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2026-02-02,low,high,0.533154849150428,0.16420410358117343,0.30264104726839886,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-02-03,normal,normal,0.24999788689498786,0.3329143212782707,0.41708779182674155,Maintain standard staffing and transaction monitoring.
-2026-02-04,normal,normal,0.22671264260516996,0.3340384621384469,0.43924889525638317,Maintain standard staffing and transaction monitoring.
-2026-02-05,normal,normal,0.1578029836113734,0.38854159414646033,0.4536554222421665,Maintain standard staffing and transaction monitoring.
-2026-02-06,normal,normal,0.23467424163620504,0.355881550461457,0.4094442079023382,Maintain standard staffing and transaction monitoring.
+2026-02-03,normal,normal,0.24999788689498792,0.3329143212782707,0.41708779182674155,Maintain standard staffing and transaction monitoring.
+2026-02-04,normal,normal,0.22671264260516996,0.33403846213844696,0.43924889525638317,Maintain standard staffing and transaction monitoring.
+2026-02-05,normal,normal,0.1578029836113734,0.38854159414646033,0.45365542224216643,Maintain standard staffing and transaction monitoring.
+2026-02-06,normal,normal,0.23467424163620504,0.355881550461457,0.40944420790233815,Maintain standard staffing and transaction monitoring.
 2026-02-09,low,normal,0.25543053921819425,0.3318507241735841,0.4127187366082221,Maintain standard staffing and transaction monitoring.
 2026-02-10,low,low,0.23045921196755398,0.3942658142356512,0.37527497379679503,Normal monitoring; use calmer periods for product education.
-2026-02-11,normal,normal,0.2631154604446896,0.3398904346616812,0.39699410489362974,Maintain standard staffing and transaction monitoring.
+2026-02-11,normal,normal,0.26311546044468953,0.3398904346616811,0.39699410489362963,Maintain standard staffing and transaction monitoring.
 2026-02-12,low,high,0.6466444906188286,0.12469927226884575,0.22865623711232563,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-02-13,low,low,0.1987531423034166,0.4094231857904503,0.39182367190613326,Normal monitoring; use calmer periods for product education.
-2026-02-16,low,low,0.14031087666228506,0.44483944832824174,0.4148496750094737,Normal monitoring; use calmer periods for product education.
+2026-02-13,low,low,0.1987531423034166,0.40942318579045034,0.39182367190613326,Normal monitoring; use calmer periods for product education.
+2026-02-16,low,low,0.14031087666228503,0.4448394483282418,0.4148496750094737,Normal monitoring; use calmer periods for product education.
 2026-02-17,low,normal,0.11058671200614563,0.43083788564618064,0.4585754023476739,Maintain standard staffing and transaction monitoring.
-2026-02-18,low,normal,0.11909931515117766,0.4055441021822483,0.4753565826665744,Maintain standard staffing and transaction monitoring.
-2026-02-19,normal,low,0.12385321633407834,0.509771272274813,0.36637551139110885,Normal monitoring; use calmer periods for product education.
-2026-02-20,low,low,0.11195823862292398,0.4811008756295382,0.4069408857475382,Normal monitoring; use calmer periods for product education.
-2026-02-23,low,low,0.08639991724398717,0.6150311119108338,0.2985689708451792,Normal monitoring; use calmer periods for product education.
+2026-02-18,low,normal,0.11909931515117765,0.40554410218224823,0.4753565826665744,Maintain standard staffing and transaction monitoring.
+2026-02-19,normal,low,0.12385321633407834,0.5097712722748129,0.36637551139110885,Normal monitoring; use calmer periods for product education.
+2026-02-20,low,low,0.11195823862292396,0.48110087562953835,0.40694088574753823,Normal monitoring; use calmer periods for product education.
+2026-02-23,low,low,0.08639991724398718,0.6150311119108338,0.2985689708451791,Normal monitoring; use calmer periods for product education.
 2026-02-24,low,low,0.09765861997170225,0.5534571231377633,0.3488842568905347,Normal monitoring; use calmer periods for product education.
-2026-02-25,normal,high,0.3967588790385539,0.24496447072419486,0.35827665023725136,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-02-26,low,high,0.5621160498476989,0.1612019789599409,0.2766819711923602,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-02-25,normal,high,0.3967588790385539,0.24496447072419486,0.35827665023725125,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-02-26,low,high,0.562116049847699,0.1612019789599409,0.2766819711923602,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2026-02-27,normal,normal,0.15308451808862444,0.3428353398111392,0.5040801421002364,Maintain standard staffing and transaction monitoring.
 2026-03-02,high,high,0.42689635434479556,0.2285629510733585,0.34454069458184605,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-03-03,high,high,0.48606011536735266,0.19678819823464225,0.3171516863980052,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-03-04,high,high,0.5467117228386019,0.1467427964399993,0.3065454807213992,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-03-03,high,high,0.48606011536735266,0.19678819823464222,0.3171516863980052,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-03-04,high,high,0.5467117228386018,0.14674279643999932,0.3065454807213992,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2026-03-05,high,high,0.6839636703918381,0.11384126706385729,0.20219506254430436,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2026-03-06,low,high,0.5530542915416423,0.14612529004156813,0.30082041841678975,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-03-09,high,high,0.6594949941779094,0.12635966550741742,0.21414534031467267,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-03-10,normal,high,0.7168182046972899,0.10903138345588805,0.17415041184682165,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-03-11,low,normal,0.20914050074038107,0.3245701160122511,0.4662893832473681,Maintain standard staffing and transaction monitoring.
-2026-03-12,low,high,0.663077624473499,0.12656411230416345,0.21035826322233692,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-03-09,high,high,0.6594949941779092,0.12635966550741742,0.21414534031467267,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-03-10,normal,high,0.7168182046972899,0.10903138345588805,0.17415041184682162,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-03-11,low,normal,0.20914050074038107,0.32457011601225116,0.4662893832473681,Maintain standard staffing and transaction monitoring.
+2026-03-12,low,high,0.6630776244734989,0.12656411230416345,0.21035826322233692,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2026-03-13,high,normal,0.25486294538529664,0.31401262963940485,0.4311244249752988,Maintain standard staffing and transaction monitoring.
-2026-03-16,normal,normal,0.2732201028519854,0.30299406764479964,0.423785829503215,Maintain standard staffing and transaction monitoring.
-2026-03-17,low,low,0.28146702489833325,0.36487532898864794,0.353657646113019,Normal monitoring; use calmer periods for product education.
-2026-03-18,high,high,0.669622233838991,0.12478941834379949,0.20558834781720858,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-03-16,normal,normal,0.27322010285198545,0.30299406764479964,0.423785829503215,Maintain standard staffing and transaction monitoring.
+2026-03-17,low,low,0.2814670248983332,0.36487532898864794,0.353657646113019,Normal monitoring; use calmer periods for product education.
+2026-03-18,high,high,0.6696222338389911,0.12478941834379949,0.20558834781720856,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2026-03-19,high,low,0.24066694108459755,0.38396717328635355,0.375365885629049,Normal monitoring; use calmer periods for product education.
-2026-03-20,high,high,0.6715271452987099,0.12065077110489864,0.20782208359639096,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-03-23,high,high,0.619167720728648,0.13281307350491153,0.24801920576644068,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-03-24,normal,high,0.5001207802461773,0.2304929636148676,0.26938625613895506,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-03-25,low,normal,0.32034120444210196,0.2916049418514687,0.38805385370642936,Maintain standard staffing and transaction monitoring.
-2026-03-26,normal,low,0.3147355191603814,0.40454031909959104,0.28072416174002773,Normal monitoring; use calmer periods for product education.
-2026-03-27,low,low,0.28833819030065105,0.38896229186781006,0.3226995178315391,Normal monitoring; use calmer periods for product education.
+2026-03-20,high,high,0.6715271452987098,0.12065077110489864,0.20782208359639098,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-03-23,high,high,0.6191677207286481,0.13281307350491153,0.2480192057664407,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-03-24,normal,high,0.5001207802461773,0.23049296361486762,0.26938625613895506,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-03-25,low,normal,0.3203412044421019,0.2916049418514687,0.3880538537064293,Maintain standard staffing and transaction monitoring.
+2026-03-26,normal,low,0.3147355191603814,0.4045403190995911,0.28072416174002773,Normal monitoring; use calmer periods for product education.
+2026-03-27,low,low,0.28833819030065105,0.38896229186781006,0.32269951783153905,Normal monitoring; use calmer periods for product education.
 2026-03-30,normal,normal,0.28814771863039546,0.3401259039529724,0.3717263774166323,Maintain standard staffing and transaction monitoring.
-2026-03-31,normal,high,0.5884097569666252,0.15240360807796247,0.2591866349554124,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-04-01,normal,normal,0.2597361435831192,0.3392331282229739,0.40103072819390706,Maintain standard staffing and transaction monitoring.
-2026-04-02,low,high,0.3518183113068991,0.3004238986533748,0.347757790039726,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-03-31,normal,high,0.5884097569666252,0.15240360807796244,0.25918663495541244,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-04-01,normal,normal,0.2597361435831192,0.3392331282229739,0.401030728193907,Maintain standard staffing and transaction monitoring.
+2026-04-02,low,high,0.3518183113068992,0.3004238986533749,0.347757790039726,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2026-04-03,low,low,0.16685556383829542,0.4865097003333498,0.346634735828355,Normal monitoring; use calmer periods for product education.
 2026-04-06,low,normal,0.21685338686507133,0.34333857913973403,0.4398080339951944,Maintain standard staffing and transaction monitoring.
-2026-04-07,normal,high,0.5659468935886741,0.14901159436730183,0.2850415120440243,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-04-08,high,high,0.6232256659470791,0.12856269687133243,0.2482116371815886,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-04-09,low,normal,0.27765077366570845,0.2844623752261949,0.4378868511080966,Maintain standard staffing and transaction monitoring.
+2026-04-07,normal,high,0.5659468935886739,0.14901159436730183,0.2850415120440243,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-04-08,high,high,0.6232256659470791,0.12856269687133243,0.24821163718158856,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-04-09,low,normal,0.2776507736657085,0.28446237522619494,0.43788685110809655,Maintain standard staffing and transaction monitoring.
 2026-04-10,normal,normal,0.17632301176620246,0.3032606626022059,0.5204163256315916,Maintain standard staffing and transaction monitoring.
 2026-04-13,low,normal,0.2107116874726795,0.3000946546948648,0.48919365783245594,Maintain standard staffing and transaction monitoring.
 2026-04-14,normal,high,0.527787510975727,0.15549743440009225,0.31671505462418087,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-04-15,low,normal,0.18278079521887228,0.3721547368728562,0.4450644679082714,Maintain standard staffing and transaction monitoring.
-2026-04-16,low,normal,0.1407923635138592,0.3410952897278598,0.5181123467582809,Maintain standard staffing and transaction monitoring.
-2026-04-17,normal,high,0.5952625129998335,0.14283364770005771,0.2619038393001091,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-04-15,low,normal,0.18278079521887228,0.3721547368728563,0.4450644679082714,Maintain standard staffing and transaction monitoring.
+2026-04-16,low,normal,0.14079236351385918,0.34109528972785985,0.5181123467582809,Maintain standard staffing and transaction monitoring.
+2026-04-17,normal,high,0.5952625129998336,0.14283364770005771,0.2619038393001091,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2026-04-20,low,normal,0.20582482485010714,0.3416357457239884,0.45253942942590436,Maintain standard staffing and transaction monitoring.
-2026-04-21,high,normal,0.1351108320718037,0.3430193453183604,0.5218698226098359,Maintain standard staffing and transaction monitoring.
+2026-04-21,high,normal,0.13511083207180363,0.3430193453183604,0.5218698226098359,Maintain standard staffing and transaction monitoring.
 2026-04-22,normal,normal,0.13729714362935722,0.3944544489058897,0.4682484074647532,Maintain standard staffing and transaction monitoring.
-2026-04-23,low,normal,0.14876184312228075,0.42189006123752837,0.42934809564019066,Maintain standard staffing and transaction monitoring.
-2026-04-24,low,normal,0.14889407995789222,0.3550332426130675,0.4960726774290403,Maintain standard staffing and transaction monitoring.
-2026-04-27,low,low,0.12123920745924434,0.4410019990974112,0.4377587934433441,Normal monitoring; use calmer periods for product education.
-2026-04-28,low,low,0.10009241220642545,0.5248503584958943,0.37505722929767954,Normal monitoring; use calmer periods for product education.
+2026-04-23,low,normal,0.14876184312228075,0.4218900612375284,0.4293480956401906,Maintain standard staffing and transaction monitoring.
+2026-04-24,low,normal,0.14889407995789225,0.3550332426130674,0.4960726774290403,Maintain standard staffing and transaction monitoring.
+2026-04-27,low,low,0.12123920745924432,0.44100199909741117,0.4377587934433442,Normal monitoring; use calmer periods for product education.
+2026-04-28,low,low,0.10009241220642545,0.5248503584958946,0.3750572292976796,Normal monitoring; use calmer periods for product education.
 2026-04-29,high,high,0.3857973777962229,0.2307833909041864,0.38341923129959044,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2026-04-30,normal,normal,0.21175941405685733,0.3245016675801786,0.46373891836296416,Maintain standard staffing and transaction monitoring.
-2026-05-01,low,normal,0.18837250188744833,0.39387823327008187,0.41774926484246977,Maintain standard staffing and transaction monitoring.
+2026-05-01,low,normal,0.18837250188744833,0.3938782332700819,0.4177492648424697,Maintain standard staffing and transaction monitoring.
 2026-05-04,low,normal,0.16265055764774142,0.33646471563776154,0.5008847267144969,Maintain standard staffing and transaction monitoring.
-2026-05-05,low,normal,0.14813249269271908,0.34981989979248934,0.5020476075147915,Maintain standard staffing and transaction monitoring.
-2026-05-06,high,high,0.5672895256577319,0.14482874338590387,0.2878817309563648,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-05-07,normal,normal,0.297514976570392,0.32572269725585573,0.37676232617375177,Maintain standard staffing and transaction monitoring.
-2026-05-08,normal,normal,0.2531474395589121,0.2738297121147343,0.4730228483263537,Maintain standard staffing and transaction monitoring.
-2026-05-11,high,normal,0.26049854779122145,0.28097811331504535,0.45852333889373326,Maintain standard staffing and transaction monitoring.
-2026-05-12,high,high,0.5037602910831867,0.14604644409657463,0.3501932648202388,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-05-13,low,normal,0.2247657614548298,0.3275791252336302,0.4476551133115398,Maintain standard staffing and transaction monitoring.
-2026-05-14,low,low,0.1893940120155576,0.46864250749451064,0.34196348048993197,Normal monitoring; use calmer periods for product education.
-2026-05-15,low,normal,0.2267609298530755,0.355004108349551,0.41823496179737424,Maintain standard staffing and transaction monitoring.
+2026-05-05,low,normal,0.14813249269271905,0.34981989979248934,0.5020476075147915,Maintain standard staffing and transaction monitoring.
+2026-05-06,high,high,0.5672895256577318,0.14482874338590387,0.2878817309563648,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-05-07,normal,normal,0.297514976570392,0.32572269725585573,0.3767623261737518,Maintain standard staffing and transaction monitoring.
+2026-05-08,normal,normal,0.2531474395589121,0.27382971211473434,0.4730228483263537,Maintain standard staffing and transaction monitoring.
+2026-05-11,high,normal,0.26049854779122145,0.2809781133150454,0.45852333889373326,Maintain standard staffing and transaction monitoring.
+2026-05-12,high,high,0.5037602910831867,0.1460464440965746,0.3501932648202388,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-05-13,low,normal,0.2247657614548298,0.32757912523363014,0.4476551133115398,Maintain standard staffing and transaction monitoring.
+2026-05-14,low,low,0.1893940120155576,0.4686425074945106,0.341963480489932,Normal monitoring; use calmer periods for product education.
+2026-05-15,low,normal,0.22676092985307547,0.355004108349551,0.41823496179737424,Maintain standard staffing and transaction monitoring.
 2026-05-18,low,normal,0.29158895342497965,0.31737138607206256,0.3910396605029583,Maintain standard staffing and transaction monitoring.
-2026-05-19,high,high,0.6179553705985884,0.13417346814868253,0.24787116125272918,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-05-20,normal,high,0.552079921797151,0.15250403027827655,0.29541604792457266,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-05-21,low,normal,0.19491812274156947,0.40242199292431885,0.40265988433411215,Maintain standard staffing and transaction monitoring.
-2026-05-22,normal,normal,0.19522853180313368,0.37512607542722287,0.4296453927696436,Maintain standard staffing and transaction monitoring.
+2026-05-19,high,high,0.6179553705985884,0.13417346814868256,0.24787116125272918,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-05-20,normal,high,0.552079921797151,0.15250403027827655,0.2954160479245726,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-05-21,low,normal,0.19491812274156947,0.4024219929243188,0.40265988433411215,Maintain standard staffing and transaction monitoring.
+2026-05-22,normal,normal,0.1952285318031337,0.3751260754272228,0.4296453927696437,Maintain standard staffing and transaction monitoring.
 2026-05-25,low,low,0.20488288518426692,0.4337017501139598,0.3614153647017732,Normal monitoring; use calmer periods for product education.
-2026-05-26,normal,low,0.26428129761280367,0.3691869527052602,0.3665317496819363,Normal monitoring; use calmer periods for product education.
-2026-05-27,low,normal,0.22674770212694312,0.3662471841455926,0.40700511372746484,Maintain standard staffing and transaction monitoring.
-2026-05-28,normal,high,0.5389793386555946,0.1750627587643567,0.2859579025800489,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-05-29,normal,normal,0.23620730151581834,0.32720250171008114,0.4365901967741009,Maintain standard staffing and transaction monitoring.
+2026-05-26,normal,low,0.2642812976128036,0.3691869527052602,0.36653174968193636,Normal monitoring; use calmer periods for product education.
+2026-05-27,low,normal,0.22674770212694312,0.3662471841455926,0.4070051137274648,Maintain standard staffing and transaction monitoring.
+2026-05-28,normal,high,0.5389793386555946,0.1750627587643567,0.28595790258004894,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-05-29,normal,normal,0.23620730151581837,0.32720250171008114,0.4365901967741008,Maintain standard staffing and transaction monitoring.
 2026-06-01,low,normal,0.2570908397866561,0.3112434937270311,0.43166566648631305,Maintain standard staffing and transaction monitoring.
-2026-06-02,low,normal,0.1562698052637099,0.40425089613148074,0.4394792986048101,Maintain standard staffing and transaction monitoring.
-2026-06-03,normal,high,0.6116589116347936,0.12989398771169527,0.2584471006535113,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-06-04,low,high,0.6020889887895503,0.1452474712822034,0.2526635399282464,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-06-05,high,high,0.6399850106776113,0.14022470948064963,0.21979027984173896,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-06-02,low,normal,0.15626980526370995,0.40425089613148074,0.4394792986048101,Maintain standard staffing and transaction monitoring.
+2026-06-03,normal,high,0.6116589116347936,0.12989398771169525,0.2584471006535113,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-06-04,low,high,0.6020889887895504,0.14524747128220336,0.2526635399282464,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-06-05,high,high,0.6399850106776113,0.1402247094806496,0.21979027984173896,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2026-06-08,high,high,0.6284169473093281,0.1436089275427172,0.22797412514795473,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2026-06-09,low,high,0.6522011806029464,0.130773288523949,0.21702553087310444,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-06-10,low,normal,0.2293747310621925,0.3570418243272132,0.4135834446105946,Maintain standard staffing and transaction monitoring.
+2026-06-10,low,normal,0.2293747310621925,0.35704182432721315,0.4135834446105946,Maintain standard staffing and transaction monitoring.
 2026-06-11,normal,low,0.22459766512613547,0.3957347750570827,0.3796675598167824,Normal monitoring; use calmer periods for product education.
 2026-06-12,normal,normal,0.21006233029857085,0.39127958678418173,0.3986580829172478,Maintain standard staffing and transaction monitoring.
-2026-06-15,low,normal,0.19648505204865954,0.3284604475125409,0.47505450043879954,Maintain standard staffing and transaction monitoring.
+2026-06-15,low,normal,0.19648505204865957,0.3284604475125409,0.4750545004387995,Maintain standard staffing and transaction monitoring.
 2026-06-16,low,normal,0.13789610828507928,0.3824707355593493,0.47963315615557145,Maintain standard staffing and transaction monitoring.
-2026-06-17,high,low,0.09879896528977393,0.5277438469861889,0.373457187724037,Normal monitoring; use calmer periods for product education.
-2026-06-18,normal,high,0.5121264380265885,0.15497937224442712,0.33289418972898444,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-06-19,normal,normal,0.14712084722651622,0.35366499104686794,0.49921416172661554,Maintain standard staffing and transaction monitoring.
-2026-06-22,normal,normal,0.16608651345293163,0.39197547898900126,0.44193800755806695,Maintain standard staffing and transaction monitoring.
+2026-06-17,high,low,0.09879896528977393,0.5277438469861889,0.37345718772403697,Normal monitoring; use calmer periods for product education.
+2026-06-18,normal,high,0.5121264380265885,0.15497937224442715,0.33289418972898444,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-06-19,normal,normal,0.14712084722651625,0.35366499104686794,0.49921416172661554,Maintain standard staffing and transaction monitoring.
+2026-06-22,normal,normal,0.16608651345293163,0.3919754789890012,0.44193800755806695,Maintain standard staffing and transaction monitoring.
 2026-06-23,low,low,0.2033148191018693,0.4005769260924609,0.39610825480566975,Normal monitoring; use calmer periods for product education.
-2026-06-24,normal,normal,0.238760933293698,0.3418450557992099,0.41939401090709216,Maintain standard staffing and transaction monitoring.
+2026-06-24,normal,normal,0.23876093329369796,0.34184505579920993,0.4193940109070923,Maintain standard staffing and transaction monitoring.
 2026-06-25,low,normal,0.20378199270731062,0.38169123641140096,0.4145267708812885,Maintain standard staffing and transaction monitoring.
-2026-06-26,normal,high,0.5326395834092741,0.1701283285105044,0.2972320880802217,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-06-26,normal,high,0.532639583409274,0.17012832851050438,0.29723208808022167,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
 2026-06-29,normal,low,0.22530849160884056,0.3994453762115495,0.37524613217961,Normal monitoring; use calmer periods for product education.
-2026-06-30,normal,normal,0.21777355934901382,0.34981528990227845,0.4324111507487079,Maintain standard staffing and transaction monitoring.
-2026-07-01,low,low,0.15069558677719963,0.4667203427359831,0.38258407048681736,Normal monitoring; use calmer periods for product education.
-2026-07-02,normal,high,0.567552894941378,0.14743609998531038,0.2850110050733117,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-07-03,normal,high,0.6305875903279813,0.13827118204801692,0.23114122762400158,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-07-06,low,low,0.22079753374104286,0.4164657643130772,0.36273670194588,Normal monitoring; use calmer periods for product education.
+2026-06-30,normal,normal,0.21777355934901382,0.34981528990227845,0.43241115074870795,Maintain standard staffing and transaction monitoring.
+2026-07-01,low,low,0.15069558677719966,0.4667203427359831,0.3825840704868175,Normal monitoring; use calmer periods for product education.
+2026-07-02,normal,high,0.567552894941378,0.14743609998531035,0.2850110050733117,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-07-03,normal,high,0.6305875903279813,0.1382711820480169,0.23114122762400158,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-07-06,low,low,0.22079753374104283,0.41646576431307725,0.3627367019458799,Normal monitoring; use calmer periods for product education.
 2026-07-07,normal,high,0.46820873759950316,0.2017223399510675,0.33006892244942937,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
-2026-07-08,normal,high,0.5520234303963846,0.17501025457698782,0.27296631502662744,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."
+2026-07-08,normal,high,0.5520234303963847,0.17501025457698782,0.27296631502662744,"Prepare support coverage, rate-change messaging, and tighter transaction monitoring."

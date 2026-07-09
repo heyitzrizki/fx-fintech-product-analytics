@@ -14,9 +14,9 @@ repeat_users AS (
         MAX(
             CASE
                 WHEN datetime(t.transaction_timestamp)
-                     > datetime(ft.first_transaction_at, '+21 days')
+                     > datetime(ft.first_transaction_at)
                  AND datetime(t.transaction_timestamp)
-                     <= datetime(ft.first_transaction_at, '+45 days')
+                     <= datetime(ft.first_transaction_at, '+30 days')
                 THEN 1
                 ELSE 0
             END
@@ -44,7 +44,6 @@ WHERE m.onboarding_valid_flag = 1
   AND m.first_successful_transaction_at IS NOT NULL
 GROUP BY m.acquisition_channel
 ORDER BY d30_repeat_rate DESC;
-
 
 
 

@@ -1,8 +1,8 @@
 acquisition_channel,first_exchange_users,d30_repeat_users,d30_repeat_rate
-content,1521,647,42.54
-direct,2307,977,42.35
-paid_social,5729,2417,42.19
-affiliate,2611,1091,41.78
-referral,5076,2114,41.65
-organic_search,7761,3208,41.33
-other,786,309,39.31
+paid_social,5729,3040,53.06
+direct,2307,1218,52.8
+referral,5076,2642,52.05
+other,786,409,52.04
+affiliate,2611,1355,51.9
+organic_search,7761,4026,51.87
+content,1521,778,51.15

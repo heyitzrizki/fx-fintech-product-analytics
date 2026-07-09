@@ -7,7 +7,7 @@ CSV_DIR = PROJECT_ROOT / "outputs" / "csv"
 PAGES = [
     "Executive Summary",
     "Funnel and Retention",
-    "Feature Adoption and A/B Test",
+    "Feature Adoption and Simulated A/B Test",
     "Prediction and Targeting",
     "FX Market Readiness",
     "Data Quality and Methodology",

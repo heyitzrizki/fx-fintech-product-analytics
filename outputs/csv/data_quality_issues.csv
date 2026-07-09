@@ -1,21 +1,21 @@
 check,table,column,issue_count,severity,detail
-missing_values,users,campaign_id,27115,warning,Null or blank values; review whether the field is conditionally optional.
-missing_values,users,kyc_completed_at,11594,warning,Null or blank values; review whether the field is conditionally optional.
-missing_values,users,bank_account_linked_at,15710,warning,Null or blank values; review whether the field is conditionally optional.
-missing_values,events,device_os,875406,warning,Null or blank values; review whether the field is conditionally optional.
-missing_values,events,currency_pair,894108,warning,Null or blank values; review whether the field is conditionally optional.
-missing_values,events,campaign_id,2120532,warning,Null or blank values; review whether the field is conditionally optional.
-missing_values,transactions,executed_rate,20683,warning,Null or blank values; review whether the field is conditionally optional.
-missing_values,transactions,failure_reason,240996,warning,Null or blank values; review whether the field is conditionally optional.
+missing_values,users,campaign_id,27115,warning,Review whether the field is conditionally optional.
+missing_values,users,kyc_completed_at,11594,warning,Review whether the field is conditionally optional.
+missing_values,users,bank_account_linked_at,15710,warning,Review whether the field is conditionally optional.
+missing_values,events,device_os,875406,warning,Review whether the field is conditionally optional.
+missing_values,events,currency_pair,894108,warning,Review whether the field is conditionally optional.
+missing_values,events,campaign_id,2120532,warning,Review whether the field is conditionally optional.
+missing_values,transactions,executed_rate,20683,warning,Review whether the field is conditionally optional.
+missing_values,transactions,failure_reason,240996,warning,Review whether the field is conditionally optional.
 duplicate_user_id,users,user_id,0,error,Each user_id should identify one user.
 duplicate_transaction_id,transactions,transaction_id,0,error,Each transaction_id should identify one transaction.
-invalid_signup_date,users,signup_timestamp,0,error,Date cannot be parsed by SQLite.
-invalid_event_date,events,event_timestamp,0,error,Date cannot be parsed by SQLite.
-invalid_transaction_date,transactions,transaction_timestamp,0,error,Date cannot be parsed by SQLite.
-activation_before_signup,mart_user_lifecycle,first_successful_transaction_at,0,error,Activation must not precede signup.
-transaction_before_signup,transactions,transaction_timestamp,0,error,A transaction must not precede signup.
-nonpositive_transaction_volume,transactions,transaction_amount_krw,1675,error,Transaction amount should be positive.
-invalid_acquisition_channel,users,acquisition_channel,0,error,Channel must match the documented channel taxonomy.
-duplicate_event_rows,events,"user_id, session_id, event_timestamp, event_name",4400,warning,Extra duplicated event-key rows; clean_events keeps one row per key.
-transaction_volume_outlier,transactions,transaction_amount_krw,7337,review,"Above conservative Q3 + 3*IQR threshold of KRW 8,770,329; retained for analysis."
-repeat_model_target_leakage,modeling_user_month_snapshots,"failed_ratio_90d, recency_days, total_volume_90d, transactions_90d",0,error,Features use data available on or before observation_date; target uses the following 30 days.
+duplicate_event_rows,events,"user_id, session_id, event_timestamp, event_name",4400,warning,clean_events keeps one row for each duplicated event key.
+invalid_signup_date,users / events / transactions,see check name,0,error,Logic-based validity check.
+invalid_event_date,users / events / transactions,see check name,0,error,Logic-based validity check.
+invalid_transaction_date,users / events / transactions,see check name,0,error,Logic-based validity check.
+activation_before_signup,users / events / transactions,see check name,0,error,Logic-based validity check.
+transaction_before_signup,users / events / transactions,see check name,0,error,Logic-based validity check.
+nonpositive_transaction_volume,users / events / transactions,see check name,1675,error,Logic-based validity check.
+invalid_acquisition_channel,users / events / transactions,see check name,0,error,Logic-based validity check.
+transaction_volume_outlier,transactions,transaction_amount_krw,7337,review,"Above Q3 + 3*IQR threshold of KRW 8,770,329; retained."
+repeat_model_target_leakage,modeling_user_month_snapshots,repeat model features,0,error,All selected features are measured on or before observation_date.

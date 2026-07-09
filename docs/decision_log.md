@@ -1,8 +1,10 @@
 # Decision Log
 
+These are deliberate scope choices, not claims that each method is universally best. The goal is to keep the analysis explainable, reproducible, and tied to a product decision.
+
 | Decision | Reason |
 |---|---|
-| One main workbook | Keeps the analytical narrative recruiter-readable while retaining prior notebooks as supporting work |
+| One main workbook | Gives reviewers one clear analytical path; earlier exploration is kept only in the archive |
 | Yahoo Finance FX snapshot with local cache | Uses real historical market observations while keeping repeated runs reproducible |
 | Chronological model splits | Prevents future periods from informing earlier validation |
 | Four repeat-model features | Uses fields available at the observation date and avoids ambiguous lifetime leakage |
@@ -10,4 +12,4 @@
 | Simulated experiment labeled explicitly | Demonstrates statistical evaluation without claiming production causal evidence |
 | Scenario campaign value | Low/base/high assumptions expose sensitivity and avoid revenue claims |
 | Six dashboard pages | Each page maps to a distinct product or operating decision |
-| Existing notebooks retained | They preserve earlier exploratory work and are not required for the main workflow |
+| Earlier notebooks moved to `notebooks/archive/` | Preserves prior exploration while keeping one clear notebook entry point |

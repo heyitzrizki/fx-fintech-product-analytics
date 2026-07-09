@@ -6,7 +6,7 @@
 - The repeat model is validated on synthetic monthly snapshots and is not calibrated for production decisions.
 - The campaign simulator assumes uplift, recent volume, and fee proxies. It is not a revenue forecast.
 - FX regime prediction uses historical Yahoo Finance observations, but it has not been linked to measured operational benefit.
-- D30 repeat uses the existing 21–45 day business window; teams should confirm this definition.
+- D30 repeat counts another successful exchange after the first exchange and no later than day 30.
 - Missing fields may be conditionally optional. A nonzero missing count is not automatically an error.
 - Transaction volume outliers are flagged using Q3 plus three IQRs and retained unless domain review finds invalid records.
 

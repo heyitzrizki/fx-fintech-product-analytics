@@ -1,5 +1,7 @@
 # Metric Dictionary
 
+This file separates similarly named metrics that answer different product questions. In particular, D30 retention starts from a user's first exchange, while the repeat-prediction target starts from a monthly model observation date.
+
 | Metric | Definition | Denominator or window |
 |---|---|---|
 | Valid signup | User without an invalid onboarding sequence | Eligible users |
@@ -7,7 +9,7 @@
 | Bank-link rate | Users with `bank_account_linked_at` | Valid signups |
 | First exchange rate | Users with a completed exchange | Valid signups |
 | 14-day activation rate | KYC, bank link, and first completed exchange within 14 days of signup | Valid signups |
-| D30 repeat rate | Users with another completed exchange 21–45 days after first exchange | First-exchange users |
+| D30 repeat rate | Users with another completed exchange within 30 days after their first exchange | First-exchange users |
 | Rate-alert adoption | Users with `rate_alert_created` | Eligible users |
 | Target-rate adoption | Users with a completed or attempted target-rate order | Eligible users |
 | Cohort retention | Users active in month N after first-exchange month | First-exchange cohort |
