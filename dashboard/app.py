@@ -1,6 +1,15 @@
+import sys
+from pathlib import Path
+
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+
+# Streamlit Cloud executes this file as a script, so add the repository root
+# before importing modules from the dashboard package.
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 from dashboard.charts import cohort_heatmap, funnel_chart, horizontal_bar
 from dashboard.config import PAGES
